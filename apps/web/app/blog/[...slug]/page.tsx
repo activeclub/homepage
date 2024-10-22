@@ -1,8 +1,9 @@
 import { formatDate } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function BlogContent() {
-  const blogs = [];
+  const blogs: any[] = [];
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10 mx-auto">
@@ -25,15 +26,13 @@ export default function BlogContent() {
               key={blog.slug}
               className="group relative flex flex-col space-y-2"
             >
-              {blog.image && (
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  width={804}
-                  height={452}
-                  className="border bg-muted transition-colors"
-                />
-              )}
+              <Image
+                src={blog.image ?? ""}
+                alt={blog.title}
+                width={804}
+                height={452}
+                className="border bg-muted transition-colors"
+              />
 
               <h2 className="text-2xl font-extrabold text-primary">
                 {blog.title}
