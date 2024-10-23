@@ -39,9 +39,6 @@ export default async function Blog() {
               <h2 className="text-2xl font-extrabold text-primary">
                 {post.title}
               </h2>
-              {post.description && (
-                <p className="text-muted-foreground">{post.description}</p>
-              )}
               {post.publishedAt && (
                 <p className="text-sm text-muted-foreground">
                   {formatDate(post.publishedAt)}

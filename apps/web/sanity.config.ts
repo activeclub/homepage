@@ -3,8 +3,8 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
-import { schemaTypes } from "./lib/sanity/schema";
-import { dataset, projectId } from "./lib/sanity/env";
+import { schemaTypes } from "./src/lib/sanity/schema";
+import { dataset, projectId } from "./src/lib/sanity/env";
 
 export default defineConfig({
   name: "default",

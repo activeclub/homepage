@@ -8,7 +8,6 @@ export const POSTS_QUERY =
   mainImage{
     asset->{url}
   },
-  description,
   publishedAt
 }`);
 
@@ -20,7 +19,6 @@ export const POST_QUERY =
     asset->{url}
   },
   body,
-  description,
   publishedAt,
   author->{
     slug,
