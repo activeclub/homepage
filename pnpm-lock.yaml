@@ -21,7 +21,7 @@ importers:
   apps/web:
     dependencies:
       '@portabletext/react':
-        specifier: ^3.1.0
+        specifier: 3.1.0
         version: 3.1.0(react@18.3.1)
       '@radix-ui/react-dialog':
         specifier: 1.1.2
@@ -36,10 +36,10 @@ importers:
         specifier: 6.22.2
         version: 6.22.2(debug@4.3.7)
       '@sanity/image-url':
-        specifier: ^1.0.2
+        specifier: 1.0.2
         version: 1.0.2
       '@sanity/preview-url-secret':
-        specifier: ^2.0.0
+        specifier: 2.0.0
         version: 2.0.0(@sanity/client@6.22.2)
       '@sanity/vision':
         specifier: 3.62.0
@@ -91,7 +91,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@tailwindcss/typography':
-        specifier: ^0.5.15
+        specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.14)
       '@types/node':
         specifier: 20.16.15
