@@ -48,8 +48,8 @@ importers:
         specifier: 15.0.1
         version: 15.0.1(@babel/core@7.25.9)(react-dom@18.3.1)(react@18.3.1)
       next-sanity:
-        specifier: 9.7.0
-        version: 9.7.0(@sanity/client@6.22.2)(@sanity/icons@3.4.0)(@sanity/types@3.62.0)(@sanity/ui@2.8.10)(next@15.0.1)(react-dom@18.3.1)(react@18.3.1)(sanity@3.62.0)(styled-components@6.1.13)
+        specifier: 9.7.1
+        version: 9.7.1(@sanity/client@6.22.2)(@sanity/icons@3.4.0)(@sanity/types@3.62.0)(@sanity/ui@2.8.10)(next@15.0.1)(react-dom@18.3.1)(react@18.3.1)(sanity@3.62.0)(styled-components@6.1.13)
       next-themes:
         specifier: 0.3.0
         version: 0.3.0(react-dom@18.3.1)(react@18.3.1)
@@ -3156,11 +3156,11 @@ packages:
       - debug
     dev: false
 
-  /@sanity/mutate@0.10.1-canary.4(xstate@5.18.2):
-    resolution: {integrity: sha512-p12N0GreukzQFGqG72NLFlukJ+jrlCNXTfg6zyfoom4c0GgN+FX0NW8GVW4HwCaMY5u3UiEqSQecT3R/lVyZ6w==}
+  /@sanity/mutate@0.10.1-canary.5(xstate@5.18.2):
+    resolution: {integrity: sha512-ce5xQJhqvbFnYejUEUlpR8VNq9RqMYYnasVdtZPBoD2gJpHpwSMXhpvWHcZM3gtNDcQEkHT/ttPDluMghbF8aw==}
     engines: {node: '>=18'}
     peerDependencies:
-      xstate: ^5.18.0
+      xstate: ^5.18.2
     peerDependenciesMeta:
       xstate:
         optional: true
@@ -3397,8 +3397,8 @@ packages:
       - react-is
     dev: false
 
-  /@sanity/visual-editing@2.2.2(@sanity/client@6.22.2)(next@15.0.1)(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-JRcyNLc+vrrvxreERxtZfk+qE3JKHKmFVKZW2LADIZJ3NTnlYJ0YHSbusXVK4Sy4TrQ3RIY3NHxtfNQrjB7lkA==}
+  /@sanity/visual-editing@2.3.0(@sanity/client@6.22.2)(next@15.0.1)(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-e0C1EqmRgEXRJwrUcvq0Q/RvmHBCAo4h8qdkWQXbsgWPBl1d+veyYqlRZOESEGvAhaw7xcrOXG2BaJgUPqK5ow==}
     engines: {node: '>=18'}
     peerDependencies:
       '@remix-run/react': '>= 2'
@@ -3422,7 +3422,7 @@ packages:
     dependencies:
       '@sanity/client': 6.22.2(debug@4.3.7)
       '@sanity/comlink': 1.0.0
-      '@sanity/mutate': 0.10.1-canary.4(xstate@5.18.2)
+      '@sanity/mutate': 0.10.1-canary.5(xstate@5.18.2)
       '@sanity/preview-url-secret': 2.0.0(@sanity/client@6.22.2)
       '@vercel/stega': 0.1.2
       next: 15.0.1(@babel/core@7.25.9)(react-dom@18.3.1)(react@18.3.1)
@@ -8519,8 +8519,8 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /next-sanity@9.7.0(@sanity/client@6.22.2)(@sanity/icons@3.4.0)(@sanity/types@3.62.0)(@sanity/ui@2.8.10)(next@15.0.1)(react-dom@18.3.1)(react@18.3.1)(sanity@3.62.0)(styled-components@6.1.13):
-    resolution: {integrity: sha512-SU6bwbBTSli3Zv8peGMYQ+HRjVZ1ShbCsXWPp8fRS90dw4qPGMjQMACNXPwvRjcELTEeuSZqAFeFZPgbSRCc7Q==}
+  /next-sanity@9.7.1(@sanity/client@6.22.2)(@sanity/icons@3.4.0)(@sanity/types@3.62.0)(@sanity/ui@2.8.10)(next@15.0.1)(react-dom@18.3.1)(react@18.3.1)(sanity@3.62.0)(styled-components@6.1.13):
+    resolution: {integrity: sha512-41gQWHwVN4sbVpqDY9HuFB1//lPX9e6HEmRPDZkKlahXdsa2Gpg9uhaMHwaZbcumlJtmBICskhRx0SsRZhvmuQ==}
     engines: {node: '>=18.18'}
     peerDependencies:
       '@sanity/client': ^6.22.2
@@ -8540,7 +8540,7 @@ packages:
       '@sanity/preview-url-secret': 2.0.0(@sanity/client@6.22.2)
       '@sanity/types': 3.62.0(debug@4.3.7)
       '@sanity/ui': 2.8.10(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13)
-      '@sanity/visual-editing': 2.2.2(@sanity/client@6.22.2)(next@15.0.1)(react-dom@18.3.1)(react@18.3.1)
+      '@sanity/visual-editing': 2.3.0(@sanity/client@6.22.2)(next@15.0.1)(react-dom@18.3.1)(react@18.3.1)
       groq: 3.62.0
       history: 5.3.0
       next: 15.0.1(@babel/core@7.25.9)(react-dom@18.3.1)(react@18.3.1)
