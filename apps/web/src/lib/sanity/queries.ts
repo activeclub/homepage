@@ -5,9 +5,7 @@ export const POSTS_QUERY =
   _id,
   title,
   slug,
-  mainImage{
-    asset->{url}
-  },
+  mainImage,
   publishedAt
 }`);
 
@@ -15,16 +13,12 @@ export const POST_QUERY =
   defineQuery(`*[_type == "post" && slug.current == $slug][0]{
   title,
   slug,
-  mainImage{
-    asset->{url}
-  },
+  mainImage,
   body,
   publishedAt,
   author->{
     slug,
     name,
-    image{
-      asset->{url}
-    }
+    image
   }
 }`);

@@ -250,27 +250,39 @@ export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: src/lib/sanity/queries.ts
 // Variable: POSTS_QUERY
-// Query: *[_type == "post" && defined(slug.current)][0...12]{  _id,  title,  slug,  mainImage{    asset->{url}  },  publishedAt}
+// Query: *[_type == "post" && defined(slug.current)][0...12]{  _id,  title,  slug,  mainImage,  publishedAt}
 export type POSTS_QUERYResult = Array<{
   _id: string;
   title: string | null;
   slug: Slug | null;
   mainImage: {
-    asset: {
-      url: string | null;
-    } | null;
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
   } | null;
   publishedAt: string | null;
 }>;
 // Variable: POST_QUERY
-// Query: *[_type == "post" && slug.current == $slug][0]{  title,  slug,  mainImage{    asset->{url}  },  body,  publishedAt,  author->{    slug,    name,    image{      asset->{url}    }  }}
+// Query: *[_type == "post" && slug.current == $slug][0]{  title,  slug,  mainImage,  body,  publishedAt,  author->{    slug,    name,    image  }}
 export type POST_QUERYResult = {
   title: string | null;
   slug: Slug | null;
   mainImage: {
-    asset: {
-      url: string | null;
-    } | null;
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
   } | null;
   body: BlockContent | null;
   publishedAt: string | null;
@@ -278,9 +290,15 @@ export type POST_QUERYResult = {
     slug: Slug | null;
     name: string | null;
     image: {
-      asset: {
-        url: string | null;
-      } | null;
+      asset?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+      };
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: "image";
     } | null;
   } | null;
 } | null;
@@ -289,7 +307,7 @@ export type POST_QUERYResult = {
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[_type == \"post\" && defined(slug.current)][0...12]{\n  _id,\n  title,\n  slug,\n  mainImage{\n    asset->{url}\n  },\n  publishedAt\n}": POSTS_QUERYResult;
-    "*[_type == \"post\" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage{\n    asset->{url}\n  },\n  body,\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image{\n      asset->{url}\n    }\n  }\n}": POST_QUERYResult;
+    "*[_type == \"post\" && defined(slug.current)][0...12]{\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}": POSTS_QUERYResult;
+    "*[_type == \"post\" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage,\n  body,\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image\n  }\n}": POST_QUERYResult;
   }
 }

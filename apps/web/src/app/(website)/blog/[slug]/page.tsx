@@ -1,11 +1,14 @@
-import { buttonVariants } from "@/components/ui/button";
-import { client } from "@/lib/sanity/client";
-import { POST_QUERY } from "@/lib/sanity/queries";
-import { POST_QUERYResult } from "@/lib/sanity/types";
-import { cn, formatDate } from "@/lib/utils";
+import { PortableText } from "@portabletext/react";
 import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+import { buttonVariants } from "@/components/ui/button";
+import { client } from "@/lib/sanity/client";
+import { urlFor } from "@/lib/sanity/image";
+import { POST_QUERY } from "@/lib/sanity/queries";
+import { POST_QUERYResult } from "@/lib/sanity/types";
+import { cn, formatDate } from "@/lib/utils";
 
 type Params = Promise<{ slug: string }>;
 
@@ -33,7 +36,7 @@ export default async function BlogContent({ params }: { params: Params }) {
         {post?.author && (
           <div className="mt-4 flex space-x-4">
             <Image
-              src={post.author.image?.asset?.url ?? ""}
+              src={urlFor(post.author.image?.asset!)?.url()!}
               alt={post.author.name!}
               width={42}
               height={42}
@@ -50,7 +53,7 @@ export default async function BlogContent({ params }: { params: Params }) {
 
         {post?.mainImage && (
           <Image
-            src={post.mainImage.asset?.url!}
+            src={urlFor(post.mainImage.asset!)?.url()!}
             alt={post?.title ?? ""}
             width={720}
             height={405}
@@ -58,7 +61,7 @@ export default async function BlogContent({ params }: { params: Params }) {
             className="my-8 border bg-muted transition-colors"
           />
         )}
-        {/* <Mdx code={blog.body} /> */}
+        {post?.body && <PortableText value={post.body} />}
         <hr className="mt-12" />
         <div className="flex justify-center py-6 lg:py-10">
           <Link

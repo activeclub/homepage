@@ -4,6 +4,7 @@ import Link from "next/link";
 import { client } from "@/lib/sanity/client";
 import { POSTS_QUERY } from "@/lib/sanity/queries";
 import { POSTS_QUERYResult } from "@/lib/sanity/types";
+import { urlFor } from "@/lib/sanity/image";
 
 export default async function Blog() {
   const posts = await client.fetch<POSTS_QUERYResult>(POSTS_QUERY);
@@ -30,7 +31,7 @@ export default async function Blog() {
               className="group relative flex flex-col space-y-2"
             >
               <Image
-                src={post.mainImage?.asset?.url!}
+                src={urlFor(post.mainImage?.asset!)?.url()!}
                 alt={post.title!}
                 width={804}
                 height={452}

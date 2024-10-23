@@ -18,9 +18,19 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { isEnabled } = await draftMode();
+
   return (
     <html lang="en">
       <body className="min-h-dvh flex flex-col">
+        {isEnabled && (
+          <a
+            className="fixed right-0 bottom-0 bg-blue-500 text-white p-4 m-4"
+            href="/api/draft-mode/disable"
+          >
+            Disable preview mode
+          </a>
+        )}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -30,7 +40,7 @@ export default async function RootLayout({
           <Header />
           <main className="flex-1">
             {children}
-            {(await draftMode()).isEnabled && <VisualEditing />}
+            {isEnabled && <VisualEditing />}
           </main>
           <Footer />
         </ThemeProvider>
