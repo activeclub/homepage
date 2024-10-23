@@ -1,6 +1,7 @@
 import { loadEnvConfig } from "@next/env";
 import { defineCliConfig } from "sanity/cli";
 
+// eslint-disable-next-line turbo/no-undeclared-env-vars
 const dev = process.env.NODE_ENV !== "production";
 loadEnvConfig(__dirname, dev, { info: () => null, error: console.error });
 
