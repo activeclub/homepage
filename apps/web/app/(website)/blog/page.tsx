@@ -1,9 +1,12 @@
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { client } from "@/lib/sanity/client";
+import { POSTS_QUERY } from "@/lib/sanity/queries";
+import { POSTS_QUERYResult } from "@/lib/sanity/types";
 
-export default function Blog() {
-  const blogs: any[] = [];
+export default async function Blog() {
+  const posts = await client.fetch<POSTS_QUERYResult>(POSTS_QUERY);
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10 mx-auto">
@@ -19,35 +22,35 @@ export default function Blog() {
       </div>
       <hr className="my-8" />
 
-      {blogs.length ? (
+      {posts.length ? (
         <div className="grid gap-10 sm:grid-cols-2">
-          {blogs.map((blog) => (
+          {posts.map((post) => (
             <article
-              key={blog.slug}
+              key={post.slug?.current!}
               className="group relative flex flex-col space-y-2"
             >
               <Image
-                src={blog.image ?? ""}
-                alt={blog.title}
+                src={post.mainImage?.asset?._ref!}
+                alt={post.title!}
                 width={804}
                 height={452}
                 className="border bg-muted transition-colors"
               />
-
               <h2 className="text-2xl font-extrabold text-primary">
-                {blog.title}
+                {post.title}
               </h2>
-              {blog.description && (
-                <p className="text-muted-foreground">{blog.description}</p>
+              {post.description && (
+                <p className="text-muted-foreground">{post.description}</p>
               )}
-
-              {blog.date && (
+              {post.publishedAt && (
                 <p className="text-sm text-muted-foreground">
-                  {formatDate(blog.date)}
+                  {formatDate(post.publishedAt)}
                 </p>
               )}
-
-              <Link href={blog.slug} className="absolute inset-0">
+              <Link
+                href={`/blog/${post.slug?.current!}`}
+                className="absolute inset-0"
+              >
                 <span className="sr-only">View Article</span>
               </Link>
             </article>
