@@ -2,19 +2,35 @@ import { PortableText } from "@portabletext/react";
 import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { QueryParams } from "next-sanity";
 
 import { buttonVariants } from "@/components/ui/button";
-import { client } from "@/lib/sanity/client";
+import { client, sanityFetch } from "@/lib/sanity/client";
 import { urlFor } from "@/lib/sanity/image";
-import { POST_QUERY } from "@/lib/sanity/queries";
-import { POST_QUERYResult } from "@/lib/sanity/types";
+import { POST_QUERY, POSTS_QUERY } from "@/lib/sanity/queries";
+import { POST_QUERYResult, POSTS_QUERYResult } from "@/lib/sanity/types";
 import { cn, formatDate } from "@/lib/utils";
 
-type Params = Promise<{ slug: string }>;
+export async function generateStaticParams() {
+  const posts = await client.fetch<POSTS_QUERYResult>(
+    POSTS_QUERY,
+    {},
+    { perspective: "published" }
+  );
 
-export default async function BlogContent({ params }: { params: Params }) {
-  const post = await client.fetch<POST_QUERYResult>(POST_QUERY, {
-    slug: (await params).slug,
+  return posts.map((post) => ({
+    slug: post?.slug?.current,
+  }));
+}
+
+export default async function BlogContent({
+  params,
+}: {
+  params: Promise<QueryParams>;
+}) {
+  const post = await sanityFetch<POST_QUERYResult>({
+    query: POST_QUERY,
+    params: await params,
   });
 
   return (
