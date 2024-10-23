@@ -30,7 +30,7 @@ export default async function Blog() {
               className="group relative flex flex-col space-y-2"
             >
               <Image
-                src={post.mainImage?.asset?._ref!}
+                src={post.mainImage?.asset?.url!}
                 alt={post.title!}
                 width={804}
                 height={452}

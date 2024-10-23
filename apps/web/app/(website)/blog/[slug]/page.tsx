@@ -50,7 +50,7 @@ export default async function BlogContent({ params }: { params: Params }) {
 
         {post?.mainImage && (
           <Image
-            src={post.mainImage.asset?._ref!}
+            src={post.mainImage.asset?.url!}
             alt={post?.title ?? ""}
             width={720}
             height={405}

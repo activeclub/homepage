@@ -251,40 +251,28 @@ export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: lib/sanity/queries.ts
 // Variable: POSTS_QUERY
-// Query: *[_type == "post" && defined(slug.current)][0...12]{  _id, title, slug, mainImage, description, publishedAt}
+// Query: *[_type == "post" && defined(slug.current)][0...12]{  _id,  title,  slug,  mainImage{    asset->{url}  },  description,  publishedAt}
 export type POSTS_QUERYResult = Array<{
   _id: string;
   title: string | null;
   slug: Slug | null;
   mainImage: {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    _type: "image";
+    asset: {
+      url: string | null;
+    } | null;
   } | null;
   description: string | null;
   publishedAt: string | null;
 }>;
 // Variable: POST_QUERY
-// Query: *[_type == "post" && slug.current == $slug][0]{  title,  slug,  mainImage,  body,  description,  publishedAt,  author->{    slug,    name,    image{      asset->{url}    }  }}
+// Query: *[_type == "post" && slug.current == $slug][0]{  title,  slug,  mainImage{    asset->{url}  },  body,  description,  publishedAt,  author->{    slug,    name,    image{      asset->{url}    }  }}
 export type POST_QUERYResult = {
   title: string | null;
   slug: Slug | null;
   mainImage: {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    _type: "image";
+    asset: {
+      url: string | null;
+    } | null;
   } | null;
   body: BlockContent | null;
   description: string | null;
@@ -304,7 +292,7 @@ export type POST_QUERYResult = {
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[_type == \"post\" && defined(slug.current)][0...12]{\n  _id, title, slug, mainImage, description, publishedAt\n}": POSTS_QUERYResult;
-    "*[_type == \"post\" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage,\n  body,\n  description,\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image{\n      asset->{url}\n    }\n  }\n}": POST_QUERYResult;
+    "*[_type == \"post\" && defined(slug.current)][0...12]{\n  _id,\n  title,\n  slug,\n  mainImage{\n    asset->{url}\n  },\n  description,\n  publishedAt\n}": POSTS_QUERYResult;
+    "*[_type == \"post\" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage{\n    asset->{url}\n  },\n  body,\n  description,\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image{\n      asset->{url}\n    }\n  }\n}": POST_QUERYResult;
   }
 }
