@@ -28,7 +28,7 @@ export default function About() {
         <div className="mx-auto mt-8 w-[400px]">
           <div className="relative flex flex-col items-center gap-2 rounded-md bg-secondary px-4 py-6">
             <Image
-              src=""
+              src="/images/icon.png"
               width={82}
               height={82}
               alt="Active Club"

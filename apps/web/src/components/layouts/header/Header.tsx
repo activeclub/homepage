@@ -23,7 +23,7 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <div className="flex items-center space-x-3">
           <Link href="/" className="flex items-center space-x-3 text-primary">
-            <img src="/logo.png" className="h-6 lg:h-10" />
+            <img src="/images/logo.png" className="h-6 lg:h-10" />
           </Link>
         </div>
         <div className="flex items-center space-x-5 md:space-x-6">

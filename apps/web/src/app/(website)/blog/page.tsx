@@ -5,6 +5,11 @@ import { client } from "@/lib/sanity/client";
 import { POSTS_QUERY } from "@/lib/sanity/queries";
 import { POSTS_QUERYResult } from "@/lib/sanity/types";
 import { urlFor } from "@/lib/sanity/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+};
 
 export default async function Blog() {
   const posts = await client.fetch<POSTS_QUERYResult>(POSTS_QUERY);
