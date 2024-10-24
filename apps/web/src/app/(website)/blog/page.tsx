@@ -6,6 +6,7 @@ import { POSTS_QUERY } from "@/lib/sanity/queries";
 import { POSTS_QUERYResult } from "@/lib/sanity/types";
 import { urlFor } from "@/lib/sanity/image";
 import { Metadata } from "next";
+import { PageHeader } from "@/components/base/page-header";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -16,17 +17,10 @@ export default async function Blog() {
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10 mx-auto px-6 lg:px-10">
-      <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
-        <div className="flex-1 space-y-4">
-          <h1 className="inline-block text-4xl font-bold tracking-tight text-primary lg:text-5xl">
-            Blog
-          </h1>
-          <p className="text-sm lg:text-base text-muted-foreground">
-            アクティ部の活動記録や技術記事を発信していきます
-          </p>
-        </div>
-      </div>
-      <hr className="my-8" />
+      <PageHeader
+        title="Blog"
+        description="アクティ部の活動記録や技術記事を発信していきます"
+      />
 
       {posts.length ? (
         <div className="grid gap-10 sm:grid-cols-2">

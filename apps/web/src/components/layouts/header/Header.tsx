@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { AlignLeft, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Bot, Rss } from "lucide-react";
+import { Bot, Rss, Contact } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 const NAV_LIST = [
   { label: "Blog", path: "/blog", icon: Rss },
   { label: "About", path: "/about", icon: Bot },
+  { label: "Contact", path: "/contact", icon: Contact },
 ];
 
 export function Header() {
