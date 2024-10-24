@@ -1,1 +1,1 @@
-export { ContactForm } from "./ContactForm";
+export { ContactForm, type Schema } from "./ContactForm";

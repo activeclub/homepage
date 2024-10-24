@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -26,8 +25,14 @@ const schema = z.object({
   message: z.string().min(1, { message: "本文を入力してください" }).max(500),
 });
 
-export function ContactForm() {
-  const form = useForm<z.infer<typeof schema>>({
+export type Schema = z.infer<typeof schema>;
+
+type Props = {
+  sendMessage: (values: Schema) => void;
+};
+
+export function ContactForm({ sendMessage }: Props) {
+  const form = useForm<Schema>({
     resolver: zodResolver(schema),
     defaultValues: {
       username: "",
@@ -37,8 +42,8 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof schema>) {
-    alert("実装中です");
+  function onSubmit(values: Schema) {
+    sendMessage(values);
   }
 
   return (
