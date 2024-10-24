@@ -77,7 +77,11 @@ export default async function BlogContent({
             className="my-8 border bg-muted transition-colors"
           />
         )}
-        {post?.body && <PortableText value={post.body} />}
+        {post?.body && (
+          <div className="prose-lg">
+            <PortableText value={post.body} />
+          </div>
+        )}
         <hr className="mt-12" />
         <div className="flex justify-center py-6 lg:py-10">
           <Link
