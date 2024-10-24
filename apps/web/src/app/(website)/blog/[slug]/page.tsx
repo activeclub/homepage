@@ -34,7 +34,7 @@ export default async function BlogContent({
   });
 
   return (
-    <article className="container relative max-w-3xl py-6 lg:py-10 mx-auto">
+    <article className="container relative max-w-3xl py-6 lg:py-10 mx-auto px-6 lg:px-10">
       <div>
         {post?.publishedAt && (
           <time
@@ -78,7 +78,7 @@ export default async function BlogContent({
           />
         )}
         {post?.body && (
-          <div className="prose-lg">
+          <div className="prose-base lg:prose-lg">
             <PortableText value={post.body} />
           </div>
         )}

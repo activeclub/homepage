@@ -15,13 +15,13 @@ export default async function Blog() {
   const posts = await client.fetch<POSTS_QUERYResult>(POSTS_QUERY);
 
   return (
-    <div className="container max-w-4xl py-6 lg:py-10 mx-auto">
+    <div className="container max-w-4xl py-6 lg:py-10 mx-auto px-6 lg:px-10">
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-y-4">
-          <h1 className="inline-block text-4xl font-bold leading-3 tracking-tight text-primary lg:text-5xl">
+          <h1 className="inline-block text-4xl font-bold tracking-tight text-primary lg:text-5xl">
             Blog
           </h1>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-sm lg:text-base text-muted-foreground">
             アクティ部の活動記録や技術記事を発信していきます
           </p>
         </div>
