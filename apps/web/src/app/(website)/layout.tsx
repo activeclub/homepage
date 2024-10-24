@@ -1,10 +1,13 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
+import { draftMode } from "next/headers";
+import { VisualEditing } from "next-sanity";
+
 import "../globals.css";
 import { Header } from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
 import { ThemeProvider } from "@/components/theme-provider";
-import { draftMode } from "next/headers";
-import { VisualEditing } from "next-sanity";
+import { GA_ID } from "@/lib/google-analytics/env";
 
 export const metadata: Metadata = {
   title: "Active Club | Play with Technology",
@@ -45,6 +48,7 @@ export default async function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
+      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }
