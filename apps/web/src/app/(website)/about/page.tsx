@@ -32,7 +32,7 @@ export default function About() {
               alt="Active Club"
               className="absolute -top-8 mb-4 rounded-full border bg-primary h-[82px] object-scale-down"
             />
-            <h3 className="mt-8 text-lg font-semibold">Active Club</h3>
+            <h3 className="mt-8 text-lg font-semibold">アクティ部</h3>
             <p className="text-center text-sm text-muted-foreground">
               Play with Technology
             </p>
