@@ -22,7 +22,7 @@ export default async function Blog() {
             Blog
           </h1>
           <p className="text-xl text-muted-foreground">
-            A blog using velite. Posts are written in MDX
+            アクティ部の活動記録や技術記事を発信していきます
           </p>
         </div>
       </div>
