@@ -18,9 +18,11 @@ export async function generateStaticParams() {
     { perspective: "published" }
   );
 
-  return posts.map((post) => ({
-    slug: post?.slug?.current,
-  }));
+  return posts
+    .filter((post) => !post.slug?.current?.startsWith("link:"))
+    .map((post) => ({
+      slug: post?.slug?.current,
+    }));
 }
 
 export default async function BlogContent({

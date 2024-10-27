@@ -29,13 +29,16 @@ export default async function Blog() {
               key={post.slug?.current!}
               className="group relative flex flex-col space-y-2"
             >
-              <Image
-                src={urlFor(post.mainImage?.asset!)?.url()!}
-                alt={post.title!}
-                width={804}
-                height={452}
-                className="border bg-muted transition-colors"
-              />
+              {/* TODO: デフォルトのヘッダー画像を用意する */}
+              {post.mainImage?.asset && (
+                <Image
+                  src={urlFor(post.mainImage?.asset!)?.url()!}
+                  alt={post.title!}
+                  width={804}
+                  height={452}
+                  className="border bg-muted transition-colors"
+                />
+              )}
               <h2 className="text-2xl font-extrabold text-primary">
                 {post.title}
               </h2>
@@ -45,7 +48,19 @@ export default async function Blog() {
                 </p>
               )}
               <Link
-                href={`/blog/${post.slug?.current!}`}
+                href={
+                  post.slug?.current?.startsWith("link:")
+                    ? post.slug.current.slice(5)
+                    : `/blog/${post.slug?.current}`
+                }
+                target={
+                  post.slug?.current?.startsWith("link:") ? "_blank" : undefined
+                }
+                rel={
+                  post.slug?.current?.startsWith("link:")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
                 className="absolute inset-0"
               >
                 <span className="sr-only">View Article</span>
