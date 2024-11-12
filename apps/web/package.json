@@ -21,7 +21,7 @@
     "@repo/ui": "workspace:*",
     "@sanity/client": "6.22.4",
     "@sanity/image-url": "1.1.0",
-    "@sanity/preview-url-secret": "2.0.2",
+    "@sanity/preview-url-secret": "2.0.3",
     "@sanity/vision": "3.63.0",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
