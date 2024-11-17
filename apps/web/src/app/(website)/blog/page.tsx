@@ -33,7 +33,7 @@ export default async function Blog() {
               {post.mainImage?.asset && (
                 <Image
                   src={urlFor(post.mainImage?.asset!)?.url()!}
-                  alt={post.title!}
+                  alt={post.title ?? ""}
                   width={804}
                   height={452}
                   className="border bg-muted transition-colors"

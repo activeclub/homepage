@@ -51,27 +51,31 @@ export default async function BlogContent({
           {post?.title}
         </h1>
 
-        {post?.author && (
-          <div className="mt-4 flex space-x-4">
+        <div className="mt-4 flex space-x-4">
+          {post?.author?.image?.asset && (
             <Image
               src={urlFor(post.author.image?.asset!)?.url()!}
-              alt={post.author.name!}
+              alt={post.author.name ?? ""}
               width={42}
               height={42}
               className="rounded-full bg-white"
             />
-            <div className="flex-1 text-left leading-tight">
+          )}
+          <div className="flex-1 text-left leading-tight">
+            {post?.author?.name && (
               <p className="font-medium">{post.author.name}</p>
+            )}
+            {post?.author?.slug?.current && (
               <p className="text-[12px] text-muted-foreground">
                 @{post.author.slug?.current}
               </p>
-            </div>
+            )}
           </div>
-        )}
+        </div>
 
-        {post?.mainImage && (
+        {post?.mainImage?.asset && (
           <Image
-            src={urlFor(post.mainImage.asset!)?.url()!}
+            src={urlFor(post.mainImage.asset)?.url()!}
             alt={post?.title ?? ""}
             width={720}
             height={405}
