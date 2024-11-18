@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { Post, Slug } from "./sanity/types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -20,4 +21,8 @@ export function assertValue<T>(v: T | undefined, errorMessage: string): T {
   }
 
   return v;
+}
+
+export function isExternalPost(post: { slug: Slug | null }) {
+  return post.slug?.current?.startsWith("link:");
 }

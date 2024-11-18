@@ -9,7 +9,7 @@ import { client, sanityFetch } from "@/lib/sanity/client";
 import { urlFor } from "@/lib/sanity/image";
 import { POST_QUERY, POSTS_QUERY } from "@/lib/sanity/queries";
 import { POST_QUERYResult, POSTS_QUERYResult } from "@/lib/sanity/types";
-import { cn, formatDate } from "@/lib/utils";
+import { cn, formatDate, isExternalPost } from "@/lib/utils";
 
 export async function generateStaticParams() {
   const posts = await client.fetch<POSTS_QUERYResult>(
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
   );
 
   return posts
-    .filter((post) => !post.slug?.current?.startsWith("link:"))
+    .filter((post) => !isExternalPost(post))
     .map((post) => ({
       slug: post?.slug?.current,
     }));

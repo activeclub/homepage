@@ -1,4 +1,4 @@
-import { formatDate } from "@/lib/utils";
+import { formatDate, isExternalPost } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { client } from "@/lib/sanity/client";
@@ -49,18 +49,12 @@ export default async function Blog() {
               )}
               <Link
                 href={
-                  post.slug?.current?.startsWith("link:")
-                    ? post.slug.current.slice(5)
+                  isExternalPost(post)
+                    ? post.slug?.current?.slice(5)!
                     : `/blog/${post.slug?.current}`
                 }
-                target={
-                  post.slug?.current?.startsWith("link:") ? "_blank" : undefined
-                }
-                rel={
-                  post.slug?.current?.startsWith("link:")
-                    ? "noopener noreferrer"
-                    : undefined
-                }
+                target={isExternalPost(post) ? "_blank" : undefined}
+                rel={isExternalPost(post) ? "noopener noreferrer" : undefined}
                 className="absolute inset-0"
               >
                 <span className="sr-only">View Article</span>
