@@ -10,6 +10,7 @@ import { getImageDimensions, urlFor } from "@/lib/sanity/image";
 import { POST_QUERY, POSTS_QUERY } from "@/lib/sanity/queries";
 import { POST_QUERYResult, POSTS_QUERYResult } from "@/lib/sanity/types";
 import { cn, formatDate, isExternalPost } from "@/lib/utils";
+import { YouTubePlayer } from "@/components/page/post";
 
 export async function generateStaticParams() {
   const posts = await client.fetch<POSTS_QUERYResult>(
@@ -90,6 +91,7 @@ export default async function BlogContent({
               components={{
                 types: {
                   image: ImageComponent,
+                  youtube: YouTubeComponent,
                 },
                 marks: {
                   link: LinkComponent,
@@ -152,5 +154,19 @@ function LinkComponent({ value, children }: any) {
     >
       {children}
     </Link>
+  );
+}
+
+function YouTubeComponent({ value }: any) {
+  const { url } = value;
+  return (
+    <div className="relative pt-[56.25%]">
+      <YouTubePlayer
+        url={url}
+        className="absolute top-0 left-0"
+        width="100%"
+        height="100%"
+      />
+    </div>
   );
 }

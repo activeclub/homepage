@@ -68,6 +68,11 @@ export type Geopoint = {
   alt?: number;
 };
 
+export type Youtube = {
+  _type: "youtube";
+  url?: string;
+};
+
 export type BlockContent = Array<{
   children?: Array<{
     marks?: Array<string>;
@@ -96,7 +101,9 @@ export type BlockContent = Array<{
   crop?: SanityImageCrop;
   _type: "image";
   _key: string;
-}>;
+} | {
+  _key: string;
+} & Youtube>;
 
 export type Category = {
   _id: string;
@@ -246,7 +253,7 @@ export type Slug = {
   source?: string;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | BlockContent | Category | Post | Author | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Youtube | BlockContent | Category | Post | Author | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: src/lib/sanity/queries.ts
 // Variable: POSTS_QUERY
