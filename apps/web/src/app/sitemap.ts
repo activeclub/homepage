@@ -18,10 +18,10 @@ export default async function sitemap({
   if (id === "_index") {
     return [
       {
-        url: `${BASE_URL}/sitemaps/static.xml`,
+        url: `${BASE_URL}/sitemap/static.xml`,
       },
       {
-        url: `${BASE_URL}/sitemaps/post.xml`,
+        url: `${BASE_URL}/sitemap/post.xml`,
       },
     ];
   } else if (id === "static") {
