@@ -309,6 +309,12 @@ export type POST_QUERYResult = {
     } | null;
   } | null;
 } | null;
+// Variable: SITEMAP_POSTS_QUERY
+// Query: *[_type == "post" && defined(slug.current)]{  _updatedAt,  slug}
+export type SITEMAP_POSTS_QUERYResult = Array<{
+  _updatedAt: string;
+  slug: Slug | null;
+}>;
 
 // Query TypeMap
 import "@sanity/client";
@@ -316,5 +322,6 @@ declare module "@sanity/client" {
   interface SanityQueries {
     "*[_type == \"post\" && defined(slug.current)][0...12]{\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}": POSTS_QUERYResult;
     "*[_type == \"post\" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage,\n  body,\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image\n  }\n}": POST_QUERYResult;
+    "*[_type == \"post\" && defined(slug.current)]{\n  _updatedAt,\n  slug\n}": SITEMAP_POSTS_QUERYResult;
   }
 }

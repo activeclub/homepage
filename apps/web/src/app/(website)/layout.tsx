@@ -8,12 +8,13 @@ import { Header } from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GA_ID } from "@/lib/google-analytics/env";
+import { BASE_URL } from "@/constants";
 
 export const metadata: Metadata = {
   title: "Active Club | Play with Technology",
   description:
     "アクティ部はテクノロジーを使ってさまざまなものを形作る技術者の集まりです。",
-  metadataBase: new URL("https://activeclub.jp"),
+  metadataBase: new URL(BASE_URL),
 };
 
 export default async function RootLayout({

@@ -22,3 +22,9 @@ export const POST_QUERY =
     image
   }
 }`);
+
+export const SITEMAP_POSTS_QUERY =
+  defineQuery(`*[_type == "post" && defined(slug.current)]{
+  _updatedAt,
+  slug
+}`);
