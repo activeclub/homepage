@@ -1,5 +1,6 @@
 import { PortableText } from "@portabletext/react";
 import { ChevronLeft } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { QueryParams } from "next-sanity";
@@ -11,6 +12,21 @@ import { POST_QUERY, POSTS_QUERY } from "@/lib/sanity/queries";
 import { POST_QUERYResult, POSTS_QUERYResult } from "@/lib/sanity/types";
 import { cn, formatDate, isExternalPost } from "@/lib/utils";
 import { YouTubePlayer } from "@/components/page/post";
+
+type Props = {
+  params: Promise<QueryParams>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const post = await sanityFetch<POST_QUERYResult>({
+    query: POST_QUERY,
+    params: await params,
+  });
+
+  return {
+    title: post?.title,
+  };
+}
 
 export async function generateStaticParams() {
   const posts = await client.fetch<POSTS_QUERYResult>(
@@ -26,11 +42,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export default async function BlogContent({
-  params,
-}: {
-  params: Promise<QueryParams>;
-}) {
+export default async function BlogContent({ params }: Props) {
   const post = await sanityFetch<POST_QUERYResult>({
     query: POST_QUERY,
     params: await params,
