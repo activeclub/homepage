@@ -6,7 +6,7 @@ import { QueryParams } from "next-sanity";
 
 import { buttonVariants } from "@/components/ui/button";
 import { client, sanityFetch } from "@/lib/sanity/client";
-import { urlFor } from "@/lib/sanity/image";
+import { getImageDimensions, urlFor } from "@/lib/sanity/image";
 import { POST_QUERY, POSTS_QUERY } from "@/lib/sanity/queries";
 import { POST_QUERYResult, POSTS_QUERYResult } from "@/lib/sanity/types";
 import { cn, formatDate, isExternalPost } from "@/lib/utils";
@@ -85,7 +85,21 @@ export default async function BlogContent({
         )}
         {post?.body && (
           <div className="prose-base lg:prose-lg">
-            <PortableText value={post.body} />
+            <PortableText
+              value={post.body}
+              components={{
+                types: {
+                  image: ImageComponent,
+                },
+                marks: {
+                  link: LinkComponent,
+                },
+                list: {
+                  bullet: ({ children }) => <ul className="list-disc">{children}</ul>,
+                  number: ({ children }) => <ol className="list-decimal">{children}</ol>,
+                },
+              }}
+            />
           </div>
         )}
         <hr className="mt-12" />
@@ -100,5 +114,32 @@ export default async function BlogContent({
         </div>
       </div>
     </article>
+  );
+}
+
+function ImageComponent({ value }: any) {
+  const { width, height } = getImageDimensions(value);
+  return (
+    <Image
+      src={urlFor(value).url()}
+      alt={value.altText || " "}
+      loading="lazy"
+      width={width}
+      height={height}
+    />
+  );
+}
+
+function LinkComponent({ value, children }: any) {
+  const isExternal = value?.href?.startsWith("http");
+  return (
+    <Link
+      href={value?.href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noindex nofollow" : undefined}
+      className={cn({ underline: isExternal })}
+    >
+      {children}
+    </Link>
   );
 }

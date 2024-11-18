@@ -1,4 +1,5 @@
 import createImageUrlBuilder from "@sanity/image-url";
+import { getImageDimensions } from "@sanity/asset-utils";
 import type { Image } from "sanity";
 
 import { dataset, projectId } from "./env";
@@ -11,3 +12,5 @@ const builder = createImageUrlBuilder({
 export function urlFor(source: Image) {
   return builder.image(source);
 }
+
+export { getImageDimensions };

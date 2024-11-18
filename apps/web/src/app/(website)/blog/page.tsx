@@ -29,7 +29,6 @@ export default async function Blog() {
               key={post.slug?.current!}
               className="group relative flex flex-col space-y-2"
             >
-              {/* TODO: デフォルトのヘッダー画像を用意する */}
               {post.mainImage?.asset && (
                 <Image
                   src={urlFor(post.mainImage?.asset!)?.url()!}
