@@ -1,5 +1,5 @@
 "use client";
 
-import ReactPlayer from "react-player";
+import YouTubePlayer from "react-player/youtube";
 
-export { ReactPlayer as YouTubePlayer };
+export { YouTubePlayer };
