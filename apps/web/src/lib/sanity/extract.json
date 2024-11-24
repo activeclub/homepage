@@ -447,6 +447,10 @@
                     {
                       "type": "string",
                       "value": "bullet"
+                    },
+                    {
+                      "type": "string",
+                      "value": "number"
                     }
                   ]
                 },
