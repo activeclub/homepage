@@ -97,7 +97,7 @@ export default async function BlogContent({ params }: Props) {
           />
         )}
         {post?.body && (
-          <div className="prose-base lg:prose-lg">
+          <div className="prose-base">
             <PortableText
               value={post.body}
               components={{
@@ -117,9 +117,27 @@ export default async function BlogContent({ params }: Props) {
                   ),
                 },
                 block: {
+                  h1: ({ children }) => (
+                    <h1 className="text-[1.7em] mb-[1.1rem] pb-[.2em] mt-[2.3em] first:mt-0 font-bold leading-[1.5] border-b-[1px] border-gray-200 dark:border-gray-400">{children}</h1>
+                  ),
+                  h2: ({ children }) => (
+                    <h2 className="text-[1.5em] mb-[1.1rem] pb-[.3em] mt-[2.3em] first:mt-0 font-bold leading-[1.5] border-b-[1px] border-gray-200 dark:border-gray-400">{children}</h2>
+                  ),
+                  h3: ({ children }) => (
+                    <h3 className="text-[1.3em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">{children}</h3>
+                  ),
+                  h4: ({ children }) => (
+                    <h4 className="text-[1.1em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">{children}</h4>
+                  ),
+                  h5: ({ children }) => (
+                    <h5 className="text-[1em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">{children}</h5>
+                  ),
+                  h6: ({ children }) => (
+                    <h6 className="text-[.9em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">{children}</h6>
+                  ),
                   blockquote: ({ children }) => (
-                    <blockquote className="border-s-4 border-gray-300 dark:border-gray-500">
-                      <p>{children}</p>
+                    <blockquote className="text-gray-400 text-[.97em] my-[1.4rem] mx-0 py-[2px] pr-0 pl-[.7em] border-s-[3px] border-gray-500 dark:border-gray-700">
+                      <p className="my-[1rem] first:my-0 mx-0">{children}</p>
                     </blockquote>
                   ),
                 },

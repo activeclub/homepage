@@ -24,10 +24,12 @@ export default defineType({
       // use your content.
       styles: [
         { title: "Normal", value: "normal" },
-        { title: "H1", value: "h1" },
-        { title: "H2", value: "h2" },
-        { title: "H3", value: "h3" },
-        { title: "H4", value: "h4" },
+        { title: "Header1", value: "h1" },
+        { title: "Header2", value: "h2" },
+        { title: "Header3", value: "h3" },
+        { title: "Header4", value: "h4" },
+        { title: "Header5", value: "h5" },
+        { title: "Header6", value: "h6" },
         { title: "Quote", value: "blockquote" },
       ],
       lists: [
