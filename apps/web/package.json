@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predev": "pnpm run typegen",
-    "dev": "next dev --turbo & npx next-video sync -w",
+    "dev": "next dev --turbo",
     "prebuild": "pnpm run typegen",
     "build": "next build",
     "start": "next start",
