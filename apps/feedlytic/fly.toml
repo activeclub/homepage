@@ -16,3 +16,8 @@ primary_region = 'nrt'
 
 [[vm]]
   size = 'shared-cpu-1x'
+
+[env]
+  TZ = 'Asia/Tokyo'
+  CRON_MIN = '2,32'
+  LISTEN = '0.0.0.0:8080'

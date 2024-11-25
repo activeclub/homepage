@@ -3,7 +3,8 @@ volumes:
 
 services:
   freshrss:
-    image: freshrss/freshrss:alpine
+    build:
+      dockerfile: Dockerfile
     container_name: freshrss
     hostname: freshrss
     restart: unless-stopped
