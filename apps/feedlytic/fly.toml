@@ -21,3 +21,7 @@ primary_region = 'nrt'
   TZ = 'Asia/Tokyo'
   CRON_MIN = '2,32'
   LISTEN = '0.0.0.0:8080'
+
+[mounts]
+  source = "feedlytic_data"
+  destination = "/var/www/FreshRSS/data"
