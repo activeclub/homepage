@@ -10,6 +10,9 @@ services:
     dockerfilePath: ./apps/feedlytic/Dockerfile
     dockerContext: ./apps/feedlytic
     envVars:
+      # for port binding
+      - key: PORT
+        value: 8080
       - key: TZ
         value: Asia/Tokyo
       - key: PUBLISHED_PORT
