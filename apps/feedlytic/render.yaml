@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: feedlytic
+    runtime: docker
+    repo: https://github.com/activeclub/homepage
+    region: oregon
+    plan: free
+    branch: main
+    rootDir: ./
+    dockerfilePath: ./Dockerfile
+    dockerContext: ./
+    envVars:
+      - key: TZ
+        value: Asia/Tokyo
+      - key: PUBLISHED_PORT
+        value: 8080
+      - key: DB_HOST
+        fromDatabase:
+          name: feedlytic-db
+          property: host
+      - key: DB_BASE
+        fromDatabase:
+          name: feedlytic-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: feedlytic-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: feedlytic-db
+          property: password
+
+databases:
+  - name: feedlytic-db
