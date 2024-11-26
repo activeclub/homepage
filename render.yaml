@@ -7,8 +7,8 @@ services:
     plan: free
     branch: main
     rootDir: ./
-    dockerfilePath: ./Dockerfile
-    dockerContext: ./
+    dockerfilePath: ./apps/feedlytic/Dockerfile
+    dockerContext: ./apps/feedlytic
     envVars:
       - key: TZ
         value: Asia/Tokyo
