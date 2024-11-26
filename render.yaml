@@ -4,11 +4,15 @@ services:
     runtime: docker
     repo: https://github.com/activeclub/homepage
     region: singapore
-    plan: free
+    plan: starter
     branch: main
     rootDir: ./
     dockerfilePath: ./apps/feedlytic/Dockerfile
     dockerContext: ./apps/feedlytic
+    disk:
+      name: feedlytic-data
+      mountPath: /var/www/FreshRSS/data
+      sizeGB: 10
     envVars:
       # for port binding
       - key: PORT
