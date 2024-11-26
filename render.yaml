@@ -3,7 +3,7 @@ services:
     name: feedlytic
     runtime: docker
     repo: https://github.com/activeclub/homepage
-    region: oregon
+    region: singapore
     plan: free
     branch: main
     rootDir: ./
@@ -33,3 +33,5 @@ services:
 
 databases:
   - name: feedlytic-db
+    region: singapore
+    plan: basic-256mb
