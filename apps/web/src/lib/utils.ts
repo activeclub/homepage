@@ -15,14 +15,6 @@ export function formatDate(input: string | number) {
   });
 }
 
-export function assertValue<T>(v: T | undefined, errorMessage: string): T {
-  if (v === undefined) {
-    throw new Error(errorMessage);
-  }
-
-  return v;
-}
-
 export function isExternalPost(post: { slug: Slug | null }) {
   return post.slug?.current?.startsWith("link:");
 }
