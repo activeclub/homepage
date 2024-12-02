@@ -3,10 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { SOCIALS } from "@/constants";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function Index() {
-  const router = useRouter();
   return (
     <section className="flex-grow flex flex-col items-center justify-center text-center py-16 lg:py-32 px-2 lg:px-0">
       <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">
