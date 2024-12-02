@@ -1,81 +1,68 @@
-# Turborepo starter
+# Active Club Official Website
 
-This is an official starter Turborepo.
+![Active Club](https://your-image-link-here.com)
 
-## Using this example
+## Overview
 
-Run the following command:
+Welcome to the official website repository of Active Club!
 
-```sh
-npx create-turbo@latest
-```
+This repository hosts the code and resources for the Active Club website, which serves as a platform to showcase our mission, projects, and content.
 
-## What's inside?
+## Getting Started
 
-This Turborepo includes the following packages/apps:
+Follow these steps to set up the project locally.
 
-### Apps and Packages
+### Prerequisites
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- Node.js (recommended v22 or later)
+- pnpm
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Setup Instructions
 
-### Utilities
+1. Clone this repository.
 
-This Turborepo has some additional tools already setup for you:
+   ```bash
+   git clone https://github.com/activeclub/homepage.git
+   cd homepage
+   ```
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+2. Install dependencies.
 
-### Build
+   ```bash
+   pnpm install
+   ```
 
-To build all apps and packages, run the following command:
+3. Start the development server.
 
-```
-cd my-turborepo
-pnpm build
-```
+   ```bash
+   pnpm dev
+   ```
 
-### Develop
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To develop all apps and packages, run the following command:
+## Technologies Used
 
-```
-cd my-turborepo
-pnpm dev
-```
+- **Framework**: Next.js
+- **CSS Library**: Tailwind CSS
+- **Deployment**: Vercel
 
-### Remote Caching
+## Contributing
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+We welcome contributions to improve the Active Club website!
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+1. Submit an issue to propose a feature or report a bug.  
+2. Review the contribution guidelines before submitting a pull request.
 
-```
-cd my-turborepo
-npx turbo login
-```
+## License
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+This project is licensed under the [MIT License](LICENSE). See the `LICENSE` file for more details.
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+## Contact
 
-```
-npx turbo link
-```
+- **Official Website**: [activeclub.jp](https://activeclub.jp)
+- **YouTube**: [Active Club Channel](https://www.youtube.com/@ActiveClub2024)
+- **Twitter**: [@activeclub](https://twitter.com/active_club_)
 
-## Useful Links
+## Notes
 
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+The website is currently under development. Some features may be incomplete. Follow this repository for updates and announcements.
