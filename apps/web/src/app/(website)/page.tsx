@@ -8,11 +8,11 @@ import { useRouter } from "next/navigation";
 export default function Index() {
   const router = useRouter();
   return (
-    <section className="flex-grow flex flex-col items-center justify-center text-center py-16 lg:py-32">
+    <section className="flex-grow flex flex-col items-center justify-center text-center py-16 lg:py-32 px-2 lg:px-0">
       <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">
         Play with Technology
       </h2>
-      <div className="flex space-x-4 mb-8">
+      <div className="flex space-x-4 mb-12 lg:mb-16">
         {SOCIALS.map((social) => (
           <Link
             key={social.label}
@@ -25,7 +25,21 @@ export default function Index() {
           </Link>
         ))}
       </div>
-      <Button onClick={() => router.push("/blog")}>ブログを読む</Button>
+      <section className="w-full mx-auto text-center mb-12">
+        <h3 className="text-2xl font-semibold mb-4">ニュースレターを配信中</h3>
+        <p className="mb-4">
+          ものづくりに関連する最新ニュースやビジネス情報をお届けします。
+        </p>
+        <Button asChild>
+          <Link
+            href="https://activeclub.substack.com/"
+            target="_blank"
+            rel="noreferer noopener"
+          >
+            購読する
+          </Link>
+        </Button>
+      </section>
     </section>
   );
 }
