@@ -1,5 +1,5 @@
-import { defineType, defineField } from "sanity";
 import { PlayIcon } from "lucide-react";
+import { defineField, defineType } from "sanity";
 import { YouTubePreview } from "./YouTubePreview";
 
 export const youtube = defineType({

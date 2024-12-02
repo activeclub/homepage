@@ -5,9 +5,9 @@ import { defineConfig } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 
-import { schemaTypes } from "@/lib/sanity/schema";
 import { dataset, projectId } from "@/lib/sanity/env";
 import { resolve } from "@/lib/sanity/presentation/resolve";
+import { schemaTypes } from "@/lib/sanity/schema";
 
 export default defineConfig({
   name: "default",

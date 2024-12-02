@@ -1,5 +1,5 @@
-import type { PreviewProps } from "sanity";
 import YouTubePlayer from "react-player/youtube";
+import type { PreviewProps } from "sanity";
 
 export function YouTubePreview(props: PreviewProps) {
   const { title: url } = props;

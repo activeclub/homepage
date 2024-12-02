@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import Link from "next/link";
-import { AlignLeft, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Bot, FileText, MessageCircleQuestion } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AlignLeft, X } from "lucide-react";
+import { Bot, FileText, MessageCircleQuestion } from "lucide-react";
+import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
+import React, { useState } from "react";
 
 const NAV_LIST = [
   { label: "Blog", path: "/blog", icon: FileText },
@@ -23,7 +23,7 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <div className="flex items-center space-x-3">
           <Link href="/" className="flex items-center space-x-3 text-primary">
-            <img src="/images/logo.png" className="h-6 lg:h-10" />
+            <img src="/images/logo.png" className="h-6 lg:h-10" alt="Logo" />
           </Link>
         </div>
         <div className="flex items-center space-x-5 md:space-x-6">
@@ -36,7 +36,7 @@ export function Header() {
                   " font-normal hover:text-primary transition-colors flex items-center",
                   `/${segment}` === item.path
                     ? "text-primary"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground",
                 )}
               >
                 <item.icon className="mr-2 size-4" />
@@ -71,7 +71,7 @@ export function Header() {
                   "flex items-center transition-colors hover:text-primary",
                   `/${segment}` === item.path
                     ? "text-primary"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground",
                 )}
                 onClick={() => setIsMobileOpen(false)}
               >

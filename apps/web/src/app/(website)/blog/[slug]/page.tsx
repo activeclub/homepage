@@ -1,17 +1,17 @@
 import { PortableText } from "@portabletext/react";
 import { ChevronLeft } from "lucide-react";
 import type { Metadata } from "next";
+import type { QueryParams } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
-import { QueryParams } from "next-sanity";
 
+import { YouTubePlayer } from "@/components/page/post";
 import { buttonVariants } from "@/components/ui/button";
 import { client, sanityFetch } from "@/lib/sanity/client";
 import { getImageDimensions, urlFor } from "@/lib/sanity/image";
-import { POST_QUERY, POSTS_QUERY } from "@/lib/sanity/queries";
-import { POST_QUERYResult, POSTS_QUERYResult } from "@/lib/sanity/types";
+import { POSTS_QUERY, POST_QUERY } from "@/lib/sanity/queries";
+import type { POSTS_QUERYResult, POST_QUERYResult } from "@/lib/sanity/types";
 import { cn, formatDate, isExternalPost } from "@/lib/utils";
-import { YouTubePlayer } from "@/components/page/post";
 
 type Props = {
   params: Promise<QueryParams>;
@@ -32,7 +32,7 @@ export async function generateStaticParams() {
   const posts = await client.fetch<POSTS_QUERYResult>(
     POSTS_QUERY,
     {},
-    { perspective: "published" }
+    { perspective: "published" },
   );
 
   return posts
@@ -67,7 +67,7 @@ export default async function BlogContent({ params }: Props) {
         <div className="mt-4 flex space-x-4">
           {post?.author?.image?.asset && (
             <Image
-              src={urlFor(post.author.image?.asset!)?.url()!}
+              src={urlFor(post.author.image?.asset)?.url() ?? ""}
               alt={post.author.name ?? ""}
               width={42}
               height={42}
@@ -88,7 +88,7 @@ export default async function BlogContent({ params }: Props) {
 
         {post?.mainImage?.asset && (
           <Image
-            src={urlFor(post.mainImage.asset)?.url()!}
+            src={urlFor(post.mainImage.asset)?.url() ?? ""}
             alt={post?.title ?? ""}
             width={720}
             height={405}
@@ -118,22 +118,34 @@ export default async function BlogContent({ params }: Props) {
                 },
                 block: {
                   h1: ({ children }) => (
-                    <h1 className="text-[1.7em] mb-[1.1rem] pb-[.2em] mt-[2.3em] first:mt-0 font-bold leading-[1.5] border-b-[1px] border-gray-200 dark:border-gray-400">{children}</h1>
+                    <h1 className="text-[1.7em] mb-[1.1rem] pb-[.2em] mt-[2.3em] first:mt-0 font-bold leading-[1.5] border-b-[1px] border-gray-200 dark:border-gray-400">
+                      {children}
+                    </h1>
                   ),
                   h2: ({ children }) => (
-                    <h2 className="text-[1.5em] mb-[1.1rem] pb-[.3em] mt-[2.3em] first:mt-0 font-bold leading-[1.5] border-b-[1px] border-gray-200 dark:border-gray-400">{children}</h2>
+                    <h2 className="text-[1.5em] mb-[1.1rem] pb-[.3em] mt-[2.3em] first:mt-0 font-bold leading-[1.5] border-b-[1px] border-gray-200 dark:border-gray-400">
+                      {children}
+                    </h2>
                   ),
                   h3: ({ children }) => (
-                    <h3 className="text-[1.3em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">{children}</h3>
+                    <h3 className="text-[1.3em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
+                      {children}
+                    </h3>
                   ),
                   h4: ({ children }) => (
-                    <h4 className="text-[1.1em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">{children}</h4>
+                    <h4 className="text-[1.1em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
+                      {children}
+                    </h4>
                   ),
                   h5: ({ children }) => (
-                    <h5 className="text-[1em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">{children}</h5>
+                    <h5 className="text-[1em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
+                      {children}
+                    </h5>
                   ),
                   h6: ({ children }) => (
-                    <h6 className="text-[.9em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">{children}</h6>
+                    <h6 className="text-[.9em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
+                      {children}
+                    </h6>
                   ),
                   blockquote: ({ children }) => (
                     <blockquote className="text-gray-400 text-[.97em] my-[1.4rem] mx-0 py-[2px] pr-0 pl-[.7em] border-s-[3px] border-gray-500 dark:border-gray-700">
@@ -160,11 +172,12 @@ export default async function BlogContent({ params }: Props) {
   );
 }
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 function ImageComponent({ value }: any) {
   const { width, height } = getImageDimensions(value);
   return (
     <Image
-      src={urlFor(value).url()}
+      src={urlFor(value)?.url() ?? ""}
       alt={value.altText || " "}
       loading="lazy"
       width={width}
@@ -173,6 +186,7 @@ function ImageComponent({ value }: any) {
   );
 }
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 function LinkComponent({ value, children }: any) {
   const isExternal = value?.href?.startsWith("http");
   return (
@@ -187,6 +201,7 @@ function LinkComponent({ value, children }: any) {
   );
 }
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 function YouTubeComponent({ value }: any) {
   const { url } = value;
   return (

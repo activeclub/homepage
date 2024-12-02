@@ -1,14 +1,14 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { draftMode } from "next/headers";
 import { VisualEditing } from "next-sanity";
+import { draftMode } from "next/headers";
 
 import "../globals.css";
-import { Header } from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
+import { Header } from "@/components/layouts/header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { GA_ID } from "@/lib/google-analytics/env";
 import { BASE_URL } from "@/constants";
+import { GA_ID } from "@/lib/google-analytics/env";
 
 export const metadata: Metadata = {
   title: "Active Club | Play with Technology",

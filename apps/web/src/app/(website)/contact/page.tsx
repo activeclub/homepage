@@ -1,10 +1,10 @@
-import { Metadata } from "next";
 import { PageHeader } from "@/components/base/page-header";
 import {
   ContactForm,
   type Schema as ContactFormSchema,
 } from "@/components/page/contact";
 import { CHANNEL_ID, sendMessage } from "@/lib/discord/api";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -16,14 +16,12 @@ export default function Contact() {
 
     await sendMessage(
       CHANNEL_ID,
-      "ホームページからお問い合わせがありました\n\nお名前: " +
-        values.username +
-        "\nメールアドレス: " +
-        values.email +
-        "\n件名: " +
-        values.subject +
-        "\n本文: " +
-        values.message
+      `ホームページからお問い合わせがありました
+
+お名前: ${values.username}
+メールアドレス: ${values.email}
+件名: ${values.subject}
+本文: ${values.message}`,
     );
   };
 

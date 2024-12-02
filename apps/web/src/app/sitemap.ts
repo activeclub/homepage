@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { BASE_URL } from "@/constants";
 import { client } from "@/lib/sanity/client";
 import { SITEMAP_POSTS_QUERY } from "@/lib/sanity/queries";
-import { SITEMAP_POSTS_QUERYResult } from "@/lib/sanity/types";
+import type { SITEMAP_POSTS_QUERYResult } from "@/lib/sanity/types";
 import { isExternalPost } from "@/lib/utils";
 
 export async function generateSitemaps() {
@@ -24,7 +24,8 @@ export default async function sitemap({
         url: `${BASE_URL}/sitemap/post.xml`,
       },
     ];
-  } else if (id === "static") {
+  }
+  if (id === "static") {
     return [
       {
         url: `${BASE_URL}`,
@@ -42,7 +43,8 @@ export default async function sitemap({
         changeFrequency: "monthly",
       },
     ];
-  } else if (id === "post") {
+  }
+  if (id === "post") {
     const posts =
       await client.fetch<SITEMAP_POSTS_QUERYResult>(SITEMAP_POSTS_QUERY);
 

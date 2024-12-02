@@ -12,26 +12,24 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const logoSrc = await fetch(
-    new URL("../../../public/images/logo.png", import.meta.url)
+    new URL("../../../public/images/logo.png", import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
-    (
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#000",
-          height: "100%",
-          width: "100%",
-        }}
-      >
-        <img src={logoSrc as never as string} height="140" />
-      </div>
-    ),
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#000",
+        height: "100%",
+        width: "100%",
+      }}
+    >
+      <img src={logoSrc as never as string} height="140" alt="" />
+    </div>,
     {
       ...size,
-    }
+    },
   );
 }

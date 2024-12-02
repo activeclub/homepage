@@ -1,6 +1,6 @@
 import { validatePreviewUrl } from "@sanity/preview-url-secret";
 import { draftMode } from "next/headers";
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 import { client } from "@/lib/sanity/client";
 import { token } from "@/lib/sanity/env";
@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
 
   const { isValid, redirectTo = "/" } = await validatePreviewUrl(
     clientWithToken,
-    request.url
+    request.url,
   );
 
   if (!isValid) {

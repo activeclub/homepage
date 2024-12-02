@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
+import { PageHeader } from "@/components/base/page-header";
 import { buttonVariants } from "@/components/ui/button";
 import { SOCIALS } from "@/constants";
 import { cn } from "@/lib/utils";
-import { Metadata } from "next";
-import { PageHeader } from "@/components/base/page-header";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
@@ -38,7 +38,7 @@ export default function About() {
                   target="_blank"
                   className={cn(
                     buttonVariants({ variant: "ghost" }),
-                    "text-primary px-0 hover:bg-primary transition-colors rounded-full p-2 size-8 bg-primary/20"
+                    "text-primary px-0 hover:bg-primary transition-colors rounded-full p-2 size-8 bg-primary/20",
                   )}
                 >
                   <social.icon className="size-6" />
