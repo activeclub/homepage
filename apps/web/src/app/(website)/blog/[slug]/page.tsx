@@ -5,7 +5,7 @@ import type { QueryParams } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 
-import { YouTubePlayer } from "@/components/page/post";
+import { CodeComponent, YouTubePlayer } from "@/components/page/post";
 import { buttonVariants } from "@/components/ui/button";
 import { client, sanityFetch } from "@/lib/sanity/client";
 import { getImageDimensions, urlFor } from "@/lib/sanity/image";
@@ -104,6 +104,12 @@ export default async function BlogContent({ params }: Props) {
                 types: {
                   image: ImageComponent,
                   youtube: YouTubeComponent,
+                  code: ({ value }) => (
+                    <CodeComponent
+                      code={value.code}
+                      language={value.language}
+                    />
+                  ),
                 },
                 marks: {
                   link: LinkComponent,

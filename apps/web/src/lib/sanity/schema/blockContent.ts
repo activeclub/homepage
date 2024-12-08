@@ -1,4 +1,4 @@
-import { defineArrayMember, defineType } from "sanity";
+import { defineArrayMember, defineField, defineType } from "sanity";
 
 /**
  * This is the schema definition for the rich text fields used for
@@ -68,6 +68,32 @@ export default defineType({
       type: "image",
       options: { hotspot: true },
     }),
-    defineArrayMember({ type: "youtube" }),
+    defineArrayMember({ type: "youtube", title: "YouTube" }),
+    defineArrayMember({
+      type: "code",
+      name: "code",
+      title: "Code",
+      options: {
+        languageAlternatives: [
+          // Bundled languages
+          // ref: https://shiki.style/languages
+          { title: "C", value: "c" },
+          { title: "CSS", value: "css" },
+          { title: "Dockerfile", value: "docker" },
+          { title: "dotEnv", value: "dotenv" },
+          { title: "HTML", value: "html" },
+          { title: "JavaScript", value: "javascript" },
+          { title: "JSON", value: "json" },
+          { title: "Markdown", value: "markdown" },
+          { title: "Nginx", value: "nginx" },
+          { title: "Python", value: "python" },
+          { title: "Shell", value: "shellscript" },
+          { title: "SQL", value: "sql" },
+          { title: "TypeScript", value: "typescript" },
+          { title: "YAML", value: "yaml" },
+        ],
+        withFilename: true,
+      },
+    }),
   ],
 });
