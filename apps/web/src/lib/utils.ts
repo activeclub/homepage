@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { Post, type Slug } from "./sanity/types";
+import type { Slug } from "./sanity/types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
