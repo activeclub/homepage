@@ -286,7 +286,7 @@ export type POSTS_QUERYResult = Array<{
   publishedAt: string | null;
 }>;
 // Variable: POST_QUERY
-// Query: *[_type == "post" && slug.current == $slug][0]{  title,  slug,  mainImage,  body,  publishedAt,  author->{    slug,    name,    image  }}
+// Query: *[_type == "post" && slug.current == $slug][0]{  title,  slug,  mainImage,  body,  publishedAt,  author->{    slug,    name,    image  },  categories[]->{    title  }}
 export type POST_QUERYResult = {
   title: string | null;
   slug: Slug | null;
@@ -318,6 +318,9 @@ export type POST_QUERYResult = {
       _type: "image";
     } | null;
   } | null;
+  categories: Array<{
+    title: string | null;
+  }> | null;
 } | null;
 // Variable: SITEMAP_POSTS_QUERY
 // Query: *[_type == "post" && defined(slug.current)]{  _updatedAt,  slug}
@@ -331,7 +334,7 @@ import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
     "*[_type == \"post\" && defined(slug.current)][0...12]{\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}": POSTS_QUERYResult;
-    "*[_type == \"post\" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage,\n  body,\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image\n  }\n}": POST_QUERYResult;
+    "*[_type == \"post\" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage,\n  body,\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image\n  },\n  categories[]->{\n    title\n  }\n}": POST_QUERYResult;
     "*[_type == \"post\" && defined(slug.current)]{\n  _updatedAt,\n  slug\n}": SITEMAP_POSTS_QUERYResult;
   }
 }

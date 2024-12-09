@@ -20,6 +20,9 @@ export const POST_QUERY =
     slug,
     name,
     image
+  },
+  categories[]->{
+    title
   }
 }`);
 

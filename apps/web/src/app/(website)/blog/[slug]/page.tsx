@@ -5,7 +5,7 @@ import type { QueryParams } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 
-import { CodeComponent, YouTubePlayer } from "@/components/page/post";
+import { CodeComponent, PostTag, YouTubePlayer } from "@/components/page/post";
 import { buttonVariants } from "@/components/ui/button";
 import { client, sanityFetch } from "@/lib/sanity/client";
 import { getImageDimensions, urlFor } from "@/lib/sanity/image";
@@ -32,7 +32,7 @@ export async function generateStaticParams() {
   const posts = await client.fetch<POSTS_QUERYResult>(
     POSTS_QUERY,
     {},
-    { perspective: "published" },
+    { perspective: "published" }
   );
 
   return posts
@@ -86,6 +86,14 @@ export default async function BlogContent({ params }: Props) {
           </div>
         </div>
 
+        {post?.categories && (
+          <div className="flex flex-wrap gap-2 mt-8">
+            {post.categories.map(({ title }) => (
+              <PostTag key={title}>{title}</PostTag>
+            ))}
+          </div>
+        )}
+
         {post?.mainImage?.asset && (
           <Image
             src={urlFor(post.mainImage.asset)?.url() ?? ""}
@@ -93,11 +101,11 @@ export default async function BlogContent({ params }: Props) {
             width={720}
             height={405}
             priority
-            className="my-8 border bg-muted transition-colors"
+            className="mt-8 border bg-muted transition-colors"
           />
         )}
         {post?.body && (
-          <div className="prose-base">
+          <div className="prose-base mt-8">
             <PortableText
               value={post.body}
               components={{
