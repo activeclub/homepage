@@ -1,13 +1,14 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+
 import { PageHeader } from "@/components/base/page-header";
+import { dayjs } from "@/lib/dayjs";
 import { client } from "@/lib/sanity/client";
 import { urlFor } from "@/lib/sanity/image";
 import { POSTS_QUERY } from "@/lib/sanity/queries";
 import type { POSTS_QUERYResult } from "@/lib/sanity/types";
 import { formatDate, isExternalPost } from "@/lib/utils";
-import { dayjs } from "@/lib/dayjs";
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -27,7 +28,7 @@ export default async function Blog() {
         <div className="grid gap-10 sm:grid-cols-2">
           {posts
             .sort((a, b) =>
-              dayjs(a.publishedAt).isAfter(dayjs(b.publishedAt)) ? -1 : 1
+              dayjs(a.publishedAt).isAfter(dayjs(b.publishedAt)) ? -1 : 1,
             )
             .map((post) => (
               <article
