@@ -62,6 +62,7 @@ export function Header() {
           </Button>
           <Button
             variant="outline"
+            size="icon"
             className="md:hidden"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
           >
