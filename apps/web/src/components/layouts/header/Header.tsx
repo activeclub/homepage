@@ -28,7 +28,7 @@ export function Header() {
             <img src="/images/logo.png" className="h-6 lg:h-10" alt="Logo" />
           </Link>
         </div>
-        <div className="flex items-center space-x-5 md:space-x-6">
+        <div className="flex items-center space-x-4 md:space-x-6">
           <nav className="hidden items-center gap-6 md:flex">
             {NAV_LIST.map((item) => (
               <Link
@@ -45,26 +45,24 @@ export function Header() {
                 <span>{item.label}</span>
               </Link>
             ))}
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => {
-                resolvedTheme === "light"
-                  ? setTheme("dark")
-                  : setTheme("light");
-              }}
-            >
-              <Sun
-                className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
-                onClick={() => setTheme("dark")}
-              />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
           </nav>
           <Button
-            variant="ghost"
-            className="p-0 text-primary hover:bg-transparent hover:text-primary md:hidden"
+            variant="outline"
+            size="icon"
+            onClick={() => {
+              resolvedTheme === "light" ? setTheme("dark") : setTheme("light");
+            }}
+          >
+            <Sun
+              className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+              onClick={() => setTheme("dark")}
+            />
+            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <span className="sr-only">Toggle theme</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="md:hidden"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
           >
             <>

@@ -28,15 +28,26 @@ export default function Index() {
         <p className="mb-4">
           ものづくりに関連する最新ニュースやビジネス情報をお届けします。
         </p>
-        <Button asChild>
-          <Link
-            href="https://activeclub.substack.com/"
-            target="_blank"
-            rel="noreferer noopener"
-          >
-            購読する
-          </Link>
-        </Button>
+        <div className="space-x-4">
+          <Button asChild>
+            <Link
+              href="https://note.com/activeclub"
+              target="_blank"
+              rel="noreferer noopener"
+            >
+              購読する (日本語)
+            </Link>
+          </Button>
+          <Button asChild>
+            <Link
+              href="https://activeclub.substack.com"
+              target="_blank"
+              rel="noreferer noopener"
+            >
+              Subscribe (English)
+            </Link>
+          </Button>
+        </div>
       </section>
     </section>
   );
