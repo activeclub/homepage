@@ -25,7 +25,7 @@ export default async function RootLayout({
   const { isEnabled } = await draftMode();
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="min-h-dvh flex flex-col">
         {isEnabled && (
           <a
@@ -37,7 +37,7 @@ export default async function RootLayout({
         )}
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

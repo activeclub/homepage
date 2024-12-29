@@ -1,8 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AlignLeft, X } from "lucide-react";
+import { AlignLeft, Moon, Sun, X } from "lucide-react";
 import { Bot, FileText, MessageCircleQuestion } from "lucide-react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import React, { useState } from "react";
@@ -15,6 +16,7 @@ const NAV_LIST = [
 
 export function Header() {
   const segment = useSelectedLayoutSegment();
+  const { setTheme, resolvedTheme } = useTheme();
 
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -36,13 +38,29 @@ export function Header() {
                   " font-normal hover:text-primary transition-colors flex items-center",
                   `/${segment}` === item.path
                     ? "text-primary"
-                    : "text-muted-foreground",
+                    : "text-muted-foreground"
                 )}
               >
                 <item.icon className="mr-2 size-4" />
                 <span>{item.label}</span>
               </Link>
             ))}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => {
+                resolvedTheme === "light"
+                  ? setTheme("dark")
+                  : setTheme("light");
+              }}
+            >
+              <Sun
+                className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+                onClick={() => setTheme("dark")}
+              />
+              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
           </nav>
           <Button
             variant="ghost"
@@ -71,7 +89,7 @@ export function Header() {
                   "flex items-center transition-colors hover:text-primary",
                   `/${segment}` === item.path
                     ? "text-primary"
-                    : "text-muted-foreground",
+                    : "text-muted-foreground"
                 )}
                 onClick={() => setIsMobileOpen(false)}
               >
