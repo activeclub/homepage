@@ -51,8 +51,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0
       '@sanity/preview-url-secret':
-        specifier: 2.0.6
-        version: 2.0.6(@sanity/client@6.24.3)
+        specifier: 2.0.7
+        version: 2.0.7(@sanity/client@6.24.3)
       '@sanity/vision':
         specifier: 3.69.0
         version: 3.69.0(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(@lezer/common@1.2.3)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -2208,8 +2208,8 @@ packages:
     peerDependencies:
       '@sanity/client': ^6.23.0
 
-  '@sanity/preview-url-secret@2.0.6':
-    resolution: {integrity: sha512-6HHO0+grjJ9atqXMxHSZSwPgZGLMVN+om2DZLdghKmM5/PCAT3osmV++Buutxj+qOZF97awzJDAghpNZ3O8iDg==}
+  '@sanity/preview-url-secret@2.0.7':
+    resolution: {integrity: sha512-Lcz2lf/wNNIGhK4NYOxkVqp6I/ug+MCaPoAJOyW/ye/YyJ7PpL7tdGWNvRiOnBX3S+qv3utK6vlWAoHcXWDLNQ==}
     engines: {node: '>=18'}
     peerDependencies:
       '@sanity/client': ^6.24.1
@@ -5727,10 +5727,6 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  uuid@11.0.3:
-    resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
-    hasBin: true
-
   uuid@11.0.4:
     resolution: {integrity: sha512-IzL6VtTTYcAhA/oghbFJ1Dkmqev+FpQWnCBaKq/gUluLxliWvO8DPFWfIviRmYbtaavtSQe4WBL++rFjdcGWEg==}
     hasBin: true
@@ -8001,7 +7997,7 @@ snapshots:
   '@sanity/comlink@2.0.3':
     dependencies:
       rxjs: 7.8.1
-      uuid: 11.0.3
+      uuid: 11.0.4
       xstate: 5.19.0
 
   '@sanity/comlink@2.0.4':
@@ -8214,7 +8210,7 @@ snapshots:
       rxjs: 7.8.1
       treeify: 1.1.0
       typescript: 5.7.3
-      uuid: 11.0.3
+      uuid: 11.0.4
       zod: 3.24.1
       zod-validation-error: 3.4.0(zod@3.24.1)
     transitivePeerDependencies:
@@ -8270,7 +8266,7 @@ snapshots:
       '@sanity/client': 6.24.3(debug@4.3.7)
       '@sanity/uuid': 3.0.2
 
-  '@sanity/preview-url-secret@2.0.6(@sanity/client@6.24.3)':
+  '@sanity/preview-url-secret@2.0.7(@sanity/client@6.24.3)':
     dependencies:
       '@sanity/client': 6.24.3(debug@4.3.7)
       '@sanity/uuid': 3.0.2
@@ -12320,8 +12316,6 @@ snapshots:
       os-homedir: 1.0.2
 
   util-deprecate@1.0.2: {}
-
-  uuid@11.0.3: {}
 
   uuid@11.0.4: {}
 
