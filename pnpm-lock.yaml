@@ -51,8 +51,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0
       '@sanity/preview-url-secret':
-        specifier: 2.1.0
-        version: 2.1.0(@sanity/client@6.26.1)
+        specifier: 2.1.2
+        version: 2.1.2(@sanity/client@6.26.1)
       '@sanity/vision':
         specifier: 3.70.0
         version: 3.70.0(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(@lezer/common@1.2.3)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -2219,6 +2219,12 @@ packages:
     engines: {node: '>=18'}
     peerDependencies:
       '@sanity/client': ^6.24.1
+
+  '@sanity/preview-url-secret@2.1.2':
+    resolution: {integrity: sha512-oKxb5ugvTrwNePr9in7QdoXgORggj/ghWE74jykI89i8g5VbrAAM6Mp0p0K43o8/gPhEvqtja4GGzJpf4iBH5A==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@sanity/client': ^6.27.0
 
   '@sanity/schema@3.70.0':
     resolution: {integrity: sha512-2/EfojSeHw4HkDs4vVcIcQ/EYJXVkiEcgRYTDNOLBJ+YSRsrDSLE7QfSkGwrZNoqkYVNmgWwIk0Nr5CjOvOOnA==}
@@ -8324,6 +8330,11 @@ snapshots:
       '@sanity/client': 6.26.1(debug@4.3.7)
       '@sanity/uuid': 3.0.2
 
+  '@sanity/preview-url-secret@2.1.2(@sanity/client@6.26.1)':
+    dependencies:
+      '@sanity/client': 6.26.1(debug@4.3.7)
+      '@sanity/uuid': 3.0.2
+
   '@sanity/schema@3.70.0(@types/react@18.3.18)(debug@4.3.7)':
     dependencies:
       '@sanity/generate-help-url': 3.0.0
@@ -8489,7 +8500,7 @@ snapshots:
       '@sanity/comlink': 3.0.1
       '@sanity/mutate': 0.11.0-canary.4(xstate@5.19.2)
       '@sanity/presentation-comlink': 1.0.0(@sanity/client@6.26.1)(@sanity/types@3.70.0(@types/react@18.3.18))
-      '@sanity/preview-url-secret': 2.1.0(@sanity/client@6.26.1)
+      '@sanity/preview-url-secret': 2.1.2(@sanity/client@6.26.1)
       '@sanity/visual-editing-csm': 1.0.0(@sanity/client@6.26.1)(@sanity/types@3.70.0(@types/react@18.3.18))
       '@vercel/stega': 0.1.2
       get-random-values-esm: 1.0.2
