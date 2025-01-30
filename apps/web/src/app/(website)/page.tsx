@@ -35,7 +35,7 @@ export default function Index() {
               target="_blank"
               rel="noreferer noopener"
             >
-              購読する (日本語)
+              日本語 (note)
             </Link>
           </Button>
           <Button asChild>
@@ -44,7 +44,7 @@ export default function Index() {
               target="_blank"
               rel="noreferer noopener"
             >
-              Subscribe (English)
+              English (Substack)
             </Link>
           </Button>
         </div>
