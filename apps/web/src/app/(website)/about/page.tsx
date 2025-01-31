@@ -15,7 +15,7 @@ export default function About() {
     <section className="container relative max-w-6xl py-6 lg:py-10 mx-auto px-6 lg:px-10">
       <PageHeader title="About" description="アクティ部について" />
 
-      <div className="flex flex-col items-center space-y-6 lg:flex-row lg:space-x-6 lg:space-y-0">
+      <div className="flex flex-col items-center space-y-6 lg:flex-row lg:gap-6 lg:space-y-0">
         <div className="mx-auto mt-8 w-full lg:w-[400px]">
           <div className="relative flex flex-col items-center gap-2 rounded-md bg-muted px-4 py-6">
             <Image
@@ -29,7 +29,7 @@ export default function About() {
             <p className="text-center text-sm text-muted-foreground">
               Play with Technology
             </p>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-2">
               {SOCIALS.map((social) => (
                 <Link
                   key={social.label}
