@@ -6,11 +6,11 @@ import Link from "next/link";
 
 export default function Index() {
   return (
-    <section className="flex-grow flex flex-col items-center justify-center text-center py-16 lg:py-32 px-2 lg:px-0">
+    <section className="grow flex flex-col items-center justify-center text-center py-16 lg:py-32 px-2 lg:px-0">
       <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">
         Play with Technology
       </h2>
-      <div className="flex space-x-4 mb-12 lg:mb-16">
+      <div className="flex gap-4 mb-12 lg:mb-16">
         {SOCIALS.map((social) => (
           <Link
             key={social.label}
