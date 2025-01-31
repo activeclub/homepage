@@ -23,7 +23,7 @@ export function CodeComponent({
   code,
   language,
 }: { code: string; language: string }) {
-  const [nodes, setNodes] = useState<JSX.Element>();
+  const [nodes, setNodes] = useState<React.JSX.Element>();
 
   useLayoutEffect(() => {
     void highlight(code, language).then(setNodes);
