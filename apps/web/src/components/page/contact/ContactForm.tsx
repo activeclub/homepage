@@ -35,7 +35,7 @@ const schema = v.object({
   ),
 });
 
-type Schema = v.InferInput<typeof schema>; // { email: string; password: string }
+export type Schema = v.InferInput<typeof schema>;
 
 type Props = {
   sendMessage: (values: Schema) => void;
