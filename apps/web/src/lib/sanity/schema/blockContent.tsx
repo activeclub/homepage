@@ -97,6 +97,7 @@ export default defineType({
     }),
     defineArrayMember({
       type: "latex",
+      icon: () => <span style={{ fontWeight: "bold" }}>∑</span>,
       title: "Math",
     }),
   ],

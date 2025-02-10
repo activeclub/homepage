@@ -5,7 +5,10 @@ export function MathComponent({ math }: { math: string }) {
     <div
       // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
       dangerouslySetInnerHTML={{
-        __html: katex.renderToString(math, { displayMode: true }),
+        __html: katex.renderToString(math, {
+          displayMode: true,
+          output: "mathml",
+        }),
       }}
     />
   );
