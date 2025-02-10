@@ -16,5 +16,8 @@
   "packageManager": "pnpm@9.15.5",
   "engines": {
     "node": ">=22"
+  },
+  "dependencies": {
+    "lefthook": "1.10.10"
   }
 }
