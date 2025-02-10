@@ -37,7 +37,7 @@ export async function generateStaticParams() {
   const posts = await client.fetch<POSTS_QUERYResult>(
     POSTS_QUERY,
     {},
-    { perspective: "published" }
+    { perspective: "published" },
   );
 
   return posts
@@ -123,7 +123,7 @@ export default async function BlogContent({ params }: Props) {
                       language={value.language}
                     />
                   ),
-                  latex: ({value}) => <MathComponent math={value.body} />,
+                  latex: ({ value }) => <MathComponent math={value.body} />,
                 },
                 marks: {
                   link: LinkComponent,
