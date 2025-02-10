@@ -1,8 +1,8 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
+import { valibotResolver } from "@hookform/resolvers/valibot";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import * as v from "valibot";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,16 +16,26 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-const schema = z.object({
-  username: z.string().min(1, { message: "お名前を入力してください" }).max(50),
-  email: z
-    .string()
-    .email({ message: "メールアドレスの形式が正しくありません" }),
-  subject: z.string().min(1, { message: "件名を入力してください" }).max(50),
-  message: z.string().min(1, { message: "本文を入力してください" }).max(500),
+const schema = v.object({
+  username: v.pipe(
+    v.string(),
+    v.nonEmpty("お名前を入力してください"),
+    v.maxLength(50)
+  ),
+  email: v.pipe(v.string(), v.email("メールアドレスの形式が正しくありません")),
+  subject: v.pipe(
+    v.string(),
+    v.nonEmpty("件名を入力してください"),
+    v.maxLength(50)
+  ),
+  message: v.pipe(
+    v.string(),
+    v.nonEmpty("本文を入力してください"),
+    v.maxLength(500)
+  ),
 });
 
-export type Schema = z.infer<typeof schema>;
+type Schema = v.InferInput<typeof schema>; // { email: string; password: string }
 
 type Props = {
   sendMessage: (values: Schema) => void;
@@ -33,7 +43,7 @@ type Props = {
 
 export function ContactForm({ sendMessage }: Props) {
   const form = useForm<Schema>({
-    resolver: zodResolver(schema),
+    resolver: valibotResolver(schema),
     defaultValues: {
       username: "",
       email: "",
