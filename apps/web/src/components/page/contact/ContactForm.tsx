@@ -20,18 +20,18 @@ const schema = v.object({
   username: v.pipe(
     v.string(),
     v.nonEmpty("お名前を入力してください"),
-    v.maxLength(50)
+    v.maxLength(50),
   ),
   email: v.pipe(v.string(), v.email("メールアドレスの形式が正しくありません")),
   subject: v.pipe(
     v.string(),
     v.nonEmpty("件名を入力してください"),
-    v.maxLength(50)
+    v.maxLength(50),
   ),
   message: v.pipe(
     v.string(),
     v.nonEmpty("本文を入力してください"),
-    v.maxLength(500)
+    v.maxLength(500),
   ),
 });
 
