@@ -5,7 +5,12 @@ import type { QueryParams } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 
-import { CodeComponent, PostTag, YouTubePlayer } from "@/components/page/post";
+import {
+  CodeComponent,
+  MathComponent,
+  PostTag,
+  YouTubePlayer,
+} from "@/components/page/post";
 import { buttonVariants } from "@/components/ui/button";
 import { client, sanityFetch } from "@/lib/sanity/client";
 import { getImageDimensions, urlFor } from "@/lib/sanity/image";
@@ -118,6 +123,7 @@ export default async function BlogContent({ params }: Props) {
                       language={value.language}
                     />
                   ),
+                  latex: ({ value }) => <MathComponent math={value.body} />,
                 },
                 marks: {
                   link: LinkComponent,
