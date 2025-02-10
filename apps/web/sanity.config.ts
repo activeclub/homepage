@@ -5,6 +5,8 @@ import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
+import { latexInput } from "sanity-plugin-latex-input";
+
 
 import { dataset, projectId } from "@/lib/sanity/env";
 import { resolve } from "@/lib/sanity/presentation/resolve";
@@ -28,6 +30,7 @@ export default defineConfig({
     }),
     structureTool(),
     codeInput(),
+    latexInput(),
   ],
   schema: {
     types: schemaTypes,

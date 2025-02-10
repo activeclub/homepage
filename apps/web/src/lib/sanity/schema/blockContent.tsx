@@ -95,5 +95,9 @@ export default defineType({
         withFilename: true,
       },
     }),
+    defineArrayMember({
+      type: "latex",
+      title: "Math",
+    }),
   ],
 });

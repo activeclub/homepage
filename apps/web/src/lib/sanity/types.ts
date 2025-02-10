@@ -105,7 +105,9 @@ export type BlockContent = Array<{
   _key: string;
 } & Youtube | {
   _key: string;
-} & Code>;
+} & Code | {
+  _key: string;
+} & Latex>;
 
 export type Category = {
   _id: string;
@@ -255,6 +257,11 @@ export type Slug = {
   source?: string;
 };
 
+export type Latex = {
+  _type: "latex";
+  body?: string;
+};
+
 export type Code = {
   _type: "code";
   language?: string;
@@ -263,7 +270,7 @@ export type Code = {
   highlightedLines?: Array<number>;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Youtube | BlockContent | Category | Post | Author | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Code;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Youtube | BlockContent | Category | Post | Author | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Latex | Code;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: src/lib/sanity/queries.ts
 // Variable: POSTS_QUERY
