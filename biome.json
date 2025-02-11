@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": [".next", "lib/sanity/types.ts"]
+    "ignore": [".next", "lib/sanity/types.ts", ".turbo"]
   },
   "formatter": {
     "enabled": true,
