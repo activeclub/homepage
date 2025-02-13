@@ -29,7 +29,7 @@
     "dayjs": "1.11.13",
     "hast-util-to-jsx-runtime": "2.3.2",
     "katex": "0.16.21",
-    "lucide-react": "0.471.0",
+    "lucide-react": "0.471.2",
     "next": "15.1.7",
     "next-sanity": "9.8.56",
     "next-themes": "0.4.4",
