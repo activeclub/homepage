@@ -40,7 +40,7 @@
     "sanity": "3.76.3",
     "sanity-plugin-latex-input": "2.0.5",
     "shiki": "2.5.0",
-    "tailwind-merge": "3.0.1",
+    "tailwind-merge": "3.0.2",
     "tailwindcss-animate": "1.0.7",
     "valibot": "1.0.0-rc.1",
     "vaul": "1.1.2"
