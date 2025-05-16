@@ -55,8 +55,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0
       '@sanity/preview-url-secret':
-        specifier: 2.1.8
-        version: 2.1.8(@sanity/client@6.28.4)
+        specifier: 2.1.11
+        version: 2.1.11(@sanity/client@6.28.4)
       '@sanity/vision':
         specifier: 3.84.0
         version: 3.84.0(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(@lezer/common@1.2.3)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
@@ -2030,11 +2030,11 @@ packages:
       react:
         optional: true
 
-  '@sanity/preview-url-secret@2.1.8':
-    resolution: {integrity: sha512-i5moO9BYvct7SRdh+636WH5dMEUp0CDTWZW00S7aouQDpeC3FnYGch5EhQfAnWjClVSzBVEFv8rJlKjK106AOg==}
+  '@sanity/preview-url-secret@2.1.11':
+    resolution: {integrity: sha512-kMxOvXARbDZ8g8vWPjCBJ+QYaPXoOYXlsHfh727mzl/Ibmvlh9F9fLuyAwxSvq4J2VWXZegb8kmKlEakgld0dg==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@sanity/client': ^6.29.0
+      '@sanity/client': ^7.1.0
 
   '@sanity/runtime-cli@1.2.0':
     resolution: {integrity: sha512-2AZhPl+yXrrak+EPZt76NAWlWlI7PICYdXC6FMKkp80HSIzqwPY7keBh60bZl25v85KUc7ZqySWbCnf/2G7+7Q==}
@@ -7927,7 +7927,7 @@ snapshots:
     transitivePeerDependencies:
       - '@sanity/types'
 
-  '@sanity/preview-url-secret@2.1.8(@sanity/client@6.28.4)':
+  '@sanity/preview-url-secret@2.1.11(@sanity/client@6.28.4)':
     dependencies:
       '@sanity/client': 6.28.4(debug@4.4.0)
       '@sanity/uuid': 3.0.2
@@ -8130,7 +8130,7 @@ snapshots:
       '@sanity/insert-menu': 1.1.8(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.84.0(@types/react@19.1.4))(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       '@sanity/mutate': 0.11.0-canary.4(xstate@5.19.2)
       '@sanity/presentation-comlink': 1.0.14(@sanity/client@6.28.4)(@sanity/types@3.84.0(@types/react@19.1.4))
-      '@sanity/preview-url-secret': 2.1.8(@sanity/client@6.28.4)
+      '@sanity/preview-url-secret': 2.1.11(@sanity/client@6.28.4)
       '@sanity/ui': 2.15.12(@emotion/is-prop-valid@1.2.2)(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       '@sanity/visual-editing-csm': 2.0.11(@sanity/client@6.28.4)(@sanity/types@3.84.0(@types/react@19.1.4))
       '@vercel/stega': 0.1.2
@@ -10425,7 +10425,7 @@ snapshots:
       '@sanity/icons': 3.7.0(react@19.1.0)
       '@sanity/next-loader': 1.3.9(@sanity/types@3.84.0(@types/react@19.1.4))(next@15.2.5(@babel/core@7.26.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       '@sanity/preview-kit': 6.0.6(@sanity/client@6.28.4)(@sanity/types@3.84.0(@types/react@19.1.4))(react@19.1.0)
-      '@sanity/preview-url-secret': 2.1.8(@sanity/client@6.28.4)
+      '@sanity/preview-url-secret': 2.1.11(@sanity/client@6.28.4)
       '@sanity/types': 3.84.0(@types/react@19.1.4)(debug@4.4.0)
       '@sanity/ui': 2.15.13(@emotion/is-prop-valid@1.2.2)(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       '@sanity/visual-editing': 2.13.15(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.4)(@sanity/types@3.84.0(@types/react@19.1.4))(next@15.2.5(@babel/core@7.26.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
@@ -11147,7 +11147,7 @@ snapshots:
       '@sanity/migrate': 3.84.0(@types/react@19.1.4)
       '@sanity/mutator': 3.84.0(@types/react@19.1.4)
       '@sanity/presentation-comlink': 1.0.16(@sanity/client@6.28.4)(@sanity/types@3.84.0(@types/react@19.1.4)(debug@4.4.0))
-      '@sanity/preview-url-secret': 2.1.8(@sanity/client@6.28.4)
+      '@sanity/preview-url-secret': 2.1.11(@sanity/client@6.28.4)
       '@sanity/schema': 3.84.0(@types/react@19.1.4)(debug@4.4.0)
       '@sanity/telemetry': 0.8.1(react@19.1.0)
       '@sanity/types': 3.84.0(@types/react@19.1.4)(debug@4.4.0)
