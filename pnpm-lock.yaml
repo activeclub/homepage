@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       lefthook:
-        specifier: 1.11.15
-        version: 1.11.15
+        specifier: 1.11.16
+        version: 1.11.16
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -50,7 +50,7 @@ importers:
         version: 6.29.1(debug@4.4.1)
       '@sanity/code-input':
         specifier: 5.1.2
-        version: 5.1.2(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(@lezer/common@1.2.3)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(sanity@3.96.0(@emotion/is-prop-valid@1.2.2)(@types/node@22.15.35)(@types/react@19.1.8)(immer@10.1.1)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(terser@5.37.0)(typescript@5.8.3)(yaml@2.6.1))(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+        version: 5.1.2(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(@lezer/common@1.2.3)(codemirror@6.0.1)(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(sanity@3.96.0(@emotion/is-prop-valid@1.2.2)(@types/node@22.15.35)(@types/react@19.1.8)(immer@10.1.1)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(terser@5.37.0)(typescript@5.8.3)(yaml@2.6.1))(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       '@sanity/image-url':
         specifier: 1.1.0
         version: 1.1.0
@@ -59,7 +59,7 @@ importers:
         version: 2.1.11(@sanity/client@6.29.1)
       '@sanity/vision':
         specifier: 3.96.0
-        version: 3.96.0(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+        version: 3.96.0(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(codemirror@6.0.1)(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       class-variance-authority:
         specifier: 0.7.1
         version: 0.7.1
@@ -4354,58 +4354,58 @@ packages:
     resolution: {integrity: sha512-b94GiNHQNy6JNTrt5w6zNyffMrNkXZb3KTkCZJb2V1xaEGCk093vkZ2jk3tpaeP33/OiXC+WvK9AxUebnf5nbw==}
     engines: {node: '>= 0.6.3'}
 
-  lefthook-darwin-arm64@1.11.15:
-    resolution: {integrity: sha512-+DsjBeM6HRbmqe2TgeAXqpNNk/guNbbHymPVzooUc1gKeLx1upAHFu0m7SiQcHh6KFrVFQQf2Ov77sCFqFHfsw==}
+  lefthook-darwin-arm64@1.11.16:
+    resolution: {integrity: sha512-ThsVyHPexHax7aZYpFbsswk5HPR2ap3zsJ1yE189Y97U+tLEHS+Mq98MqC1U1zFm0Ts42gpGDBx6chIRjx7Uig==}
     cpu: [arm64]
     os: [darwin]
 
-  lefthook-darwin-x64@1.11.15:
-    resolution: {integrity: sha512-+2gqqDBZ+LG2esRO82eqIkYn4zmNp1OY0KSyLyvp/jABXHj/RxN0nu6i2rOeH2t83e/hlKnQEIzSYToH7JDLTQ==}
+  lefthook-darwin-x64@1.11.16:
+    resolution: {integrity: sha512-P3QtUJ/ICX3l+ZJqqKGyovT6Hi2N60Vt8znGglJ+OeCpVMc6H6N0ID37+jHlnyjO9AfL4EkAj70vwYe8Fzfjsw==}
     cpu: [x64]
     os: [darwin]
 
-  lefthook-freebsd-arm64@1.11.15:
-    resolution: {integrity: sha512-4k1ZG12KUDGdn28j8VN5U+7Y6XD/HPUUz7Wv1LQfFQ9ZheyOfVm6Ld3VVhLoRStwleILlKFY+USDrQrJQ80VIA==}
+  lefthook-freebsd-arm64@1.11.16:
+    resolution: {integrity: sha512-X0EyVoCg4+nczJDZ0rc0gpZHOrLr4Nk7knoYFKrBnvutuMCs9ixU+tA4sV8pu4KT13gigbXkxjKlIN7QUqFCxg==}
     cpu: [arm64]
     os: [freebsd]
 
-  lefthook-freebsd-x64@1.11.15:
-    resolution: {integrity: sha512-9BOZNr3CTd8My+61wzeVk64t9eSMs3mflm/NEsslf4j8THsthHxNohaViocR2hiBALCPnCP8FeBWNfTZ79W+0A==}
+  lefthook-freebsd-x64@1.11.16:
+    resolution: {integrity: sha512-m2nfcpz2i4AdQ9fZqcoTCxAFotqXHYzUThgqcRyMaPHjlpy+ZmVnopppt9MS4GfDDq+dqjka28ZZObE7T1Nb5g==}
     cpu: [x64]
     os: [freebsd]
 
-  lefthook-linux-arm64@1.11.15:
-    resolution: {integrity: sha512-xd43wCnF8DcKMFUnxx07KTol7vG3KbuJel2oQ/1ThCabfymmKegH13AoVE7DHuT7nL5PIyWjCXtRkXTZvNincA==}
+  lefthook-linux-arm64@1.11.16:
+    resolution: {integrity: sha512-mXwCXs5J1qyq6QmBXFy2/YYG0sCzz1C0sfnzLdgXoAAmhEFfA4wy/DX/jNbvMPvRLfKHiXtf3eaqjLEYg9CGjQ==}
     cpu: [arm64]
     os: [linux]
 
-  lefthook-linux-x64@1.11.15:
-    resolution: {integrity: sha512-EJnXNv9FuNmdfZnwduZQOHOWxur/MvnPX65so+iVRNbcYRz5q9fyrOQZPXlPsMk7wqZqcoOCT0UxigfsAje0Kg==}
+  lefthook-linux-x64@1.11.16:
+    resolution: {integrity: sha512-MW1ClFIk3uTfpOCm+FGW8NZbXWA6Xdf/eUw6//mEVs3Q4EsZ4GYZn0AFRMrsaXxbSZnvAPhtNoEVqRfYWjWKBQ==}
     cpu: [x64]
     os: [linux]
 
-  lefthook-openbsd-arm64@1.11.15:
-    resolution: {integrity: sha512-04r97SMPlEuKfKV0LRcgdZrYqP6DMeV6FqB5Sn4GvjVno2UpRokKOK/7HxSuzH7vGLo7A+wehCwmpZ/LHYaTDw==}
+  lefthook-openbsd-arm64@1.11.16:
+    resolution: {integrity: sha512-6Aqjyc2TkkEpogsUvzLSdMAy/fN6YHlq3XA47N7VNc0Ke0XP/XIImb0zEPsYDjrdNqZbEKoXn+IYkValtS5DXg==}
     cpu: [arm64]
     os: [openbsd]
 
-  lefthook-openbsd-x64@1.11.15:
-    resolution: {integrity: sha512-3ngWuO4exX8tG3V9i86xfyrAER79jptJeC9IUM6YJb8OYmT1zVBTc2OvzLNO1wm2K3Axqi1+AQV3ZI303W3MEw==}
+  lefthook-openbsd-x64@1.11.16:
+    resolution: {integrity: sha512-ierlKlnrUe1ML6F3JFgFllgy71qY1S5I2wOclI3yh2EGykAJIUmdkgz/f0KT1slV2aXeSP+QgBTu496WzZSjIg==}
     cpu: [x64]
     os: [openbsd]
 
-  lefthook-windows-arm64@1.11.15:
-    resolution: {integrity: sha512-QZe0wcL7M/Q4ku4HPosOF0BZHChzozTAnZFnZH1CJ6Vzy4A2mcBUngH7Uq3PQfczij/ICb5R3IwtjAkZ7KmHHA==}
+  lefthook-windows-arm64@1.11.16:
+    resolution: {integrity: sha512-AAjDKWOExTS1XlSvNNIa3YIJbf90SZ5X0NSA7EgHobegadLcLrkl3aX+2zcw+yvpm1AOF0WUZdYxkAHL5MNQOg==}
     cpu: [arm64]
     os: [win32]
 
-  lefthook-windows-x64@1.11.15:
-    resolution: {integrity: sha512-6hGV50TPZZzwaIMIl2cshB0iQr+jLzufOLxZzTATKGu8rtsmajtfQDitBM3FcRAqQzh+v/OATWkNAiucvi5zrA==}
+  lefthook-windows-x64@1.11.16:
+    resolution: {integrity: sha512-qOEAinMMV5rlf4C0VPSIlPaj5nh2CD4lzAv7+nAUydDiDQcVkkPbiwCaRkSVX509k6SctDCYQhtBnG/bwdREFQ==}
     cpu: [x64]
     os: [win32]
 
-  lefthook@1.11.15:
-    resolution: {integrity: sha512-egjyv4wgeQP2vEIIziSQVZoOSzhmUvq8rk3rGc8j7gAYzkr8nMEHG7qMJp0XyXtjyVV49BUoBzhzx/Bktk01gQ==}
+  lefthook@1.11.16:
+    resolution: {integrity: sha512-NbFZaAJUEiwBv6Npg7TZOCo9Bxh8VUSuBZ55CTulH9roQjknSXQWgGYz9FaHvqVeMBf7Xog2Wk84Ce7gWrWlYw==}
     hasBin: true
 
   leven@3.1.0:
@@ -7606,9 +7606,9 @@ snapshots:
 
   '@codemirror/theme-one-dark@6.1.2':
     dependencies:
-      '@codemirror/language': 6.10.6
-      '@codemirror/state': 6.5.0
-      '@codemirror/view': 6.35.3
+      '@codemirror/language': 6.11.2
+      '@codemirror/state': 6.5.2
+      '@codemirror/view': 6.38.0
       '@lezer/highlight': 1.2.1
 
   '@codemirror/view@6.35.3':
@@ -8091,8 +8091,8 @@ snapshots:
 
   '@jridgewell/source-map@0.3.6':
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.5
-      '@jridgewell/trace-mapping': 0.3.25
+      '@jridgewell/gen-mapping': 0.3.12
+      '@jridgewell/trace-mapping': 0.3.29
     optional: true
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
@@ -8726,7 +8726,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@sanity/code-input@5.1.2(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(@lezer/common@1.2.3)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(sanity@3.96.0(@emotion/is-prop-valid@1.2.2)(@types/node@22.15.35)(@types/react@19.1.8)(immer@10.1.1)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(terser@5.37.0)(typescript@5.8.3)(yaml@2.6.1))(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+  '@sanity/code-input@5.1.2(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(@lezer/common@1.2.3)(codemirror@6.0.1)(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(sanity@3.96.0(@emotion/is-prop-valid@1.2.2)(@types/node@22.15.35)(@types/react@19.1.8)(immer@10.1.1)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(terser@5.37.0)(typescript@5.8.3)(yaml@2.6.1))(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
     dependencies:
       '@codemirror/autocomplete': 6.18.3(@codemirror/language@6.10.6)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)(@lezer/common@1.2.3)
       '@codemirror/commands': 6.7.1
@@ -8748,7 +8748,7 @@ snapshots:
       '@sanity/incompatible-plugin': 1.0.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@sanity/ui': 2.10.9(@emotion/is-prop-valid@1.2.2)(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       '@uiw/codemirror-themes': 4.23.6(@codemirror/language@6.10.6)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)
-      '@uiw/react-codemirror': 4.23.6(@babel/runtime@7.25.9)(@codemirror/autocomplete@6.18.3(@codemirror/language@6.10.6)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)(@lezer/common@1.2.3))(@codemirror/language@6.10.6)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.8)(@codemirror/state@6.5.0)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.35.3)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@uiw/react-codemirror': 4.23.6(@babel/runtime@7.25.9)(@codemirror/autocomplete@6.18.3(@codemirror/language@6.10.6)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)(@lezer/common@1.2.3))(@codemirror/language@6.10.6)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.8)(@codemirror/state@6.5.0)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.35.3)(codemirror@6.0.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       sanity: 3.96.0(@emotion/is-prop-valid@1.2.2)(@types/node@22.15.35)(@types/react@19.1.8)(immer@10.1.1)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(terser@5.37.0)(typescript@5.8.3)(yaml@2.6.1)
@@ -9215,7 +9215,7 @@ snapshots:
       '@types/uuid': 8.3.4
       uuid: 8.3.2
 
-  '@sanity/vision@3.96.0(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+  '@sanity/vision@3.96.0(@babel/runtime@7.25.9)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(codemirror@6.0.1)(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
     dependencies:
       '@codemirror/autocomplete': 6.18.6
       '@codemirror/commands': 6.8.1
@@ -9232,7 +9232,7 @@ snapshots:
       '@sanity/icons': 3.7.4(react@19.1.0)
       '@sanity/ui': 2.16.2(@emotion/is-prop-valid@1.2.2)(react-dom@19.1.0(react@19.1.0))(react-is@18.3.1)(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       '@sanity/uuid': 3.0.2
-      '@uiw/react-codemirror': 4.23.10(@babel/runtime@7.25.9)(@codemirror/autocomplete@6.18.6)(@codemirror/language@6.11.2)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.11)(@codemirror/state@6.5.2)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.38.0)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@uiw/react-codemirror': 4.23.10(@babel/runtime@7.25.9)(@codemirror/autocomplete@6.18.6)(@codemirror/language@6.11.2)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.11)(@codemirror/state@6.5.2)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.38.0)(codemirror@6.0.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       is-hotkey-esm: 1.0.0
       json-2-csv: 5.5.6
       json5: 2.2.3
@@ -9625,7 +9625,7 @@ snapshots:
       '@codemirror/state': 6.5.0
       '@codemirror/view': 6.35.3
 
-  '@uiw/react-codemirror@4.23.10(@babel/runtime@7.25.9)(@codemirror/autocomplete@6.18.6)(@codemirror/language@6.11.2)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.11)(@codemirror/state@6.5.2)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.38.0)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@uiw/react-codemirror@4.23.10(@babel/runtime@7.25.9)(@codemirror/autocomplete@6.18.6)(@codemirror/language@6.11.2)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.11)(@codemirror/state@6.5.2)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.38.0)(codemirror@6.0.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@babel/runtime': 7.25.9
       '@codemirror/commands': 6.8.1
@@ -9633,7 +9633,7 @@ snapshots:
       '@codemirror/theme-one-dark': 6.1.2
       '@codemirror/view': 6.38.0
       '@uiw/codemirror-extensions-basic-setup': 4.23.10(@codemirror/autocomplete@6.18.6)(@codemirror/commands@6.8.1)(@codemirror/language@6.11.2)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.11)(@codemirror/state@6.5.2)(@codemirror/view@6.38.0)
-      codemirror: 6.0.1(@lezer/common@1.2.3)
+      codemirror: 6.0.1
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
     transitivePeerDependencies:
@@ -9642,7 +9642,7 @@ snapshots:
       - '@codemirror/lint'
       - '@codemirror/search'
 
-  '@uiw/react-codemirror@4.23.6(@babel/runtime@7.25.9)(@codemirror/autocomplete@6.18.3(@codemirror/language@6.10.6)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)(@lezer/common@1.2.3))(@codemirror/language@6.10.6)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.8)(@codemirror/state@6.5.0)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.35.3)(codemirror@6.0.1(@lezer/common@1.2.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@uiw/react-codemirror@4.23.6(@babel/runtime@7.25.9)(@codemirror/autocomplete@6.18.3(@codemirror/language@6.10.6)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)(@lezer/common@1.2.3))(@codemirror/language@6.10.6)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.8)(@codemirror/state@6.5.0)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.35.3)(codemirror@6.0.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@babel/runtime': 7.25.9
       '@codemirror/commands': 6.7.1
@@ -9650,7 +9650,7 @@ snapshots:
       '@codemirror/theme-one-dark': 6.1.2
       '@codemirror/view': 6.35.3
       '@uiw/codemirror-extensions-basic-setup': 4.23.6(@codemirror/autocomplete@6.18.3(@codemirror/language@6.10.6)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)(@lezer/common@1.2.3))(@codemirror/commands@6.7.1)(@codemirror/language@6.10.6)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.8)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)
-      codemirror: 6.0.1(@lezer/common@1.2.3)
+      codemirror: 6.0.1
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
     transitivePeerDependencies:
@@ -10068,17 +10068,15 @@ snapshots:
 
   clsx@2.1.1: {}
 
-  codemirror@6.0.1(@lezer/common@1.2.3):
+  codemirror@6.0.1:
     dependencies:
-      '@codemirror/autocomplete': 6.18.3(@codemirror/language@6.10.6)(@codemirror/state@6.5.0)(@codemirror/view@6.35.3)(@lezer/common@1.2.3)
-      '@codemirror/commands': 6.7.1
-      '@codemirror/language': 6.10.6
+      '@codemirror/autocomplete': 6.18.6
+      '@codemirror/commands': 6.8.1
+      '@codemirror/language': 6.11.2
       '@codemirror/lint': 6.8.2
-      '@codemirror/search': 6.5.8
-      '@codemirror/state': 6.5.0
-      '@codemirror/view': 6.35.3
-    transitivePeerDependencies:
-      - '@lezer/common'
+      '@codemirror/search': 6.5.11
+      '@codemirror/state': 6.5.2
+      '@codemirror/view': 6.38.0
 
   color-convert@1.9.3:
     dependencies:
@@ -11204,48 +11202,48 @@ snapshots:
     dependencies:
       readable-stream: 2.3.8
 
-  lefthook-darwin-arm64@1.11.15:
+  lefthook-darwin-arm64@1.11.16:
     optional: true
 
-  lefthook-darwin-x64@1.11.15:
+  lefthook-darwin-x64@1.11.16:
     optional: true
 
-  lefthook-freebsd-arm64@1.11.15:
+  lefthook-freebsd-arm64@1.11.16:
     optional: true
 
-  lefthook-freebsd-x64@1.11.15:
+  lefthook-freebsd-x64@1.11.16:
     optional: true
 
-  lefthook-linux-arm64@1.11.15:
+  lefthook-linux-arm64@1.11.16:
     optional: true
 
-  lefthook-linux-x64@1.11.15:
+  lefthook-linux-x64@1.11.16:
     optional: true
 
-  lefthook-openbsd-arm64@1.11.15:
+  lefthook-openbsd-arm64@1.11.16:
     optional: true
 
-  lefthook-openbsd-x64@1.11.15:
+  lefthook-openbsd-x64@1.11.16:
     optional: true
 
-  lefthook-windows-arm64@1.11.15:
+  lefthook-windows-arm64@1.11.16:
     optional: true
 
-  lefthook-windows-x64@1.11.15:
+  lefthook-windows-x64@1.11.16:
     optional: true
 
-  lefthook@1.11.15:
+  lefthook@1.11.16:
     optionalDependencies:
-      lefthook-darwin-arm64: 1.11.15
-      lefthook-darwin-x64: 1.11.15
-      lefthook-freebsd-arm64: 1.11.15
-      lefthook-freebsd-x64: 1.11.15
-      lefthook-linux-arm64: 1.11.15
-      lefthook-linux-x64: 1.11.15
-      lefthook-openbsd-arm64: 1.11.15
-      lefthook-openbsd-x64: 1.11.15
-      lefthook-windows-arm64: 1.11.15
-      lefthook-windows-x64: 1.11.15
+      lefthook-darwin-arm64: 1.11.16
+      lefthook-darwin-x64: 1.11.16
+      lefthook-freebsd-arm64: 1.11.16
+      lefthook-freebsd-x64: 1.11.16
+      lefthook-linux-arm64: 1.11.16
+      lefthook-linux-x64: 1.11.16
+      lefthook-openbsd-arm64: 1.11.16
+      lefthook-openbsd-x64: 1.11.16
+      lefthook-windows-arm64: 1.11.16
+      lefthook-windows-x64: 1.11.16
 
   leven@3.1.0: {}
 
