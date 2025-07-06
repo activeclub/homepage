@@ -30,6 +30,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Run Format and Lint
-        run: pnpm run format-and-lint
+        run: pnpm run lint
       - name: Run Test
         run: pnpm run test

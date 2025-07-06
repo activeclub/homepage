@@ -277,7 +277,7 @@ export type AllSanitySchemaTypes = Youtube | BlockContent | Category | Post | Au
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: src/lib/sanity/queries.ts
 // Variable: POSTS_QUERY
-// Query: *[_type == "post" && defined(slug.current)][0...12]{  _id,  title,  slug,  mainImage,  publishedAt}
+// Query: *[_type == "post" && defined(slug.current)] | order(publishedAt desc)[$start...$end]{  _id,  title,  slug,  mainImage,  publishedAt}
 export type POSTS_QUERYResult = Array<{
   _id: string;
   title: string | null;
@@ -296,6 +296,9 @@ export type POSTS_QUERYResult = Array<{
   } | null;
   publishedAt: string | null;
 }>;
+// Variable: POSTS_COUNT_QUERY
+// Query: count(*[_type == "post" && defined(slug.current)])
+export type POSTS_COUNT_QUERYResult = number;
 // Variable: POST_QUERY
 // Query: *[_type == "post" && slug.current == $slug][0]{  title,  slug,  mainImage,  body,  publishedAt,  author->{    slug,    name,    image  },  categories[]->{    title  }}
 export type POST_QUERYResult = {
@@ -341,13 +344,35 @@ export type SITEMAP_POSTS_QUERYResult = Array<{
   _updatedAt: string;
   slug: Slug | null;
 }>;
+// Variable: ALL_POSTS_QUERY
+// Query: *[_type == "post" && defined(slug.current)] | order(publishedAt desc){  _id,  title,  slug,  mainImage,  publishedAt}
+export type ALL_POSTS_QUERYResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: Slug | null;
+  mainImage: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  } | null;
+  publishedAt: string | null;
+}>;
 
 // Query TypeMap
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[_type == \"post\" && defined(slug.current)][0...12]{\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}": POSTS_QUERYResult;
+    "*[_type == \"post\" && defined(slug.current)] | order(publishedAt desc)[$start...$end]{\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}": POSTS_QUERYResult;
+    "count(*[_type == \"post\" && defined(slug.current)])": POSTS_COUNT_QUERYResult;
     "*[_type == \"post\" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage,\n  body,\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image\n  },\n  categories[]->{\n    title\n  }\n}": POST_QUERYResult;
     "*[_type == \"post\" && defined(slug.current)]{\n  _updatedAt,\n  slug\n}": SITEMAP_POSTS_QUERYResult;
+    "*[_type == \"post\" && defined(slug.current)] | order(publishedAt desc){\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}": ALL_POSTS_QUERYResult;
   }
 }

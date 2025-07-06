@@ -14,8 +14,11 @@ import {
 import { buttonVariants } from "@/components/ui/button";
 import { client, sanityFetch } from "@/lib/sanity/client";
 import { getImageDimensions, urlFor } from "@/lib/sanity/image";
-import { POSTS_QUERY, POST_QUERY } from "@/lib/sanity/queries";
-import type { POSTS_QUERYResult, POST_QUERYResult } from "@/lib/sanity/types";
+import { ALL_POSTS_QUERY, POST_QUERY } from "@/lib/sanity/queries";
+import type {
+  ALL_POSTS_QUERYResult,
+  POST_QUERYResult,
+} from "@/lib/sanity/types";
 import { cn, formatDate, isExternalPost } from "@/lib/utils";
 
 type Props = {
@@ -34,8 +37,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const posts = await client.fetch<POSTS_QUERYResult>(
-    POSTS_QUERY,
+  const posts = await client.fetch<ALL_POSTS_QUERYResult>(
+    ALL_POSTS_QUERY,
     {},
     { perspective: "published" },
   );
