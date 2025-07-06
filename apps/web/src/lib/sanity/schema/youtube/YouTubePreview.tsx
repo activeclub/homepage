@@ -1,4 +1,4 @@
-import YouTubePlayer from "react-player/youtube";
+import YouTubePlayer from "react-player";
 import type { PreviewProps } from "sanity";
 
 export function YouTubePreview(props: PreviewProps) {
@@ -7,7 +7,7 @@ export function YouTubePreview(props: PreviewProps) {
   return (
     <div className="flex justify-center items-center">
       {typeof url === "string" ? (
-        <YouTubePlayer url={url} />
+        <YouTubePlayer src={url} />
       ) : (
         <p>Add a YouTube URL</p>
       )}

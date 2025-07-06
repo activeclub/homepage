@@ -230,7 +230,7 @@ function YouTubeComponent({ value }: any) {
   return (
     <div className="relative pt-[56.25%]">
       <YouTubePlayer
-        url={url}
+        src={url}
         className="absolute top-0 left-0"
         width="100%"
         height="100%"
