@@ -3,19 +3,46 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { PageHeader } from "@/components/base/page-header";
-import { dayjs } from "@/lib/dayjs";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { client } from "@/lib/sanity/client";
 import { urlFor } from "@/lib/sanity/image";
-import { POSTS_QUERY } from "@/lib/sanity/queries";
-import type { POSTS_QUERYResult } from "@/lib/sanity/types";
+import { POSTS_COUNT_QUERY, POSTS_QUERY } from "@/lib/sanity/queries";
+import type {
+  POSTS_COUNT_QUERYResult,
+  POSTS_QUERYResult,
+} from "@/lib/sanity/types";
 import { formatDate, isExternalPost } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Blog",
 };
 
-export default async function Blog() {
-  const posts = await client.fetch<POSTS_QUERYResult>(POSTS_QUERY);
+const POSTS_PER_PAGE = 10;
+
+type Props = {
+  searchParams: Promise<{ page?: string }>;
+};
+
+export default async function Blog({ searchParams }: Props) {
+  const { page } = await searchParams;
+  const currentPage = Number(page) || 1;
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const end = start + POSTS_PER_PAGE;
+
+  const [posts, totalCount] = await Promise.all([
+    client.fetch<POSTS_QUERYResult>(POSTS_QUERY, { start, end }),
+    client.fetch<POSTS_COUNT_QUERYResult>(POSTS_COUNT_QUERY),
+  ]);
+
+  const totalPages = Math.ceil(totalCount / POSTS_PER_PAGE);
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10 mx-auto px-6 lg:px-10">
@@ -25,12 +52,9 @@ export default async function Blog() {
       />
 
       {posts.length ? (
-        <div className="grid gap-10 sm:grid-cols-2">
-          {posts
-            .sort((a, b) =>
-              dayjs(a.publishedAt).isAfter(dayjs(b.publishedAt)) ? -1 : 1,
-            )
-            .map((post) => (
+        <>
+          <div className="grid gap-10 sm:grid-cols-2">
+            {posts.map((post) => (
               <article
                 key={post.slug?.current ?? ""}
                 className="group relative flex flex-col space-y-2"
@@ -66,7 +90,59 @@ export default async function Blog() {
                 </Link>
               </article>
             ))}
-        </div>
+          </div>
+
+          {totalPages > 1 && (
+            <Pagination className="mt-12">
+              <PaginationContent>
+                {currentPage > 1 && (
+                  <PaginationItem>
+                    <PaginationPrevious
+                      href={`/blog?page=${currentPage - 1}`}
+                    />
+                  </PaginationItem>
+                )}
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                  (page) => {
+                    if (
+                      page === 1 ||
+                      page === totalPages ||
+                      (page >= currentPage - 1 && page <= currentPage + 1)
+                    ) {
+                      return (
+                        <PaginationItem key={page}>
+                          <PaginationLink
+                            href={`/blog?page=${page}`}
+                            isActive={page === currentPage}
+                          >
+                            {page}
+                          </PaginationLink>
+                        </PaginationItem>
+                      );
+                    }
+
+                    if (page === currentPage - 2 || page === currentPage + 2) {
+                      return (
+                        <PaginationItem key={page}>
+                          <PaginationEllipsis />
+                        </PaginationItem>
+                      );
+                    }
+
+                    return null;
+                  },
+                )}
+
+                {currentPage < totalPages && (
+                  <PaginationItem>
+                    <PaginationNext href={`/blog?page=${currentPage + 1}`} />
+                  </PaginationItem>
+                )}
+              </PaginationContent>
+            </Pagination>
+          )}
+        </>
       ) : (
         <p>No Blogs found</p>
       )}
