@@ -1,5 +1,5 @@
 pre-commit:
   parallel: true
   commands:
-    format-and-lint:
-      run: pnpm run format-and-lint
+    lint:
+      run: pnpm run lint
