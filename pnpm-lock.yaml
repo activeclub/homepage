@@ -97,8 +97,8 @@ importers:
         specifier: 7.60.0
         version: 7.60.0(react@19.1.0)
       react-player:
-        specifier: 3.1.0
-        version: 3.1.0(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 3.3.1
+        version: 3.3.1(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       sanity:
         specifier: 3.99.0
         version: 3.99.0(@emotion/is-prop-valid@1.2.2)(@types/node@22.15.35)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(immer@10.1.1)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.15(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(terser@5.37.0)(typescript@5.8.3)(yaml@2.6.1)
@@ -3185,8 +3185,8 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
 
-  cloudflare-video-element@1.3.2:
-    resolution: {integrity: sha512-6M55oHTqDKVIu7sUhuvJnjTfZDEfyNEhBi5gP9dcUK3m2ECWm4J6xLEbwWaaRhgbfQ3cR5zIazEYXuFwoxUp0w==}
+  cloudflare-video-element@1.3.3:
+    resolution: {integrity: sha512-qrHzwLmUhisoIuEoKc7iBbdzBNj2Pi7ThHslU/9U/6PY9DEvo4mh/U+w7OVuzXT9ks7ZXfARvDBfPAaMGF/hIg==}
 
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
@@ -3330,8 +3330,8 @@ packages:
   cyclist@1.0.2:
     resolution: {integrity: sha512-0sVXIohTfLqVIW3kb/0n6IiWF3Ifj5nm2XaSrLq2DI6fKIGa2fYAZdk917rUneaeLVpYfFcyXE2ft0fe3remsA==}
 
-  dash-video-element@0.1.5:
-    resolution: {integrity: sha512-sPXsm1evfjLPXLTpE5a1a/9swmQP+kHUDu4HfPN4qXPHIKh8OJ6Vfr3kbidbLEke3MpS4c02iVBBpo4oiejWjw==}
+  dash-video-element@0.1.6:
+    resolution: {integrity: sha512-4gHShaQjcFv6diX5EzB6qAdUGKlIUGGZY8J8yp2pQkWqR0jX4c6plYy0cFraN7mr0DZINe8ujDN1fssDYxJjcg==}
 
   dashjs@5.0.3:
     resolution: {integrity: sha512-TXndNnCUjFjF2nYBxDVba+hWRpVkadkQ8flLp7kHkem+5+wZTfRShJCnVkPUosmjS0YPE9fVNLbYPJxHBeQZvA==}
@@ -3433,10 +3433,6 @@ packages:
   deep-eql@5.0.2:
     resolution: {integrity: sha512-h5k/5U50IJJFpzfL6nO9jaaumfjO/f2NjK/oYB2Djzm4p9L+3T9qWpZqZ2hAbLPuuYq9wrU08WQyBTL5GbPk5Q==}
     engines: {node: '>=6'}
-
-  deepmerge@4.3.1:
-    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
-    engines: {node: '>=0.10.0'}
 
   defaults@1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
@@ -3905,8 +3901,8 @@ packages:
   history@5.3.0:
     resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
 
-  hls-video-element@1.5.5:
-    resolution: {integrity: sha512-7HYIf+jeeCtazcBVVmj16qfTDRKvxd92TMdscocNWPoAePmovPPnii1aBdRsinsiw4rt90B8FgYoHzMhLi1qYQ==}
+  hls-video-element@1.5.6:
+    resolution: {integrity: sha512-KPdvSR+oBJPiCVb+m6pd2mn3rJEjNbaK8pGhSkxFI2pmyvZIeTVQrPbEO9PT/juwXHwhvCoKJnNxAuFwJG9H5A==}
 
   hls.js@1.6.6:
     resolution: {integrity: sha512-S4uTCwTHOtImW+/jxMjzG7udbHy5z682YQRbm/4f7VXuVNEoGBRjPJnD3Fxrufomdhzdtv24KnxRhPMXSvL6Fw==}
@@ -5196,8 +5192,8 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  react-player@3.1.0:
-    resolution: {integrity: sha512-j3pZ9x3rdlMPYqi0C7h3C7oFIqRcdrul1fjQiacnMU/qEzsJgOLlxd8HMZPX1nQsCblF2iwIIrmgcayf+Eh9yA==}
+  react-player@3.3.1:
+    resolution: {integrity: sha512-wE/xLloneXZ1keelFCaNeIFVNUp4/7YoUjfHjwF945aQzsbDKiIB0LQuCchGL+la0Y1IybxnR0R6Cm3AiqInMw==}
     peerDependencies:
       '@types/react': ^17.0.0 || ^18 || ^19
       react: ^17.0.2 || ^18 || ^19
@@ -5579,6 +5575,9 @@ packages:
     resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
     engines: {node: '>= 10.x'}
 
+  spotify-audio-element@1.0.2:
+    resolution: {integrity: sha512-YEovyyeJTJMzdSVqFw/Fx19e1gdcD4bmZZ/fWS0Ji58KTpvAT2rophgK87ocqpy6eJNSmIHikhgbRjGWumgZew==}
+
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
@@ -5768,6 +5767,9 @@ packages:
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
 
+  tiktok-video-element@0.1.0:
+    resolution: {integrity: sha512-PVWUlpDdQ/LPXi7x4/furfD7Xh1L72CgkGCaMsZBIjvxucMGm1DDPJdM9IhWBFfo6tuR4cYVO/v596r6GG/lvQ==}
+
   tiny-invariant@1.3.1:
     resolution: {integrity: sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw==}
 
@@ -5899,6 +5901,9 @@ packages:
   turbo@2.5.4:
     resolution: {integrity: sha512-kc8ZibdRcuWUG1pbYSBFWqmIjynlD8Lp7IB6U3vIzvOv9VG+6Sp8bzyeBWE3Oi8XV5KsQrznyRTBPvrf99E4mA==}
     hasBin: true
+
+  twitch-video-element@0.1.2:
+    resolution: {integrity: sha512-/up4KiWiTYiav+CUo+/DbV8JhP4COwEKSo8h1H/Zft/5NzZ/ZiIQ48h7erFKvwzalN0GfkEGGIfwIzAO0h7FHQ==}
 
   type-fest@0.18.1:
     resolution: {integrity: sha512-OIAYXk8+ISY+qTOwkHtKqzAuxchoMiD9Udx+FSGQDuiRR+PJKJHc2NJAXlbhkGwTt/4/nKZxELY1w3ReWOL8mw==}
@@ -6106,8 +6111,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vimeo-video-element@1.5.1:
-    resolution: {integrity: sha512-KV1PCBYqnwsA364/Lr6UhKhQAAwhyxtv9AhS1Yex43u1Yk9roClYRcvfKldo/K66lMHWMKs4G0GcaItOjvqQmw==}
+  vimeo-video-element@1.5.3:
+    resolution: {integrity: sha512-OQWyGS9nTouMqfRJyvmAm/n6IRhZ7x3EfPAef+Q+inGBeHa3SylDbtyeB/rEBd4B/T/lcYBW3rjaD9W2DRYkiQ==}
 
   vite-node@3.2.4:
     resolution: {integrity: sha512-EbKSKh+bh1E1IFxeO0pg1n4dvoOTt0UDiXMd/qn++r98+jPO1xtJilvXldeuQ8giIB5IkpjCgMleHMNEsGH6pg==}
@@ -6287,8 +6292,8 @@ packages:
     resolution: {integrity: sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==}
     engines: {node: '>=8'}
 
-  wistia-video-element@1.3.2:
-    resolution: {integrity: sha512-7aSvKXAxBQErewJaDCoZGPOQaFGLljtMMo88eT1ZGRu6TQBwNSqBSIF/Q3x7hBtYWI6ZgqVTKbCACIZn4tAiOQ==}
+  wistia-video-element@1.3.3:
+    resolution: {integrity: sha512-ZVC8HH8uV3mQGcSz10MACLDalao/0YdVverNN4GNFsOXiumfqSiZnRVc8WZEywgVckBkR7+yerQYESYPDzvTfQ==}
 
   wordwrap@1.0.0:
     resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==}
@@ -6394,8 +6399,8 @@ packages:
     resolution: {integrity: sha512-cYVsTjKl8b+FrnidjibDWskAv7UKOfcwaVZdp/it9n1s9fU3IkgDbhdIRKCW4JDsAlECJY0ytoVPT3sK6kideA==}
     engines: {node: '>=18'}
 
-  youtube-video-element@1.6.0:
-    resolution: {integrity: sha512-yu6aMaSyyp8ygqNNnf01xjJdy7AaWwEhLlJ/XRdFteLP/djM7i7JOrK0INgjvBnv88dAtiW9PKZ0OQQzGFeydw==}
+  youtube-video-element@1.6.1:
+    resolution: {integrity: sha512-FDRgXlPxpe1bh6HlhL6GfJVcvVNaZKCcLEZ90X1G3Iu+z2g2cIhm2OWj9abPZq1Zqit6SY7Gwh13H9g7acoBnQ==}
 
   zip-stream@6.0.1:
     resolution: {integrity: sha512-zK7YHHz4ZXpW89AHXUPbQVGKI7uvkd3hzusTdotCg1UxyaVtg0zFJSTfW/Dq5f7OBBVnq6cZIaC8Ti4hb6dtCA==}
@@ -9777,7 +9782,7 @@ snapshots:
 
   clone@1.0.4: {}
 
-  cloudflare-video-element@1.3.2: {}
+  cloudflare-video-element@1.3.3: {}
 
   clsx@2.1.1: {}
 
@@ -9929,7 +9934,7 @@ snapshots:
 
   cyclist@1.0.2: {}
 
-  dash-video-element@0.1.5:
+  dash-video-element@0.1.6:
     dependencies:
       custom-media-element: 1.4.5
       dashjs: 5.0.3
@@ -10042,8 +10047,6 @@ snapshots:
   deeks@3.1.0: {}
 
   deep-eql@5.0.2: {}
-
-  deepmerge@4.3.1: {}
 
   defaults@1.0.4:
     dependencies:
@@ -10584,7 +10587,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.25.9
 
-  hls-video-element@1.5.5:
+  hls-video-element@1.5.6:
     dependencies:
       custom-media-element: 1.4.5
       hls.js: 1.6.6
@@ -11951,19 +11954,21 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-player@3.1.0(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-player@3.3.1(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       '@mux/mux-player-react': 3.5.1(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@types/react': 19.1.8
-      cloudflare-video-element: 1.3.2
-      dash-video-element: 0.1.5
-      deepmerge: 4.3.1
-      hls-video-element: 1.5.5
+      cloudflare-video-element: 1.3.3
+      dash-video-element: 0.1.6
+      hls-video-element: 1.5.6
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
-      vimeo-video-element: 1.5.1
-      wistia-video-element: 1.3.2
-      youtube-video-element: 1.6.0
+      spotify-audio-element: 1.0.2
+      tiktok-video-element: 0.1.0
+      twitch-video-element: 0.1.2
+      vimeo-video-element: 1.5.3
+      wistia-video-element: 1.3.3
+      youtube-video-element: 1.6.1
     transitivePeerDependencies:
       - '@types/react-dom'
 
@@ -12576,6 +12581,8 @@ snapshots:
 
   split2@4.2.0: {}
 
+  spotify-audio-element@1.0.2: {}
+
   sprintf-js@1.0.3: {}
 
   stackback@0.0.2: {}
@@ -12789,6 +12796,8 @@ snapshots:
 
   through@2.3.8: {}
 
+  tiktok-video-element@0.1.0: {}
+
   tiny-invariant@1.3.1: {}
 
   tiny-warning@1.0.3: {}
@@ -12893,6 +12902,8 @@ snapshots:
       turbo-linux-arm64: 2.5.4
       turbo-windows-64: 2.5.4
       turbo-windows-arm64: 2.5.4
+
+  twitch-video-element@0.1.2: {}
 
   type-fest@0.18.1: {}
 
@@ -13076,7 +13087,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vimeo-video-element@1.5.1:
+  vimeo-video-element@1.5.3:
     dependencies:
       '@vimeo/player': 2.29.0
 
@@ -13232,7 +13243,7 @@ snapshots:
     dependencies:
       string-width: 4.2.3
 
-  wistia-video-element@1.3.2:
+  wistia-video-element@1.3.3:
     dependencies:
       super-media-element: 1.4.2
 
@@ -13316,7 +13327,7 @@ snapshots:
 
   yoctocolors-cjs@2.1.2: {}
 
-  youtube-video-element@1.6.0: {}
+  youtube-video-element@1.6.1: {}
 
   zip-stream@6.0.1:
     dependencies:
