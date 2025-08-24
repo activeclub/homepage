@@ -66,7 +66,12 @@ export default defineType({
     // as a block type.
     defineArrayMember({
       type: "image",
+      title: "Image",
       options: { hotspot: true },
+    }),
+    defineArrayMember({
+      type: "mux.video",
+      title: "Video",
     }),
     defineArrayMember({ type: "youtube", title: "YouTube" }),
     defineArrayMember({
