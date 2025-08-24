@@ -48,14 +48,14 @@
   "devDependencies": {
     "@next/env": "15.4.5",
     "@repo/typescript-config": "workspace:*",
-    "@tailwindcss/postcss": "4.1.11",
+    "@tailwindcss/postcss": "4.1.12",
     "@tailwindcss/typography": "0.5.16",
     "@types/node": "22.15.35",
     "@types/react": "19.1.11",
     "@types/react-dom": "19.1.7",
     "@vitejs/plugin-react": "4.7.0",
     "postcss": "8.5.6",
-    "tailwindcss": "4.1.11",
+    "tailwindcss": "4.1.12",
     "typescript": "5.9.2",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.2.4"
