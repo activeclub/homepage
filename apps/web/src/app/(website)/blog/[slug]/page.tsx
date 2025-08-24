@@ -8,6 +8,7 @@ import Link from "next/link";
 import {
   CodeComponent,
   MathComponent,
+  MuxVideo,
   PostTag,
   YouTubePlayer,
 } from "@/components/page/post";
@@ -127,6 +128,9 @@ export default async function BlogContent({ params }: Props) {
                     />
                   ),
                   latex: ({ value }) => <MathComponent math={value.body} />,
+                  "mux.video": ({ value }) => (
+                    <MuxVideo playbackId={value.asset.playbackId} />
+                  ),
                 },
                 marks: {
                   link: LinkComponent,

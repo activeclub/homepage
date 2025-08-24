@@ -18,7 +18,14 @@ export const POST_QUERY =
   title,
   slug,
   mainImage,
-  body,
+  body[]{
+    ...,
+    _type == "mux.video" => {
+      asset->{
+        playbackId
+      }
+    }
+  },
   publishedAt,
   author->{
     slug,

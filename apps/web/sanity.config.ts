@@ -4,6 +4,7 @@ import { codeInput } from "@sanity/code-input";
 import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
 import { latexInput } from "sanity-plugin-latex-input";
+import { muxInput } from "sanity-plugin-mux-input";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 
@@ -30,6 +31,7 @@ export default defineConfig({
     structureTool(),
     codeInput(),
     latexInput(),
+    muxInput(),
   ],
   schema: {
     types: schemaTypes,
