@@ -290,6 +290,21 @@
             },
             "rest": {
               "type": "inline",
+              "name": "mux.video"
+            }
+          },
+          {
+            "type": "object",
+            "attributes": {
+              "_key": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "rest": {
+              "type": "inline",
               "name": "youtube"
             }
           },
