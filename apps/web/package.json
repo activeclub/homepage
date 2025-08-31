@@ -27,7 +27,7 @@
     "@sanity/vision": "4.5.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
-    "dayjs": "1.11.13",
+    "dayjs": "1.11.18",
     "hast-util-to-jsx-runtime": "2.3.6",
     "katex": "0.16.22",
     "lucide-react": "0.542.0",
