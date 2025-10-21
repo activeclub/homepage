@@ -18,6 +18,6 @@
     "node": ">=22"
   },
   "dependencies": {
-    "lefthook": "1.12.4"
+    "lefthook": "1.13.6"
   }
 }
