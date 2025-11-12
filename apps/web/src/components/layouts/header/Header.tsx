@@ -1,12 +1,19 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { AlignLeft, Moon, Sun, X } from "lucide-react";
-import { Bot, FileText, MessageCircleQuestion } from "lucide-react";
-import { useTheme } from "next-themes";
+import {
+  AlignLeft,
+  Bot,
+  FileText,
+  MessageCircleQuestion,
+  Moon,
+  Sun,
+  X,
+} from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
-import React, { useState } from "react";
+import { useTheme } from "next-themes";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const NAV_LIST = [
   { label: "Blog", path: "/blog", icon: FileText },
@@ -25,6 +32,7 @@ export function Header() {
       <div className="container flex h-16 max-w-(--breakpoint-2xl) items-center justify-between">
         <div className="flex items-center space-x-3">
           <Link href="/" className="flex items-center space-x-3 text-primary">
+            {/** biome-ignore lint/performance/noImgElement: ... */}
             <img src="/images/logo.png" className="h-6 lg:h-10" alt="Logo" />
           </Link>
         </div>
@@ -66,14 +74,12 @@ export function Header() {
             className="md:hidden"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
           >
-            <>
-              {isMobileOpen ? (
-                <X className="size-6" />
-              ) : (
-                <AlignLeft className="size-6" />
-              )}
-              <span className="sr-only">Menu</span>
-            </>
+            {isMobileOpen ? (
+              <X className="size-6" />
+            ) : (
+              <AlignLeft className="size-6" />
+            )}
+            <span className="sr-only">Menu</span>
           </Button>
         </div>
       </div>

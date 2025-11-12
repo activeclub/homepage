@@ -1,5 +1,5 @@
-import { type QueryOptions, type QueryParams, createClient } from "next-sanity";
 import { draftMode } from "next/headers";
+import { createClient, type QueryOptions, type QueryParams } from "next-sanity";
 
 import { apiVersion, dataset, projectId, token } from "./env";
 

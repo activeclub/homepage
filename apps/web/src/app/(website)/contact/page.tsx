@@ -1,10 +1,10 @@
+import type { Metadata } from "next";
 import { PageHeader } from "@/components/base/page-header";
 import {
   ContactForm,
   type Schema as ContactFormSchema,
 } from "@/components/page/contact";
 import { CHANNEL_ID, sendMessage } from "@/lib/discord/api";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",

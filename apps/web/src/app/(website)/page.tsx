@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SOCIALS } from "@/constants";
-import Link from "next/link";
 
 export default function Index() {
   return (

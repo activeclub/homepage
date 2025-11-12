@@ -1,7 +1,7 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { VisualEditing } from "next-sanity/visual-editing";
 import { draftMode } from "next/headers";
+import { VisualEditing } from "next-sanity/visual-editing";
 
 import "../globals.css";
 import { Footer } from "@/components/layouts/footer";
