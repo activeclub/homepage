@@ -11,7 +11,7 @@ async function highlight(code: string, language: string) {
     theme: "github-dark",
   });
 
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  // biome-ignore lint/suspicious/noExplicitAny: ...
   return toJsxRuntime(out as any, {
     Fragment,
     jsx,
@@ -22,7 +22,10 @@ async function highlight(code: string, language: string) {
 export function CodeComponent({
   code,
   language,
-}: { code: string; language: string }) {
+}: {
+  code: string;
+  language: string;
+}) {
   const [nodes, setNodes] = useState<React.JSX.Element>();
 
   useLayoutEffect(() => {

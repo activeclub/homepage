@@ -5,7 +5,10 @@ import MuxPlayer from "@mux/mux-player-react";
 export function MuxVideo({
   playbackId,
   title,
-}: { playbackId?: string; title?: string }) {
+}: {
+  playbackId?: string;
+  title?: string;
+}) {
   if (!playbackId) return null;
 
   return (
