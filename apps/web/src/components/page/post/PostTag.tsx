@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge";
 import type { PropsWithChildren } from "react";
+import { Badge } from "@/components/ui/badge";
 
 type Props = PropsWithChildren;
 

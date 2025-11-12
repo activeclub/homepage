@@ -1,9 +1,9 @@
 import { PortableText } from "@portabletext/react";
 import { ChevronLeft } from "lucide-react";
 import type { Metadata } from "next";
-import type { QueryParams } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
+import type { QueryParams } from "next-sanity";
 
 import {
   CodeComponent,
@@ -155,28 +155,28 @@ export default async function BlogContent({ params }: Props) {
                     </h2>
                   ),
                   h3: ({ children }) => (
-                    <h3 className="text-[1.3em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
+                    <h3 className="text-[1.3em] mb-2 mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
                       {children}
                     </h3>
                   ),
                   h4: ({ children }) => (
-                    <h4 className="text-[1.1em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
+                    <h4 className="text-[1.1em] mb-2 mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
                       {children}
                     </h4>
                   ),
                   h5: ({ children }) => (
-                    <h5 className="text-[1em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
+                    <h5 className="text-[1em] mb-2 mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
                       {children}
                     </h5>
                   ),
                   h6: ({ children }) => (
-                    <h6 className="text-[.9em] mb-[.5rem] mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
+                    <h6 className="text-[.9em] mb-2 mt-[2.25em] first:mt-0 font-bold leading-[1.5]">
                       {children}
                     </h6>
                   ),
                   blockquote: ({ children }) => (
                     <blockquote className="text-gray-400 text-[.97em] my-[1.4rem] mx-0 py-[2px] pr-0 pl-[.7em] border-s-[3px] border-gray-500 dark:border-gray-700">
-                      <p className="my-[1rem] first:my-0 mx-0">{children}</p>
+                      <p className="my-4 first:my-0 mx-0">{children}</p>
                     </blockquote>
                   ),
                 },
@@ -199,7 +199,7 @@ export default async function BlogContent({ params }: Props) {
   );
 }
 
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+// biome-ignore lint/suspicious/noExplicitAny: ...
 function ImageComponent({ value }: any) {
   const { width, height } = getImageDimensions(value);
   return (
@@ -213,7 +213,7 @@ function ImageComponent({ value }: any) {
   );
 }
 
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+// biome-ignore lint/suspicious/noExplicitAny: ...
 function LinkComponent({ value, children }: any) {
   const isExternal = value?.href?.startsWith("http");
   return (
@@ -228,7 +228,7 @@ function LinkComponent({ value, children }: any) {
   );
 }
 
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+// biome-ignore lint/suspicious/noExplicitAny: ...
 function YouTubeComponent({ value }: any) {
   const { url } = value;
   return (

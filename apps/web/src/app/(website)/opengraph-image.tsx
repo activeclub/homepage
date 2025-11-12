@@ -26,6 +26,7 @@ export default async function Image() {
         width: "100%",
       }}
     >
+      {/** biome-ignore lint/performance/noImgElement: ... */}
       <img src={logoSrc as never as string} height="140" alt="" />
     </div>,
     {
