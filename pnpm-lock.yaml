@@ -76,8 +76,8 @@ importers:
         specifier: 2.3.6
         version: 2.3.6
       katex:
-        specifier: 0.16.25
-        version: 0.16.25
+        specifier: 0.16.28
+        version: 0.16.28
       lucide-react:
         specifier: 0.553.0
         version: 0.553.0(react@19.2.0)
@@ -4167,8 +4167,8 @@ packages:
     resolution: {integrity: sha512-CW3CJGtN3nAtkoyV58jl0aOo8VzFv3V2t24ef5OEdULwMGp9pUpnWkCmwxuwo16Tfhoq9cUBFLb3i9P2YlVc4Q==}
     engines: {node: '>=14.18'}
 
-  katex@0.16.25:
-    resolution: {integrity: sha512-woHRUZ/iF23GBP1dkDQMh1QBad9dmr8/PAwNA54VrSOVYgI12MAcE14TqnDdQOdzyEonGzMepYnqBMYdsoAr8Q==}
+  katex@0.16.28:
+    resolution: {integrity: sha512-YHzO7721WbmAL6Ov1uzN/l5mY5WWWhJBSW+jq4tkfZfsxmo1hu6frS0EOswvjBUnWE6NtjEs48SFn5CQESRLZg==}
     hasBin: true
 
   kind-of@6.0.3:
@@ -10748,7 +10748,7 @@ snapshots:
 
   jsonwebtoken-esm@1.0.5: {}
 
-  katex@0.16.25:
+  katex@0.16.28:
     dependencies:
       commander: 8.3.0
 
@@ -12070,7 +12070,7 @@ snapshots:
     dependencies:
       '@sanity/incompatible-plugin': 1.0.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@types/katex': 0.16.7
-      katex: 0.16.25
+      katex: 0.16.28
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
       sanity: 4.15.0(@emotion/is-prop-valid@1.2.2)(@portabletext/sanity-bridge@1.2.2(@sanity/schema@4.15.0(@types/react@19.2.6)(debug@4.4.3))(@sanity/types@4.15.0(@types/react@19.2.6)))(@types/node@22.15.35)(@types/react-dom@19.2.3(@types/react@19.2.6))(@types/react@19.2.6)(immer@10.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(styled-components@6.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(terser@5.37.0)(typescript@5.9.3)(yaml@2.6.1)
