@@ -109,8 +109,8 @@ importers:
         specifier: 2.0.7
         version: 2.0.7(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sanity@4.15.0(@emotion/is-prop-valid@1.2.2)(@portabletext/sanity-bridge@1.2.2(@sanity/schema@4.15.0(@types/react@19.2.14)(debug@4.4.3))(@sanity/types@4.15.0(@types/react@19.2.14)))(@types/node@22.15.35)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@10.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(terser@5.37.0)(typescript@5.9.3)(yaml@2.6.1))
       sanity-plugin-mux-input:
-        specifier: 2.11.2
-        version: 2.11.2(@emotion/is-prop-valid@1.2.2)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react-is@19.1.1)(react@19.2.4)(sanity@4.15.0(@emotion/is-prop-valid@1.2.2)(@portabletext/sanity-bridge@1.2.2(@sanity/schema@4.15.0(@types/react@19.2.14)(debug@4.4.3))(@sanity/types@4.15.0(@types/react@19.2.14)))(@types/node@22.15.35)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@10.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(terser@5.37.0)(typescript@5.9.3)(yaml@2.6.1))(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
+        specifier: 2.15.0
+        version: 2.15.0(@emotion/is-prop-valid@1.2.2)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react-is@19.1.1)(react@19.2.4)(sanity@4.15.0(@emotion/is-prop-valid@1.2.2)(@portabletext/sanity-bridge@1.2.2(@sanity/schema@4.15.0(@types/react@19.2.14)(debug@4.4.3))(@sanity/types@4.15.0(@types/react@19.2.14)))(@types/node@22.15.35)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@10.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(terser@5.37.0)(typescript@5.9.3)(yaml@2.6.1))(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       shiki:
         specifier: 3.15.0
         version: 3.15.0
@@ -5353,13 +5353,13 @@ packages:
       react-dom: ^18 || ^19.2
       sanity: ^3.0.0 || ^4.0.0-0 || ^5.0.0
 
-  sanity-plugin-mux-input@2.11.2:
-    resolution: {integrity: sha512-is9QcYce8H5bpBnjIQcQxDJY7xdaHwuVZz0t6/8vTcfx2rF8ZvRf87ufocLDzXF8ymyy8QGXzyDMUBPDzLLTEA==}
+  sanity-plugin-mux-input@2.15.0:
+    resolution: {integrity: sha512-2w0Uk00NfvcbcDRD03QBrUhkm1OaqoIQruMIi89mv3HtAXMLkx39+bHFGaR6NogtRuIoLODUxg7Evi4qR0P2Fg==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18.3 || ^19
       react-is: ^18.3 || ^19
-      sanity: ^3.42.0 || ^4.0.0-0
+      sanity: ^3.42.0 || ^4.0.0-0 || ^5.0.0
       styled-components: ^5 || ^6
 
   sanity@4.15.0:
@@ -12088,7 +12088,7 @@ snapshots:
       react-dom: 19.2.4(react@19.2.4)
       sanity: 4.15.0(@emotion/is-prop-valid@1.2.2)(@portabletext/sanity-bridge@1.2.2(@sanity/schema@4.15.0(@types/react@19.2.14)(debug@4.4.3))(@sanity/types@4.15.0(@types/react@19.2.14)))(@types/node@22.15.35)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@10.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(terser@5.37.0)(typescript@5.9.3)(yaml@2.6.1)
 
-  sanity-plugin-mux-input@2.11.2(@emotion/is-prop-valid@1.2.2)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react-is@19.1.1)(react@19.2.4)(sanity@4.15.0(@emotion/is-prop-valid@1.2.2)(@portabletext/sanity-bridge@1.2.2(@sanity/schema@4.15.0(@types/react@19.2.14)(debug@4.4.3))(@sanity/types@4.15.0(@types/react@19.2.14)))(@types/node@22.15.35)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@10.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(terser@5.37.0)(typescript@5.9.3)(yaml@2.6.1))(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4)):
+  sanity-plugin-mux-input@2.15.0(@emotion/is-prop-valid@1.2.2)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react-is@19.1.1)(react@19.2.4)(sanity@4.15.0(@emotion/is-prop-valid@1.2.2)(@portabletext/sanity-bridge@1.2.2(@sanity/schema@4.15.0(@types/react@19.2.14)(debug@4.4.3))(@sanity/types@4.15.0(@types/react@19.2.14)))(@types/node@22.15.35)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@10.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(terser@5.37.0)(typescript@5.9.3)(yaml@2.6.1))(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4)):
     dependencies:
       '@mux/mux-player-react': 3.8.0(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@mux/upchunk': 3.5.0
