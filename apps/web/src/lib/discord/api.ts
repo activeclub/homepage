@@ -17,4 +17,4 @@ async function sendMessage(channelId: string, content: string) {
   return data;
 }
 
-export { sendMessage, CHANNEL_ID };
+export { CHANNEL_ID, sendMessage };
