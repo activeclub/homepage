@@ -34,8 +34,8 @@ importers:
         specifier: 16.0.11
         version: 16.0.11(next@16.1.7(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
       '@portabletext/react':
-        specifier: 5.0.0
-        version: 5.0.0(react@19.2.4)
+        specifier: 6.1.0
+        version: 6.1.0(react@19.2.4)
       '@radix-ui/react-dialog':
         specifier: 1.1.15
         version: 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -1926,14 +1926,8 @@ packages:
       '@portabletext/editor': ^3.3.16
       react: ^18.3 || ^19
 
-  '@portabletext/react@5.0.0':
-    resolution: {integrity: sha512-ZEYhjsiUn2Dvrhyao3qAvi6C/re9ZBt2atp14dtwWtPruMNgp1uMf3p+URf0pEEhu+rMEh9JeK0A8FgNejEWCg==}
-    engines: {node: '>=20.19 <22 || >=22.12'}
-    peerDependencies:
-      react: ^18.2 || ^19
-
-  '@portabletext/react@6.0.2':
-    resolution: {integrity: sha512-qE3/Fg8PqzGzZ6+lxVXKPDqthJTRG3T1R0R6wrUCVAYeC5e0JtXWwhOiWa0daLG9TEOwn2SUeB2SuWxQlTq+5g==}
+  '@portabletext/react@6.1.0':
+    resolution: {integrity: sha512-qs87L87oxz4dIWXDCEW9nTxWtsN6zkJbpsIJ5izWfE6EpJDH1WZtfHrUZyR3Ot3jwlViHNu9b3qztxFvMM2Rzg==}
     engines: {node: '>=20.19 <22 || >=22.12'}
     peerDependencies:
       react: ^18.2 || ^19
@@ -1950,24 +1944,12 @@ packages:
     resolution: {integrity: sha512-w59PcErj5JXUCv9tbV2npqJmcnORTAftCMLp0vc9FnWrXL3C9qYvuB2MQbdHsZEOesF3VmwqUsYUgjm7PX4JTw==}
     engines: {node: '>=20.19 <22 || >=22.12'}
 
-  '@portabletext/toolkit@4.0.0':
-    resolution: {integrity: sha512-Jj/QIy3vzZCNcxiUGM7KjGhUhyVjch+9pOzotWRARPNe07R6nbF/cRsKL70q5Xizf+6PVtFYwks4CSXKInC+wg==}
-    engines: {node: '>=20.19 <22 || >=22.12'}
-
   '@portabletext/toolkit@5.0.1':
     resolution: {integrity: sha512-qcwnWd15J2Ziwi0YfWHRx+DRqp87cPb+EBcYuEbDW0ChZwwxCdfIjDazzFpQeXnqhJn8own1c8UB3iHB61DiWg==}
     engines: {node: '>=20.19 <22 || >=22.12'}
 
   '@portabletext/toolkit@5.0.2':
     resolution: {integrity: sha512-Njc1LE1PMJkTx/wEPqZ6sOWGgFgX2B47fxpOQ/Ia4ByhsZoA5Sq8dNvvV5F052j/xE8TbOLiBEjS848FkKADDQ==}
-    engines: {node: '>=20.19 <22 || >=22.12'}
-
-  '@portabletext/types@3.0.0':
-    resolution: {integrity: sha512-7U8+bFcnguNtXr4rwMDj0EvJJDRzLaaof2mQqCjUcqxuuJpAppFaATZgrKmPI1uBgtFMi4unk1nIaOOmLHrX8Q==}
-    engines: {node: '>=20.19 <22 || >=22.12'}
-
-  '@portabletext/types@4.0.1':
-    resolution: {integrity: sha512-L8PZjVjmdKpW+82c1oNqGMqCOtQD2xORqJfr6Is7X5XXbz38eLYY79IM/1ok+Esf/iGOPtEYORdcf0ETmsWYew==}
     engines: {node: '>=20.19 <22 || >=22.12'}
 
   '@portabletext/types@4.0.2':
@@ -6243,6 +6225,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   uuidv7@0.4.4:
@@ -8485,16 +8468,10 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@portabletext/react@5.0.0(react@19.2.4)':
+  '@portabletext/react@6.1.0(react@19.2.4)':
     dependencies:
-      '@portabletext/toolkit': 4.0.0
-      '@portabletext/types': 3.0.0
-      react: 19.2.4
-
-  '@portabletext/react@6.0.2(react@19.2.4)':
-    dependencies:
-      '@portabletext/toolkit': 5.0.1
-      '@portabletext/types': 4.0.1
+      '@portabletext/toolkit': 5.0.2
+      '@portabletext/types': 4.0.2
       react: 19.2.4
 
   '@portabletext/sanity-bridge@1.2.14(@types/react@19.2.14)(debug@4.4.3)':
@@ -8514,21 +8491,13 @@ snapshots:
       '@portabletext/toolkit': 5.0.2
       '@portabletext/types': 4.0.2
 
-  '@portabletext/toolkit@4.0.0':
-    dependencies:
-      '@portabletext/types': 3.0.0
-
   '@portabletext/toolkit@5.0.1':
     dependencies:
-      '@portabletext/types': 4.0.1
+      '@portabletext/types': 4.0.2
 
   '@portabletext/toolkit@5.0.2':
     dependencies:
       '@portabletext/types': 4.0.2
-
-  '@portabletext/types@3.0.0': {}
-
-  '@portabletext/types@4.0.1': {}
 
   '@portabletext/types@4.0.2': {}
 
@@ -11818,7 +11787,7 @@ snapshots:
 
   next-sanity@11.6.12(@emotion/is-prop-valid@1.2.2)(@sanity/client@7.20.0)(@sanity/icons@3.7.4(react@19.2.4))(@sanity/types@4.22.0(@types/react@19.2.14))(next@16.1.7(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react-is@19.2.4)(react@19.2.4)(sanity@4.22.0(@emotion/is-prop-valid@1.2.2)(@portabletext/sanity-bridge@1.2.14(@types/react@19.2.14))(@types/node@24.12.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@10.2.0)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(terser@5.37.0)(typescript@5.9.3)(yaml@2.6.1))(styled-components@6.1.15(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3):
     dependencies:
-      '@portabletext/react': 6.0.2(react@19.2.4)
+      '@portabletext/react': 6.1.0(react@19.2.4)
       '@sanity/client': 7.20.0(debug@4.4.3)
       '@sanity/comlink': 4.0.1
       '@sanity/presentation-comlink': 2.0.1(@sanity/client@7.20.0)(@sanity/types@4.22.0(@types/react@19.2.14))
@@ -12637,7 +12606,7 @@ snapshots:
       '@portabletext/plugin-markdown-shortcuts': 4.0.36(@portabletext/editor@3.3.19(@portabletext/sanity-bridge@1.2.14(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rxjs@7.8.2))(@types/react@19.2.14)(react@19.2.4)
       '@portabletext/plugin-one-line': 3.0.36(@portabletext/editor@3.3.19(@portabletext/sanity-bridge@1.2.14(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rxjs@7.8.2))(react@19.2.4)
       '@portabletext/plugin-typography': 4.0.36(@portabletext/editor@3.3.19(@portabletext/sanity-bridge@1.2.14(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rxjs@7.8.2))(@types/react@19.2.14)(react@19.2.4)
-      '@portabletext/react': 6.0.2(react@19.2.4)
+      '@portabletext/react': 6.1.0(react@19.2.4)
       '@portabletext/toolkit': 5.0.1
       '@rexxars/react-json-inspector': 9.0.1(react@19.2.4)
       '@sanity/asset-utils': 2.3.0
