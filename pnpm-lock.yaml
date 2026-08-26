@@ -152,8 +152,8 @@ importers:
         specifier: 5.2.0
         version: 5.2.0(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.37.0)(yaml@2.6.1))
       postcss:
-        specifier: 8.5.10
-        version: 8.5.10
+        specifier: 8.5.23
+        version: 8.5.23
       tailwindcss:
         specifier: 4.1.18
         version: 4.1.18
@@ -4389,6 +4389,7 @@ packages:
   json-2-csv@5.5.9:
     resolution: {integrity: sha512-l4g6GZVHrsN+5SKkpOmGNSvho+saDZwXzj/xmcO0lJAgklzwsiqy70HS5tA9djcRvBEybZ9IF6R1MDFTEsaOGQ==}
     engines: {node: '>= 16'}
+    deprecated: A security vulnerability has been reported with the preventCsvInjection option which has been fixed in version 5.5.11. Please upgrade as soon as possible.
 
   json-lexer@1.2.0:
     resolution: {integrity: sha512-7otpx5UPFeSELoF8nkZPHCfywg86wOsJV0WNOaysuO7mfWj1QFp2vlqESRRCeJKBXr+tqDgHh4HgqUFKTLcifQ==}
@@ -4938,6 +4939,11 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  nanoid@3.3.18:
+    resolution: {integrity: sha512-DTg4MJbGMWkfi6VZFdNt2/caMbQy4Ou+Op/hJQvGEWcnVfoA1QA+xzRKAzw9jD6+GVOOeYr/mIcuDSdug6F6+w==}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+
   nanoid@5.1.5:
     resolution: {integrity: sha512-Ir/+ZpE9fDsNH0hQ3C68uyThDXzYcim2EqcZ8zn8Chtt1iylPT9xXJB0kPCnqzgcEGikO9RxSrh63MsmVCU7Fw==}
     engines: {node: ^18 || >=20}
@@ -5248,8 +5254,8 @@ packages:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.10:
-    resolution: {integrity: sha512-pMMHxBOZKFU6HgAZ4eyGnwXF/EvPGGqUr0MnZ5+99485wwW41kW91A4LOGxSHhgugZmSChL5AlElNdwlNgcnLQ==}
+  postcss@8.5.23:
+    resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
     engines: {node: ^10 || ^12 || >=14}
 
   preferred-pm@4.1.1:
@@ -6027,6 +6033,7 @@ packages:
   tsconfck@3.1.4:
     resolution: {integrity: sha512-kdqWFGVJqe+KGYvlSO9NIaWn9jT1Ny4oKVzAJsKii5eoE9snzTJzL4+MMVOMn+fikWGFmKEylcXL710V/kIPJQ==}
     engines: {node: ^18 || >=20}
+    deprecated: unmaintained
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
@@ -9533,7 +9540,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.1.18
       '@tailwindcss/oxide': 4.1.18
-      postcss: 8.5.10
+      postcss: 8.5.23
       tailwindcss: 4.1.18
 
   '@tailwindcss/typography@0.5.19(tailwindcss@4.1.18)':
@@ -11814,6 +11821,8 @@ snapshots:
 
   nanoid@3.3.11: {}
 
+  nanoid@3.3.18: {}
+
   nanoid@5.1.5: {}
 
   native-promise-only@0.8.1: {}
@@ -12157,9 +12166,9 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.10:
+  postcss@8.5.23:
     dependencies:
-      nanoid: 3.3.11
+      nanoid: 3.3.18
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -13420,7 +13429,7 @@ snapshots:
       esbuild: 0.27.0
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
-      postcss: 8.5.10
+      postcss: 8.5.23
       rollup: 4.44.1
       tinyglobby: 0.2.15
     optionalDependencies:
