@@ -4,5 +4,6 @@
     "config:recommended",
     ":pinAllExceptPeerDependencies",
     ":automergePatch"
-  ]
+  ],
+  "assignees": ["nszknao"]
 }
