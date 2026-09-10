@@ -14,7 +14,7 @@ Follow these steps to set up the project locally.
 
 ### Prerequisites
 
-- Node.js (recommended v22 or later)
+- Node.js (recommended v24 or later)
 - pnpm
 
 ### Setup Instructions
