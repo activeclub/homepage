@@ -5,5 +5,5 @@
     ":pinAllExceptPeerDependencies",
     ":automergePatch"
   ],
-  "reviewers": ["nszknao"]
+  "assignees": ["nszknao"]
 }
