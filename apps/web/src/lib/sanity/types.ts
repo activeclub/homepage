@@ -226,12 +226,18 @@ export type MuxStaticRenditions = {
 
 export type MuxStaticRenditionFile = {
   _type: "mux.staticRenditionFile";
-  ext?: string;
   name?: string;
+  ext?: string;
+  height?: number;
   width?: number;
   bitrate?: number;
-  filesize?: number;
-  height?: number;
+  filesize?: string;
+  type?: string;
+  status?: string;
+  resolution_tier?: string;
+  resolution?: string;
+  id?: string;
+  passthrough?: string;
 };
 
 export type MuxPlaybackId = {
@@ -248,6 +254,11 @@ export type MuxTrack = {
   max_frame_rate?: number;
   duration?: number;
   max_height?: number;
+  language_code?: string;
+  name?: string;
+  status?: string;
+  text_source?: string;
+  text_type?: string;
 };
 
 export type Latex = {
