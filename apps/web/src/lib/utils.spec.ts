@@ -1,6 +1,7 @@
-import { expect, test } from "vitest";
-import { formatDate } from "./utils";
+import { strictEqual } from "node:assert";
+import { test } from "node:test";
+import { formatDate } from "./utils.ts";
 
 test("Test formatDate", () => {
-  expect(formatDate("2024-01-31")).toBe("January 31, 2024");
+  strictEqual(formatDate("2024-01-31"), "January 31, 2024");
 });
