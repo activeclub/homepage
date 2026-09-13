@@ -37,11 +37,11 @@ export default function About() {
                   rel="noreferrer"
                   target="_blank"
                   className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "text-primary px-0 hover:bg-primary transition-colors rounded-full p-2 size-8 bg-primary/20",
+                    buttonVariants({ variant: "ghost", size: "icon-sm" }),
+                    "text-primary hover:bg-primary transition-colors rounded-full p-0 bg-primary/20",
                   )}
                 >
-                  <social.icon className="size-6" />
+                  <social.icon className="size-4" />
                   <span className="sr-only">{social.label}</span>
                 </Link>
               ))}
