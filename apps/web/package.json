@@ -8,7 +8,7 @@
     "prebuild": "pnpm run typegen",
     "build": "next build",
     "start": "next start",
-    "test": "vitest",
+    "test": "node --test 'src/**/*.spec.ts'",
     "typegen": "sanity schema extract --path=src/lib/sanity/extract.json && sanity typegen generate"
   },
   "dependencies": {
@@ -55,11 +55,8 @@
     "@types/node": "24.13.4",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "@vitejs/plugin-react": "5.2.0",
     "postcss": "8.5.28",
     "tailwindcss": "4.3.3",
-    "typescript": "5.9.3",
-    "vite-tsconfig-paths": "6.1.1",
-    "vitest": "5.0.0"
+    "typescript": "5.9.3"
   }
 }
