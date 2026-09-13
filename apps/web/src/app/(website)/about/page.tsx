@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageHeader } from "@/components/base/page-header";
-import { buttonVariants } from "@/components/ui/button-variants";
+import { buttonVariants } from "@/components/ui/button";
 import { SOCIALS } from "@/constants";
 import { cn } from "@/lib/utils";
 

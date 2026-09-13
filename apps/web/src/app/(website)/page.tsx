@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button-variants";
+import { buttonVariants } from "@/components/ui/button";
 import { SOCIALS } from "@/constants";
 
 export default function Index() {

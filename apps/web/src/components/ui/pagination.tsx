@@ -1,11 +1,10 @@
-import type { VariantProps } from "class-variance-authority";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   MoreHorizontalIcon,
 } from "lucide-react";
 import type * as React from "react";
-import { buttonVariants } from "@/components/ui/button-variants";
+import { type Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
@@ -38,7 +37,7 @@ function PaginationItem({ ...props }: React.ComponentProps<"li">) {
 
 type PaginationLinkProps = {
   isActive?: boolean;
-} & Pick<VariantProps<typeof buttonVariants>, "size"> &
+} & Pick<React.ComponentProps<typeof Button>, "size"> &
   React.ComponentProps<"a">;
 
 function PaginationLink({

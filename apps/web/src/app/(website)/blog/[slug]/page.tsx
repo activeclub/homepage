@@ -12,7 +12,7 @@ import {
   PostTag,
   YouTubePlayer,
 } from "@/components/page/post";
-import { buttonVariants } from "@/components/ui/button-variants";
+import { buttonVariants } from "@/components/ui/button";
 import { client, sanityFetch } from "@/lib/sanity/client";
 import { getImageDimensions, urlFor } from "@/lib/sanity/image";
 import { ALL_POSTS_QUERY, POST_QUERY } from "@/lib/sanity/queries";
