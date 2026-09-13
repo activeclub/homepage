@@ -14,6 +14,7 @@ export default function Index() {
         {SOCIALS.map((social) => (
           <Link
             key={social.label}
+            aria-label={social.label}
             href={social.path}
             rel="noreferrer"
             target="_blank"
