@@ -1,6 +1,6 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
-
-export const runtime = "edge";
 
 export const alt = "Active Club";
 export const size = {
@@ -11,9 +11,8 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image() {
-  const logoSrc = await fetch(
-    new URL("../../../public/images/logo.png", import.meta.url),
-  ).then((res) => res.arrayBuffer());
+  const logo = await readFile(join(process.cwd(), "public/images/logo.png"));
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
 
   return new ImageResponse(
     <div
@@ -27,7 +26,7 @@ export default async function Image() {
       }}
     >
       {/** biome-ignore lint/performance/noImgElement: ... */}
-      <img src={logoSrc as never as string} height="140" alt="" />
+      <img src={logoSrc} height={140} alt="" />
     </div>,
     {
       ...size,
