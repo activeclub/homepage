@@ -37,7 +37,7 @@
     "react-hook-form": "7.88.0",
     "react-player": "3.4.0",
     "sanity": "4.22.1",
-    "sanity-plugin-latex-input": "2.0.7",
+    "sanity-plugin-latex-input": "3.0.9",
     "sanity-plugin-mux-input": "2.19.1",
     "shiki": "4.4.3",
     "simple-icons": "16.30.0",
