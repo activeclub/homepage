@@ -38,7 +38,7 @@
     "react-player": "3.4.0",
     "sanity": "6.15.0",
     "sanity-plugin-latex-input": "3.0.9",
-    "sanity-plugin-mux-input": "2.19.1",
+    "sanity-plugin-mux-input": "5.0.12",
     "shiki": "4.4.3",
     "simple-icons": "16.30.0",
     "tailwind-merge": "3.7.0",
