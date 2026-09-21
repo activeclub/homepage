@@ -258,8 +258,8 @@ importers:
         specifier: 6.15.0
         version: 6.15.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.9)(vite@8.3.0(@types/node@24.13.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@types/node@24.13.4)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.9)(styled-components@6.1.15(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2)
       sanity-plugin-latex-input:
-        specifier: 2.0.7
-        version: 2.0.7(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sanity@6.15.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.9)(vite@8.3.0(@types/node@24.13.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@types/node@24.13.4)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.9)(styled-components@6.1.15(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2))
+        specifier: 3.0.9
+        version: 3.0.9(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sanity@6.15.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.9)(vite@8.3.0(@types/node@24.13.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@types/node@24.13.4)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.9)(styled-components@6.1.15(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2))
       sanity-plugin-mux-input:
         specifier: 2.19.1
         version: 2.19.1(@emotion/is-prop-valid@1.2.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react-is@19.3.0)(react@19.3.0)(sanity@6.15.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.9)(vite@8.3.0(@types/node@24.13.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@types/node@24.13.4)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.9)(styled-components@6.1.15(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2))(styled-components@6.1.15(react-dom@19.3.0(react@19.3.0))(react@19.3.0))
@@ -1117,9 +1117,6 @@ packages:
 
   '@codemirror/lint@6.8.2':
     resolution: {integrity: sha512-PDFG5DjHxSEjOXk9TQYYVjZDqlZTFaDBfhQixHnQOEVDDNHUbEh/hstAjcQJaA6FQdZTD1hquXTK0rVBLADR1g==}
-
-  '@codemirror/search@6.5.11':
-    resolution: {integrity: sha512-KmWepDE6jUdL6n8cAAqIpRmLPBZ5ZKnicE8oGU/s3QrAVID+0VhLFrzUucVKHG5035/BSykhExDL/Xm7dHthiA==}
 
   '@codemirror/search@6.7.2':
     resolution: {integrity: sha512-gUYkYhT2+n/+VGZ+8EzE5WFkYZUZYm1VOKDudIsNqh42uRVQJ0a6Yss9sdKT3MeOYfuL1N6AZA57oza0Oyr0LA==}
@@ -3107,9 +3104,6 @@ packages:
   '@types/hast@3.0.5':
     resolution: {integrity: sha512-rp/ezSWaD1m44dPKICGhiskI13nVr7qTloFwDa/IYkhhf5nzwP+zIQcIJh3WIFSBOy/H1PzB40jPjMDksN4F+g==}
 
-  '@types/katex@0.16.7':
-    resolution: {integrity: sha512-HMwFiRujE5PjrgwHQ25+bsLJgowjGjm5Z8FVSf0N6PwgJrwxH0QxzHYDcKsTfV3wva0vzrpqMTJS2jXPr5BMEQ==}
-
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
 
@@ -3717,10 +3711,6 @@ packages:
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
-
-  commander@8.3.0:
-    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
-    engines: {node: '>= 12'}
 
   comment-json@5.0.0:
     resolution: {integrity: sha512-uiqLcOiVDJtBP8WGkZHEP+FZIhTzP1dxvn59EfoYUi9gqupjrBWVQkO2atDrbnKPwLeotFYDsuNb26uBMqB+hw==}
@@ -4519,10 +4509,6 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  jiti@2.6.1:
-    resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
-    hasBin: true
-
   jiti@2.7.0:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
@@ -4590,10 +4576,6 @@ packages:
   jsonwebtoken-esm@1.0.5:
     resolution: {integrity: sha512-CW3CJGtN3nAtkoyV58jl0aOo8VzFv3V2t24ef5OEdULwMGp9pUpnWkCmwxuwo16Tfhoq9cUBFLb3i9P2YlVc4Q==}
     engines: {node: '>=14.18'}
-
-  katex@0.16.47:
-    resolution: {integrity: sha512-Eeo8Ys1doU1z+x8AZsPpQu+p/QcZBI5PeOo7QGQdy2x2m0MU/hYagBbGOmXwr5KVbEfVuWv9LpnQWeehogurjg==}
-    hasBin: true
 
   katex@0.18.7:
     resolution: {integrity: sha512-h+UCwkZ+4Jz8WQ7MLGfj7UVFrRCizGb912fwF4luGdYsC5paYG1vx+jy+KRcC/XkpjGva/P7nAWuxNnPzRvzHw==}
@@ -5640,13 +5622,13 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sanity-plugin-latex-input@2.0.7:
-    resolution: {integrity: sha512-J+k2/qCBNbwtn1Ioi1E1BZGBieyDB7KuToaY2zrNpeQIYIvPnyS0v97JkoS3lkHZp6GYULnA3NRCkO+8smadDg==}
-    engines: {node: '>=14'}
+  sanity-plugin-latex-input@3.0.9:
+    resolution: {integrity: sha512-tZpLeckhqVRyeQpWNs9ac8S5uLOs9erbuduhHrwzOU6rCFOyq9Uf5qEfJaxUQuBlyY4iAYaMn27JZo2259xJhg==}
+    engines: {node: '>=20.19 <22 || >=22.12'}
     peerDependencies:
-      react: ^18 || ^19.2
-      react-dom: ^18 || ^19.2
-      sanity: ^3.0.0 || ^4.0.0-0 || ^5.0.0
+      react: ^19.2
+      react-dom: ^19.2
+      sanity: ^5 || ^6.0.0-0
 
   sanity-plugin-mux-input@2.19.1:
     resolution: {integrity: sha512-hFz8hZhkZsEzhAZIsCX5aoIQ5YstxEUtQuX+E7PzjUsX+wwK/gw1C4+EUgou+Xmr4SxNy1y9+Zzfi6HEtMmRiw==}
@@ -7485,12 +7467,6 @@ snapshots:
     dependencies:
       '@codemirror/state': 6.6.0
       '@codemirror/view': 6.40.0
-      crelt: 1.0.6
-
-  '@codemirror/search@6.5.11':
-    dependencies:
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
       crelt: 1.0.6
 
   '@codemirror/search@6.7.2':
@@ -9825,8 +9801,6 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  '@types/katex@0.16.7': {}
-
   '@types/mdast@4.0.4':
     dependencies:
       '@types/unist': 3.0.3
@@ -10302,11 +10276,11 @@ snapshots:
 
   codemirror@6.0.1:
     dependencies:
-      '@codemirror/autocomplete': 6.20.1
-      '@codemirror/commands': 6.10.0
+      '@codemirror/autocomplete': 6.20.3
+      '@codemirror/commands': 6.11.1
       '@codemirror/language': 6.12.4
       '@codemirror/lint': 6.8.2
-      '@codemirror/search': 6.5.11
+      '@codemirror/search': 6.7.2
       '@codemirror/state': 6.7.4
       '@codemirror/view': 6.43.11
 
@@ -10330,8 +10304,6 @@ snapshots:
 
   commander@2.20.3:
     optional: true
-
-  commander@8.3.0: {}
 
   comment-json@5.0.0:
     dependencies:
@@ -11138,8 +11110,6 @@ snapshots:
       filelist: 1.0.4
       minimatch: 3.1.2
 
-  jiti@2.6.1: {}
-
   jiti@2.7.0: {}
 
   js-tokens@4.0.0: {}
@@ -11230,10 +11200,6 @@ snapshots:
   jsonify@0.0.1: {}
 
   jsonwebtoken-esm@1.0.5: {}
-
-  katex@0.16.47:
-    dependencies:
-      commander: 8.3.0
 
   katex@0.18.7:
     dependencies:
@@ -12350,11 +12316,9 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sanity-plugin-latex-input@2.0.7(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sanity@6.15.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.9)(vite@8.3.0(@types/node@24.13.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@types/node@24.13.4)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.9)(styled-components@6.1.15(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2)):
+  sanity-plugin-latex-input@3.0.9(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sanity@6.15.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.9)(vite@8.3.0(@types/node@24.13.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@types/node@24.13.4)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.9)(styled-components@6.1.15(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2)):
     dependencies:
-      '@sanity/incompatible-plugin': 1.0.5(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@types/katex': 0.16.7
-      katex: 0.16.47
+      katex: 0.18.7
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
       sanity: 6.15.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.9)(vite@8.3.0(@types/node@24.13.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@types/node@24.13.4)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.9)(styled-components@6.1.15(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2)

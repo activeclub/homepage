@@ -17,8 +17,8 @@ import { client, sanityFetch } from "@/lib/sanity/client";
 import { getImageDimensions, urlFor } from "@/lib/sanity/image";
 import { ALL_POSTS_QUERY, POST_QUERY } from "@/lib/sanity/queries";
 import type {
-  ALL_POSTS_QUERYResult,
-  POST_QUERYResult,
+  ALL_POSTS_QUERY_RESULT,
+  POST_QUERY_RESULT,
 } from "@/lib/sanity/types";
 import { cn, formatDate, isExternalPost } from "@/lib/utils";
 
@@ -27,7 +27,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await sanityFetch<POST_QUERYResult>({
+  const post = await sanityFetch<POST_QUERY_RESULT>({
     query: POST_QUERY,
     params: await params,
   });
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const posts = await client.fetch<ALL_POSTS_QUERYResult>(
+  const posts = await client.fetch<ALL_POSTS_QUERY_RESULT>(
     ALL_POSTS_QUERY,
     {},
     { perspective: "published" },
@@ -52,7 +52,7 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogContent({ params }: Props) {
-  const post = await sanityFetch<POST_QUERYResult>({
+  const post = await sanityFetch<POST_QUERY_RESULT>({
     query: POST_QUERY,
     params: await params,
   });

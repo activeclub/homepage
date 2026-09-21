@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { BASE_URL } from "@/constants";
 import { client } from "@/lib/sanity/client";
 import { SITEMAP_POSTS_QUERY } from "@/lib/sanity/queries";
-import type { SITEMAP_POSTS_QUERYResult } from "@/lib/sanity/types";
+import type { SITEMAP_POSTS_QUERY_RESULT } from "@/lib/sanity/types";
 import { isExternalPost } from "@/lib/utils";
 
 export async function generateSitemaps() {
@@ -46,7 +46,7 @@ export default async function sitemap({
   }
   if (id === "post") {
     const posts =
-      await client.fetch<SITEMAP_POSTS_QUERYResult>(SITEMAP_POSTS_QUERY);
+      await client.fetch<SITEMAP_POSTS_QUERY_RESULT>(SITEMAP_POSTS_QUERY);
 
     return posts
       .filter((post) => !isExternalPost(post))
