@@ -18,7 +18,7 @@
     "@next/third-parties": "16.3.5",
     "@portabletext/react": "5.0.0",
     "@sanity/asset-utils": "2.3.0",
-    "@sanity/client": "8.6.1",
+    "@sanity/client": "8.6.2",
     "@sanity/code-input": "7.3.8",
     "@sanity/image-url": "2.1.1",
     "@sanity/preview-url-secret": "4.1.5",
