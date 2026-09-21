@@ -121,15 +121,19 @@ export default async function BlogContent({ params }: Props) {
                 types: {
                   image: ImageComponent,
                   youtube: YouTubeComponent,
-                  code: ({ value }) => (
-                    <CodeComponent
-                      code={value.code}
-                      language={value.language}
-                    />
-                  ),
-                  latex: ({ value }) => <MathComponent math={value.body} />,
+                  code: ({ value }) =>
+                    value.code ? (
+                      <CodeComponent
+                        code={value.code}
+                        language={value.language ?? "text"}
+                      />
+                    ) : null,
+                  latex: ({ value }) =>
+                    value.body ? <MathComponent math={value.body} /> : null,
                   "mux.video": ({ value }) => (
-                    <MuxVideo playbackId={value.asset.playbackId} />
+                    <MuxVideo
+                      playbackId={value.asset?.playbackId ?? undefined}
+                    />
                   ),
                 },
                 marks: {
