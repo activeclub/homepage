@@ -16,8 +16,8 @@ import { client } from "@/lib/sanity/client";
 import { urlFor } from "@/lib/sanity/image";
 import { POSTS_COUNT_QUERY, POSTS_QUERY } from "@/lib/sanity/queries";
 import type {
-  POSTS_COUNT_QUERYResult,
-  POSTS_QUERYResult,
+  POSTS_COUNT_QUERY_RESULT,
+  POSTS_QUERY_RESULT,
 } from "@/lib/sanity/types";
 import { formatDate, isExternalPost } from "@/lib/utils";
 
@@ -38,8 +38,8 @@ export default async function Blog({ searchParams }: Props) {
   const end = start + POSTS_PER_PAGE;
 
   const [posts, totalCount] = await Promise.all([
-    client.fetch<POSTS_QUERYResult>(POSTS_QUERY, { start, end }),
-    client.fetch<POSTS_COUNT_QUERYResult>(POSTS_COUNT_QUERY),
+    client.fetch<POSTS_QUERY_RESULT>(POSTS_QUERY, { start, end }),
+    client.fetch<POSTS_COUNT_QUERY_RESULT>(POSTS_COUNT_QUERY),
   ]);
 
   const totalPages = Math.ceil(totalCount / POSTS_PER_PAGE);

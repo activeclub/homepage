@@ -12,50 +12,61 @@
  * ---------------------------------------------------------------------------------
  */
 
-// Source: schema.json
+export declare const internalGroqTypeReferenceTo: unique symbol;
+
+// Source: src/lib/sanity/extract.json
 export type Youtube = {
   _type: "youtube";
   url?: string;
 };
 
-export type BlockContent = Array<{
-  children?: Array<{
-    marks?: Array<string>;
-    text?: string;
-    _type: "span";
-    _key: string;
-  }>;
-  style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
-  listItem?: "bullet" | "number";
-  markDefs?: Array<{
-    href?: string;
-    _type: "link";
-    _key: string;
-  }>;
-  level?: number;
-  _type: "block";
-  _key: string;
-} | {
-  asset?: {
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-  };
-  media?: unknown;
-  hotspot?: SanityImageHotspot;
-  crop?: SanityImageCrop;
-  _type: "image";
-  _key: string;
-} | {
-  _key: string;
-} & MuxVideo | {
-  _key: string;
-} & Youtube | {
-  _key: string;
-} & Code | {
-  _key: string;
-} & Latex>;
+export type SanityImageAssetReference = {
+  _ref: string;
+  _type: "reference";
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+};
+
+export type BlockContent = Array<
+  | {
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }
+  | {
+      asset?: SanityImageAssetReference;
+      media?: unknown;
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: "image";
+      _key: string;
+    }
+  | ({
+      _key: string;
+    } & MuxVideo)
+  | ({
+      _key: string;
+    } & Youtube)
+  | ({
+      _key: string;
+    } & Code)
+  | ({
+      _key: string;
+    } & Latex)
+>;
 
 export type Category = {
   _id: string;
@@ -67,6 +78,20 @@ export type Category = {
   description?: string;
 };
 
+export type AuthorReference = {
+  _ref: string;
+  _type: "reference";
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: "author";
+};
+
+export type CategoryReference = {
+  _ref: string;
+  _type: "reference";
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: "category";
+};
+
 export type Post = {
   _id: string;
   _type: "post";
@@ -75,31 +100,19 @@ export type Post = {
   _rev: string;
   title?: string;
   slug?: Slug;
-  author?: {
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: "author";
-  };
+  author?: AuthorReference;
   mainImage?: {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
+    asset?: SanityImageAssetReference;
     media?: unknown;
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
     _type: "image";
   };
-  categories?: Array<{
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    _key: string;
-    [internalGroqTypeReferenceTo]?: "category";
-  }>;
+  categories?: Array<
+    {
+      _key: string;
+    } & CategoryReference
+  >;
   publishedAt?: string;
   body?: BlockContent;
 };
@@ -129,12 +142,7 @@ export type Author = {
   name?: string;
   slug?: Slug;
   image?: {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
+    asset?: SanityImageAssetReference;
     media?: unknown;
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
@@ -166,14 +174,16 @@ export type Slug = {
   source?: string;
 };
 
+export type MuxVideoAssetReference = {
+  _ref: string;
+  _type: "reference";
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: "mux.videoAsset";
+};
+
 export type MuxVideo = {
   _type: "mux.video";
-  asset?: {
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: "mux.videoAsset";
-  };
+  asset?: MuxVideoAssetReference;
 };
 
 export type MuxVideoAsset = {
@@ -207,21 +217,27 @@ export type MuxAssetData = {
   max_stored_frame_rate?: number;
   mp4_support?: string;
   max_resolution_tier?: string;
-  tracks?: Array<{
-    _key: string;
-  } & MuxTrack>;
-  playback_ids?: Array<{
-    _key: string;
-  } & MuxPlaybackId>;
+  tracks?: Array<
+    {
+      _key: string;
+    } & MuxTrack
+  >;
+  playback_ids?: Array<
+    {
+      _key: string;
+    } & MuxPlaybackId
+  >;
   static_renditions?: MuxStaticRenditions;
 };
 
 export type MuxStaticRenditions = {
   _type: "mux.staticRenditions";
   status?: string;
-  files?: Array<{
-    _key: string;
-  } & MuxStaticRenditionFile>;
+  files?: Array<
+    {
+      _key: string;
+    } & MuxStaticRenditionFile
+  >;
 };
 
 export type MuxStaticRenditionFile = {
@@ -307,6 +323,7 @@ export type SanityImageMetadata = {
   palette?: SanityImagePalette;
   lqip?: string;
   blurHash?: string;
+  thumbHash?: string;
   hasAlpha?: boolean;
   isOpaque?: boolean;
 };
@@ -370,22 +387,46 @@ export type Geopoint = {
   alt?: number;
 };
 
-export type AllSanitySchemaTypes = Youtube | BlockContent | Category | Post | SanityImageCrop | SanityImageHotspot | Author | Slug | MuxVideo | MuxVideoAsset | MuxAssetData | MuxStaticRenditions | MuxStaticRenditionFile | MuxPlaybackId | MuxTrack | Latex | Code | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageMetadata | SanityFileAsset | SanityAssetSourceData | SanityImageAsset | Geopoint;
-export declare const internalGroqTypeReferenceTo: unique symbol;
+export type AllSanitySchemaTypes =
+  | Youtube
+  | SanityImageAssetReference
+  | BlockContent
+  | Category
+  | AuthorReference
+  | CategoryReference
+  | Post
+  | SanityImageCrop
+  | SanityImageHotspot
+  | Author
+  | Slug
+  | MuxVideoAssetReference
+  | MuxVideo
+  | MuxVideoAsset
+  | MuxAssetData
+  | MuxStaticRenditions
+  | MuxStaticRenditionFile
+  | MuxPlaybackId
+  | MuxTrack
+  | Latex
+  | Code
+  | SanityImagePaletteSwatch
+  | SanityImagePalette
+  | SanityImageDimensions
+  | SanityImageMetadata
+  | SanityFileAsset
+  | SanityAssetSourceData
+  | SanityImageAsset
+  | Geopoint;
+
 // Source: src/lib/sanity/queries.ts
 // Variable: POSTS_QUERY
 // Query: *[_type == "post" && defined(slug.current)] | order(publishedAt desc)[$start...$end]{  _id,  title,  slug,  mainImage,  publishedAt}
-export type POSTS_QUERYResult = Array<{
+export type POSTS_QUERY_RESULT = Array<{
   _id: string;
   title: string | null;
   slug: Slug | null;
   mainImage: {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
+    asset?: SanityImageAssetReference;
     media?: unknown;
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
@@ -393,88 +434,85 @@ export type POSTS_QUERYResult = Array<{
   } | null;
   publishedAt: string | null;
 }>;
+
+// Source: src/lib/sanity/queries.ts
 // Variable: POSTS_COUNT_QUERY
 // Query: count(*[_type == "post" && defined(slug.current)])
-export type POSTS_COUNT_QUERYResult = number;
+export type POSTS_COUNT_QUERY_RESULT = number;
+
+// Source: src/lib/sanity/queries.ts
 // Variable: POST_QUERY
 // Query: *[_type == "post" && slug.current == $slug][0]{  title,  slug,  mainImage,  body[]{    ...,    _type == "mux.video" => {      asset->{        playbackId      }    }  },  publishedAt,  author->{    slug,    name,    image  },  categories[]->{    title  }}
-export type POST_QUERYResult = {
+export type POST_QUERY_RESULT = {
   title: string | null;
   slug: Slug | null;
   mainImage: {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
+    asset?: SanityImageAssetReference;
     media?: unknown;
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
     _type: "image";
   } | null;
-  body: Array<{
-    children?: Array<{
-      marks?: Array<string>;
-      text?: string;
-      _type: "span";
-      _key: string;
-    }>;
-    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
-    listItem?: "bullet" | "number";
-    markDefs?: Array<{
-      href?: string;
-      _type: "link";
-      _key: string;
-    }>;
-    level?: number;
-    _type: "block";
-    _key: string;
-  } | {
-    _key: string;
-    _type: "code";
-    language?: string;
-    filename?: string;
-    code?: string;
-    highlightedLines?: Array<number>;
-  } | {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
-    media?: unknown;
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    _type: "image";
-    _key: string;
-  } | {
-    _key: string;
-    _type: "latex";
-    body?: string;
-  } | {
-    _key: string;
-    _type: "mux.video";
-    asset: {
-      playbackId: string | null;
-    } | null;
-  } | {
-    _key: string;
-    _type: "youtube";
-    url?: string;
-  }> | null;
+  body: Array<
+    | {
+        children?: Array<{
+          marks?: Array<string>;
+          text?: string;
+          _type: "span";
+          _key: string;
+        }>;
+        style?:
+          "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+        listItem?: "bullet" | "number";
+        markDefs?: Array<{
+          href?: string;
+          _type: "link";
+          _key: string;
+        }>;
+        level?: number;
+        _type: "block";
+        _key: string;
+      }
+    | {
+        _key: string;
+        _type: "code";
+        language?: string;
+        filename?: string;
+        code?: string;
+        highlightedLines?: Array<number>;
+      }
+    | {
+        asset?: SanityImageAssetReference;
+        media?: unknown;
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: "image";
+        _key: string;
+      }
+    | {
+        _key: string;
+        _type: "latex";
+        body?: string;
+      }
+    | {
+        _key: string;
+        _type: "mux.video";
+        asset: {
+          playbackId: string | null;
+        } | null;
+      }
+    | {
+        _key: string;
+        _type: "youtube";
+        url?: string;
+      }
+  > | null;
   publishedAt: string | null;
   author: {
     slug: Slug | null;
     name: string | null;
     image: {
-      asset?: {
-        _ref: string;
-        _type: "reference";
-        _weak?: boolean;
-        [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-      };
+      asset?: SanityImageAssetReference;
       media?: unknown;
       hotspot?: SanityImageHotspot;
       crop?: SanityImageCrop;
@@ -485,25 +523,24 @@ export type POST_QUERYResult = {
     title: string | null;
   }> | null;
 } | null;
+
+// Source: src/lib/sanity/queries.ts
 // Variable: SITEMAP_POSTS_QUERY
 // Query: *[_type == "post" && defined(slug.current)]{  _updatedAt,  slug}
-export type SITEMAP_POSTS_QUERYResult = Array<{
+export type SITEMAP_POSTS_QUERY_RESULT = Array<{
   _updatedAt: string;
   slug: Slug | null;
 }>;
+
+// Source: src/lib/sanity/queries.ts
 // Variable: ALL_POSTS_QUERY
 // Query: *[_type == "post" && defined(slug.current)] | order(publishedAt desc){  _id,  title,  slug,  mainImage,  publishedAt}
-export type ALL_POSTS_QUERYResult = Array<{
+export type ALL_POSTS_QUERY_RESULT = Array<{
   _id: string;
   title: string | null;
   slug: Slug | null;
   mainImage: {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
+    asset?: SanityImageAssetReference;
     media?: unknown;
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
@@ -513,13 +550,16 @@ export type ALL_POSTS_QUERYResult = Array<{
 }>;
 
 // Query TypeMap
-import "@sanity/client";
-declare module "@sanity/client" {
+declare global {
   interface SanityQueries {
-    "*[_type == \"post\" && defined(slug.current)] | order(publishedAt desc)[$start...$end]{\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}": POSTS_QUERYResult;
-    "count(*[_type == \"post\" && defined(slug.current)])": POSTS_COUNT_QUERYResult;
-    "*[_type == \"post\" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage,\n  body[]{\n    ...,\n    _type == \"mux.video\" => {\n      asset->{\n        playbackId\n      }\n    }\n  },\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image\n  },\n  categories[]->{\n    title\n  }\n}": POST_QUERYResult;
-    "*[_type == \"post\" && defined(slug.current)]{\n  _updatedAt,\n  slug\n}": SITEMAP_POSTS_QUERYResult;
-    "*[_type == \"post\" && defined(slug.current)] | order(publishedAt desc){\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}": ALL_POSTS_QUERYResult;
+    '*[_type == "post" && defined(slug.current)] | order(publishedAt desc)[$start...$end]{\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}': POSTS_QUERY_RESULT;
+    'count(*[_type == "post" && defined(slug.current)])': POSTS_COUNT_QUERY_RESULT;
+    '*[_type == "post" && slug.current == $slug][0]{\n  title,\n  slug,\n  mainImage,\n  body[]{\n    ...,\n    _type == "mux.video" => {\n      asset->{\n        playbackId\n      }\n    }\n  },\n  publishedAt,\n  author->{\n    slug,\n    name,\n    image\n  },\n  categories[]->{\n    title\n  }\n}': POST_QUERY_RESULT;
+    '*[_type == "post" && defined(slug.current)]{\n  _updatedAt,\n  slug\n}': SITEMAP_POSTS_QUERY_RESULT;
+    '*[_type == "post" && defined(slug.current)] | order(publishedAt desc){\n  _id,\n  title,\n  slug,\n  mainImage,\n  publishedAt\n}': ALL_POSTS_QUERY_RESULT;
   }
+}
+// Lets @sanity/client releases that predate the global registry read it too
+declare module "@sanity/client" {
+  interface SanityQueries extends globalThis.SanityQueries {}
 }
