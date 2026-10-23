@@ -204,8 +204,8 @@ importers:
         specifier: 8.10.1
         version: 8.10.1
       '@sanity/code-input':
-        specifier: 7.3.13
-        version: 7.3.13(f18c3e08dd646bc10aa2c07dfb0ad52e)
+        specifier: 7.3.14
+        version: 7.3.14(f18c3e08dd646bc10aa2c07dfb0ad52e)
       '@sanity/image-url':
         specifier: 2.1.1
         version: 2.1.1
@@ -2520,8 +2520,8 @@ packages:
     resolution: {integrity: sha512-6LvBQymm2ErkqD9VY+VQt3IJKFm9vr3drWIEu2WmVzjoyh15zSJWxpLOGRELoEopETQsua9GQedHt5w3OOg1Xg==}
     engines: {node: '>=22.12.0'}
 
-  '@sanity/code-input@7.3.13':
-    resolution: {integrity: sha512-ckqhbzUfSW2uFsvtx7PZN1T4WeD2gN9W1fGqu46lRSO/mKsBcGHDAtxlnpu/R6H/cb4yQ7UrQrh49lZGLmtg6w==}
+  '@sanity/code-input@7.3.14':
+    resolution: {integrity: sha512-7eHrWJ6tJeTve6kt2CZNAOy6pvsd7M033JlCDnkSUKu0li4jw8xZ7E5WamTZtttuIjvmYeeWiHARV7jLF3SkSQ==}
     engines: {node: '>=20.19 <22 || >=22.12'}
     peerDependencies:
       react: ^19.2
@@ -8700,7 +8700,7 @@ snapshots:
     transitivePeerDependencies:
       - vitest
 
-  '@sanity/code-input@7.3.13(f18c3e08dd646bc10aa2c07dfb0ad52e)':
+  '@sanity/code-input@7.3.14(f18c3e08dd646bc10aa2c07dfb0ad52e)':
     dependencies:
       '@codemirror/lang-html': 6.4.12
       '@codemirror/lang-java': 6.0.2
