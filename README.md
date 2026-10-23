@@ -49,8 +49,7 @@ Follow these steps to set up the project locally.
 ## Contributing
 
 We welcome contributions to improve the Active Club website!
-
-1. Submit an issue to propose a feature or report a bug.  
+1. Submit an issue to propose a feature or report a bug.
 2. Review the contribution guidelines before submitting a pull request.
 
 ## License
