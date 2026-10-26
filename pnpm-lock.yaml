@@ -261,8 +261,8 @@ importers:
         specifier: 3.0.10
         version: 3.0.10(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.12)(vite@8.3.3(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.12)(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2))
       sanity-plugin-mux-input:
-        specifier: 5.2.0
-        version: 5.2.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.12)(vite@8.3.3(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.12)(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2))(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
+        specifier: 5.2.1
+        version: 5.2.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.12)(vite@8.3.3(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.12)(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2))(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
       shiki:
         specifier: 4.5.0
         version: 4.5.0
@@ -2016,20 +2016,11 @@ packages:
       '@types/react-dom':
         optional: true
 
-  '@mux/mux-player@3.14.0':
-    resolution: {integrity: sha512-vb1czZOL+L1PA4hNbiLBO913CMtJ5LTvJ5hjck+ba93MNNpv/Ie86TxtvspXWK6fufEWiCoCH5GK81A/aEWQhw==}
-
   '@mux/mux-player@3.14.1':
     resolution: {integrity: sha512-kn7xxbLLnVOxmXG0KT+DG05zuYMNL99fw9Mbl3hxo5Ug62pCBDUzw4YvOHYh21ZxQF1kBmdfS8vuc3RfXWNufA==}
 
-  '@mux/mux-video@0.31.5':
-    resolution: {integrity: sha512-Cs2SUiKhW5puhua071z6CDHFFKu1qtvAot0LtJBFrYIEN3CWTXJ6hrGpPr6JVVCtaTHXQ8nbArOQ70cI1A/gmw==}
-
   '@mux/mux-video@0.31.6':
     resolution: {integrity: sha512-DRRvZEh6UJyk5Gtpb1SiXWO5iTmmvlQhkqz2SufC31B/XInUoEOiHrwYskl1mG/LzWFXntZm/c+OMN59FajPbA==}
-
-  '@mux/playback-core@0.36.0':
-    resolution: {integrity: sha512-HCACbUUDQ3j7dA9b7zqa9dsqjQOS6PlETPyiHYS4wfZiY0dciAQhIjymCBtpfXQg+WeSzD1Clsj2Uq0cMev36g==}
 
   '@mux/playback-core@0.36.1':
     resolution: {integrity: sha512-bZbjGBC5SlCLUTpebhKgtE4uEMnErn4TMOJYmcACQlfx5cXnQ3PFiWdeMOlmm43Az5tdkBqzkiDhPastM9NHRQ==}
@@ -3556,9 +3547,6 @@ packages:
     resolution: {integrity: sha512-JSr5eOgoEymtYHBjNWyjrMqet9Am2miJhlfKNdqLp6zoeAh0KN5dRAcxlecj5mAJrmQomgiOBj35xHLrFjqBpw==}
     hasBin: true
 
-  castable-video@1.1.16:
-    resolution: {integrity: sha512-wBhe2dZu2afhewL3EaGgVYTyDsa9HvNhY98clMZkNzDrLelOValSrTaoMos9YX7PPBCrgpd1j6YmNyyI2Vbq3w==}
-
   castable-video@1.1.17:
     resolution: {integrity: sha512-mq633z1RlDyGyTcqnyz/yLVQxAoqI1J7adyiEmXORcv7D9jUIVCn9OjZPcgul7oCK4VAdcHsA2ZP9psKlXf2VQ==}
 
@@ -4838,9 +4826,6 @@ packages:
   mdn-data@2.27.1:
     resolution: {integrity: sha512-9Yubnt3e8A0OKwxYSXyhLymGW4sCufcLG6VdiDdUGVkPhpqLxlvP5vl1983gQjJl3tqbrM731mjaZaP68AgosQ==}
 
-  media-chrome@4.19.2:
-    resolution: {integrity: sha512-4ai1ITN8wBhwugQcRgqe3tN0z6OSKGOXqHLNrS04MgKFfsLqu6Dm8MPq02pI9Y9ZKoXtFjIl85jOryIW9es3BA==}
-
   media-chrome@4.19.3:
     resolution: {integrity: sha512-B5cPfn5FUTm3ki58QlEk2CB3xFo1i5jM1JavVN3bV81o09cokQC+qWVGVWZWY9Yoo6si9WeaQZUNn472WzbNVQ==}
 
@@ -5239,9 +5224,6 @@ packages:
     resolution: {integrity: sha512-/E57AYkoeQ25qkxMj5PBOVgF8Kiu/h7cYS30Z5+R7WaiCCBfLq58ZI/dSeaEKb9WVJV5n/03QwrN3IeWIFllvw==}
     engines: {node: '>=6'}
 
-  player.style@0.3.4:
-    resolution: {integrity: sha512-5O9bkbq0APQIkhptyZwp0gUgheCeImGPFo4hvPF2M5xBmgsUYzsUPHCfMye2xyeRE1zvQBKtziaC3jPgnHE1tw==}
-
   player.style@0.3.5:
     resolution: {integrity: sha512-hknPiLjNtJP5zM0vCVXsl3Pef+uQnecYg8X/1vjd/Y3TdAgs/zxhck02SFTxRSckaObKemP5tUT8wTH7ByUmnw==}
 
@@ -5550,8 +5532,8 @@ packages:
       react-dom: ^19.2
       sanity: ^5 || ^6.0.0-0
 
-  sanity-plugin-mux-input@5.2.0:
-    resolution: {integrity: sha512-2xx+8TBkQ9Z+Lq7PuoixjWF5IDi7Ko0b2EoqeWD8VyhCw0tKcVssmCRJ1bg9bW/tmjceuUVuyD5e81BaK741eA==}
+  sanity-plugin-mux-input@5.2.1:
+    resolution: {integrity: sha512-MlqS/fegZqWShtDOXwKzQ2o4siaRnCTdzVSuy7S6M6HfP8VAr8PMSXwq3kgXOnjWiBwn9Jy8gCFQwFrn8Zu+6w==}
     engines: {node: '>=20.19 <22 || >=22.12'}
     peerDependencies:
       react: ^19.2
@@ -8059,15 +8041,6 @@ snapshots:
       '@types/react': 19.3.0
       '@types/react-dom': 19.3.0(@types/react@19.3.0)
 
-  '@mux/mux-player@3.14.0(react@19.3.1)':
-    dependencies:
-      '@mux/mux-video': 0.31.5
-      '@mux/playback-core': 0.36.0
-      media-chrome: 4.19.3(react@19.3.1)
-      player.style: 0.3.4(react@19.3.1)
-    transitivePeerDependencies:
-      - react
-
   '@mux/mux-player@3.14.1(react@19.3.1)':
     dependencies:
       '@mux/mux-video': 0.31.6
@@ -8077,15 +8050,6 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@mux/mux-video@0.31.5':
-    dependencies:
-      '@mux/mux-data-google-ima': 0.3.17
-      '@mux/playback-core': 0.36.0
-      '@types/google_interactive_media_ads_types': 3.697.1
-      castable-video: 1.1.16
-      custom-media-element: 1.4.6
-      media-tracks: 0.3.5
-
   '@mux/mux-video@0.31.6':
     dependencies:
       '@mux/mux-data-google-ima': 0.3.17
@@ -8094,11 +8058,6 @@ snapshots:
       castable-video: 1.1.17
       custom-media-element: 1.4.7
       media-tracks: 0.3.5
-
-  '@mux/playback-core@0.36.0':
-    dependencies:
-      hls.js: 1.7.3
-      mux-embed: 5.18.1
 
   '@mux/playback-core@0.36.1':
     dependencies:
@@ -10063,10 +10022,6 @@ snapshots:
       ansicolors: 0.3.2
       redeyed: 2.1.1
 
-  castable-video@1.1.16:
-    dependencies:
-      custom-media-element: 1.4.6
-
   castable-video@1.1.17:
     dependencies:
       custom-media-element: 1.4.7
@@ -11342,12 +11297,6 @@ snapshots:
 
   mdn-data@2.27.1: {}
 
-  media-chrome@4.19.2(react@19.3.1):
-    dependencies:
-      ce-la-react: 0.3.2(react@19.3.1)
-    transitivePeerDependencies:
-      - react
-
   media-chrome@4.19.3(react@19.3.1):
     dependencies:
       ce-la-react: 0.3.2(react@19.3.1)
@@ -11783,12 +11732,6 @@ snapshots:
     dependencies:
       find-up: 3.0.0
 
-  player.style@0.3.4(react@19.3.1):
-    dependencies:
-      media-chrome: 4.19.2(react@19.3.1)
-    transitivePeerDependencies:
-      - react
-
   player.style@0.3.5(react@19.3.1):
     dependencies:
       media-chrome: 4.19.3(react@19.3.1)
@@ -12114,13 +12057,13 @@ snapshots:
       react-dom: 19.3.1(react@19.3.1)
       sanity: 6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.12)(vite@8.3.3(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.12)(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2)
 
-  sanity-plugin-mux-input@5.2.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.12)(vite@8.3.3(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.12)(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2))(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1)):
+  sanity-plugin-mux-input@5.2.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.20.0(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(@noble/hashes@2.0.1)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@8.1.1))(@babel/runtime@7.29.7)(rolldown@1.2.12)(vite@8.3.3(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.37.0)(tsx@4.23.13)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@24.19.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@10.2.0)(jiti@2.7.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.12)(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(supports-color@8.1.1)(terser@5.37.0)(tsx@4.23.13)(typescript@7.0.2))(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1)):
     dependencies:
-      '@mux/mux-player': 3.14.0(react@19.3.1)
+      '@mux/mux-player': 3.14.1(react@19.3.1)
       '@mux/mux-player-react': 3.14.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@mux/upchunk': 3.5.0
       '@sanity/icons': 5.2.3(react@19.3.1)
-      '@sanity/ui': 4.4.9(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
+      '@sanity/ui': 4.4.10(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(styled-components@6.1.15(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
       '@sanity/uuid': 3.0.3
       dequal: 2.0.3
       iso-639-1: 3.1.6
