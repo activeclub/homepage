@@ -276,8 +276,8 @@ importers:
         specifier: 4.6.0
         version: 4.6.0
       simple-icons:
-        specifier: 16.38.0
-        version: 16.38.0
+        specifier: 16.38.1
+        version: 16.38.1
       tailwind-merge:
         specifier: 3.7.1
         version: 3.7.1
@@ -5736,8 +5736,8 @@ packages:
   signal-polyfill@0.2.2:
     resolution: {integrity: sha512-p63Y4Er5/eMQ9RHg0M0Y64NlsQKpiu6MDdhBXpyywRuWiPywhJTpKJ1iB5K2hJEbFZ0BnDS7ZkJ+0AfTuL37Rg==}
 
-  simple-icons@16.38.0:
-    resolution: {integrity: sha512-B0Wws90eL0Fm65aH35CA8kM+7/Zzgsaytt0DndBx7VFm3+o9HurVIVRQZ1hvqqYYIyNJq7ycn3kQm2v2FhiWSQ==}
+  simple-icons@16.38.1:
+    resolution: {integrity: sha512-q4JnGp1cgeASp4jzEsmSh/7BD/e2y7aYO8XST+QBEvOJ5wzZ/9WRmKsI+QUwkfPUSiXC+sfh2+QetD38zl3N0g==}
     engines: {node: '>=0.12.18'}
 
   simple-wcswidth@1.1.2:
@@ -12726,7 +12726,7 @@ snapshots:
 
   signal-polyfill@0.2.2: {}
 
-  simple-icons@16.38.0: {}
+  simple-icons@16.38.1: {}
 
   simple-wcswidth@1.1.2: {}
 
