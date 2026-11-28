@@ -214,8 +214,8 @@ importers:
         specifier: 16.4.6
         version: 16.4.6(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@types/node@26.6.11)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)
       '@portabletext/react':
-        specifier: 8.0.1
-        version: 8.0.1(react@19.3.1)
+        specifier: 8.0.2
+        version: 8.0.2(react@19.3.1)
       '@sanity/asset-utils':
         specifier: 2.3.0
         version: 2.3.0
@@ -2480,8 +2480,8 @@ packages:
     peerDependencies:
       react: ^19
 
-  '@portabletext/react@8.0.1':
-    resolution: {integrity: sha512-Fy9UxVhppgEckEvczZytg4bBxiPcZIM49NrJ3sizEoz19aNzJWEYoUj7f3TI94907psEk0yfR145eoOgkedM2A==}
+  '@portabletext/react@8.0.2':
+    resolution: {integrity: sha512-D825eu342QAQ379bzUXcSR1XGfwRtORsVZaAA86JCKLlShKjELUedzyd0r2B+FBsD4iJsJELKLwTQFglGdL+tw==}
     engines: {node: '>=22.12'}
     peerDependencies:
       react: ^19
@@ -2510,8 +2510,16 @@ packages:
     resolution: {integrity: sha512-+qSqe0KnefuZfNLUhzQRTpbSKxslZof+3pNwxg0DC8dfZ1yLKyyBUw6iR7EpDL+SJlrnpiBfEcfmEuFitK1NSQ==}
     engines: {node: '>=22.12'}
 
+  '@portabletext/toolkit@6.1.1':
+    resolution: {integrity: sha512-W04MbBkgcbRVNW3/01rs6hKbpwiDgKw8w1AGouVwG/If4gW6yrPMeYVQ0K5UfOnZztMJ3DQJQZ5CUWZ+GsuOCQ==}
+    engines: {node: '>=22.12'}
+
   '@portabletext/types@4.0.2':
     resolution: {integrity: sha512-djfIGU9n6DRrunlvj2nIDAp17URo/nA4jSXGvf+Gupx8NLLy9fmJBZ3GL8yhqn9lSVc+cKCharjOa3aOBnWbRw==}
+    engines: {node: '>=20.19 <22 || >=22.12'}
+
+  '@portabletext/types@4.0.3':
+    resolution: {integrity: sha512-jSCKrutPWitTg6gC9uf4qBbVjPZflFvZl2rSzqtMlypmP7AChg5ZJ2u4sDf2C9d9YyeTotqfT3sHZOoX1LlZIg==}
     engines: {node: '>=20.19 <22 || >=22.12'}
 
   '@rexxars/react-json-inspector@9.0.1':
@@ -8820,10 +8828,10 @@ snapshots:
       '@portabletext/types': 4.0.2
       react: 19.3.1
 
-  '@portabletext/react@8.0.1(react@19.3.1)':
+  '@portabletext/react@8.0.2(react@19.3.1)':
     dependencies:
-      '@portabletext/toolkit': 6.0.0
-      '@portabletext/types': 4.0.2
+      '@portabletext/toolkit': 6.1.1
+      '@portabletext/types': 4.0.3
       react: 19.3.1
 
   '@portabletext/repair@1.0.4':
@@ -8854,7 +8862,13 @@ snapshots:
     dependencies:
       '@portabletext/types': 4.0.2
 
+  '@portabletext/toolkit@6.1.1':
+    dependencies:
+      '@portabletext/types': 4.0.3
+
   '@portabletext/types@4.0.2': {}
+
+  '@portabletext/types@4.0.3': {}
 
   '@rexxars/react-json-inspector@9.0.1(react@19.3.1)':
     dependencies:
@@ -12750,7 +12764,7 @@ snapshots:
       '@portabletext/plugin-paste-link': 5.0.28(@portabletext/editor@8.2.15(@types/react@19.3.3)(react@19.3.1))(react@19.3.1)
       '@portabletext/plugin-table': 2.0.28(@portabletext/editor@8.2.15(@types/react@19.3.3)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@portabletext/plugin-typography': 9.0.29(@portabletext/editor@8.2.15(@types/react@19.3.3)(react@19.3.1))(@types/react@19.3.3)(react@19.3.1)
-      '@portabletext/react': 8.0.1(react@19.3.1)
+      '@portabletext/react': 8.0.2(react@19.3.1)
       '@portabletext/sanity-bridge': 5.0.1(@types/react@19.3.3)
       '@portabletext/to-html': 6.0.0
       '@portabletext/toolkit': 6.0.0
